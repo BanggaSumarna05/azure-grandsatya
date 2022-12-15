@@ -62,7 +62,7 @@
 </head>
 
 <body>
-    <a href="https://api.whatsapp.com/send?phone=6289636463189&text=Hallo%21%20Saya%20ingin%20melakukan%20pemesanan%20ticket."
+    <a href="https://api.whatsapp.com/send?phone=6289636463189&text=Hallo%21%20Saya%20ingin%20melakukan%20pemesanan%20ticket/sewa%20mobil."
         class="float" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-whatsapp"
             viewBox="0 0 16 16">
@@ -75,7 +75,7 @@
     <div id="topbar" class="fixed-top d-flex align-items-center ">
         <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope-fill"></i><a href="mailto:admin@grandsatya.com">admin@grandsatya.com</a>
+                <i class="bi bi-envelope-fill"></i><a href="mailto:via@grandsatya.com">via@grandsatya.com</a>
                 <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
             </div>
             <div class="cta d-none d-md-block">
@@ -88,7 +88,7 @@
     <header id="header" class="fixed-top d-flex align-items-center ">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <h1 class="logo"><a href="index.html">Anyar</a></h1>
+            <h1 class="logo"><a href="index.html">GRANDSATYA</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -134,7 +134,7 @@
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Anyar</span></h2>
+                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>GRANDSATYA</span></h2>
                     <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
                         Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut.
                         Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore
@@ -889,13 +889,13 @@
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
                                 <h4>Location:</h4>
-                                <p>A108 Adam Street, New York, NY 535022</p>
+                                <p>Talavera Office Park lt.15 jl. T.B. Simatupang kav 22-26 Jakarta selatan</p>
                             </div>
 
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email:</h4>
-                                <p>admin@grandsatya.com</p>
+                                <p>via@grandsatya.com</p>
                             </div>
 
                             <div class="phone">
@@ -993,9 +993,9 @@
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h4>Contact Us</h4>
                         <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br><br>
+                            Talavera Office Park lt.15<br>
+                            Jl. T.B. Simatupang kav 22-26<br>
+                            Indonesia, Jakarta Selatan<br><br>
                             <strong>Phone:</strong> +1 5589 55488 55<br>
                             <strong>Email:</strong> info@grandsatya.com<br>
                         </p>
@@ -1003,7 +1003,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-info">
-                        <h3>About Anyar</h3>
+                        <h3>About GRANDSATYA</h3>
                         <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
                             valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
                         <div class="social-links mt-3">
@@ -1021,14 +1021,13 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Anyar</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>GRANDSATYA</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
             </div>
         </div>
     </footer><!-- End Footer -->
