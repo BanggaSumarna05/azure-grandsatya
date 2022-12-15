@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>GrandSatya - Index</title>
+    <title>GRAND SATYA - Index</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -88,7 +88,7 @@
     <header id="header" class="fixed-top d-flex align-items-center ">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <h1 class="logo"><a href="index.html">GRANDSATYA</a></h1>
+            <h1 class="logo"><a href="index.html">GRAND SATYA</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href=index.html" class="logo"><img src="anyar/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -134,7 +134,7 @@
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>GRANDSATYA</span></h2>
+                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>GRAND SATYA</span></h2>
                     <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
                         Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut.
                         Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore
@@ -310,7 +310,6 @@
 
                     <div class="col-lg-5 align-items-stretch position-relative video-box"
                         style='background-image: url("anyar/img/why-us.jpg");' data-aos="fade-right">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn mb-4"></a>
                     </div>
 
                     <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch"
@@ -476,7 +475,7 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Portfoio</h2>
+                    <h2>Portfolio</h2>
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
                         sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
                         ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
@@ -901,7 +900,7 @@
                             <div class="phone">
                                 <i class="bi bi-phone"></i>
                                 <h4>Call:</h4>
-                                <p>+1 5589 55488 55s</p>
+                                <p>6289636463189</p>
                             </div>
 
                         </div>
@@ -996,14 +995,14 @@
                             Talavera Office Park lt.15<br>
                             Jl. T.B. Simatupang kav 22-26<br>
                             Indonesia, Jakarta Selatan<br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@grandsatya.com<br>
+                            <strong>Phone:</strong> 6289636463189<br>
+                            <strong>Email:</strong> info@GRAND SATYA.com<br>
                         </p>
 
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-info">
-                        <h3>About GRANDSATYA</h3>
+                        <h3>About GRAND SATYA</h3>
                         <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
                             valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
                         <div class="social-links mt-3">
@@ -1021,7 +1020,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>GRANDSATYA</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>GRAND SATYA</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
@@ -1033,8 +1032,6 @@
     </footer><!-- End Footer -->
 
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('anyar/vendor/aos/aos.js') }}"></script>
