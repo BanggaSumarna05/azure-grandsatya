@@ -444,7 +444,7 @@
                             <h4><a href="#">Eiusmod Tempor</a></h4>
                             <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta
                                 nobis est eligendi</p>
-                        </div>
+                        </div> 
                     </div>
                 </div>
 
