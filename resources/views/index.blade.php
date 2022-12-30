@@ -129,22 +129,25 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex justify-cntent-center align-items-center">
-        <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+        {{-- <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel"> --}}
 
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>GRAND SATYA</span></h2>
-                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
-                        Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut.
-                        Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore
-                        modi architecto.</p>
+                    <h2 class="animate__animated animate__fadeInDown"><span>GRAND SATYA</span></h2>
+                    <p class="animate__animated animate__fadeInUp">Welcome to our website esthablished in 2021, catered
+                        to a large volume of corporate and industrial clients providing rapid growth in services offered
+                        of air ticketing service, hotel reservations tih an instant confirmation, travell document
+                        arrengement, car rental, etc.
+                        <br><br>
+                    
+                        Based in Jakarta and certainly having a wide network throughout national, managed by professional teams who adept at their tasks.</p>
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
                 </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="carousel-item">
+            {{-- <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
                     <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
@@ -154,10 +157,10 @@
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                         More</a>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Slide 3 -->
-            <div class="carousel-item">
+            {{-- <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
                     <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
@@ -167,7 +170,7 @@
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                         More</a>
                 </div>
-            </div>
+            </div> --}}
 
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
@@ -177,13 +180,13 @@
                 <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
             </a>
 
-        </div>
+        {{-- </div> --}}
     </section><!-- End Hero -->
 
     <main id="main">
 
         <!-- ======= Icon Boxes Section ======= -->
-        <section id="icon-boxes" class="icon-boxes">
+        {{-- <section id="icon-boxes" class="icon-boxes">
             <div class="container">
 
                 <div class="row">
@@ -229,7 +232,7 @@
                 </div>
 
             </div>
-        </section><!-- End Icon Boxes Section -->
+        </section><!-- End Icon Boxes Section --> --}}
 
         <!-- ======= About Us Section ======= -->
         <section id="about" class="about">
@@ -237,9 +240,9 @@
 
                 <div class="section-title">
                     <h2>About Us</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>welcome to our website esthablished in 2021 , catered to a large volume of corporate and industrial clients providing rapid growth in services offered of air ticketing service , hotel reservations tih an instant confirmation , travell document arrengement , car rental , etc.
+
+                        Based in Jakarta and certainly having a wide network throughout national, managed by professional teams who adept at their tasks.</p>
                 </div>
 
                 <div class="row content">
@@ -274,7 +277,7 @@
         </section><!-- End About Us Section -->
 
         <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients">
+        {{-- <section id="clients" class="clients">
             <div class="container" data-aos="zoom-in">
 
                 <div class="clients-slider swiper">
@@ -300,10 +303,10 @@
                 </div>
 
             </div>
-        </section><!-- End Clients Section -->
+        </section><!-- End Clients Section --> --}}
 
         <!-- ======= Why Us Section ======= -->
-        <section id="why-us" class="why-us">
+        {{-- <section id="why-us" class="why-us">
             <div class="container-fluid">
 
                 <div class="row">
@@ -379,10 +382,10 @@
                 </div>
 
             </div>
-        </section><!-- End Why Us Section -->
+        </section><!-- End Why Us Section --> --}}
 
         <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
+        {{-- <section id="services" class="services">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -444,15 +447,15 @@
                             <h4><a href="#">Eiusmod Tempor</a></h4>
                             <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta
                                 nobis est eligendi</p>
-                        </div> 
+                        </div>
                     </div>
                 </div>
 
             </div>
-        </section><!-- End Services Section -->
+        </section><!-- End Services Section --> --}}
 
         <!-- ======= Cta Section ======= -->
-        <section id="cta" class="cta">
+        {{-- <section id="cta" class="cta">
             <div class="container">
 
                 <div class="row" data-aos="zoom-in">
@@ -468,10 +471,10 @@
                 </div>
 
             </div>
-        </section><!-- End Cta Section -->
+        </section><!-- End Cta Section --> --}}
 
         <!-- ======= Portfoio Section ======= -->
-        <section id="portfolio" class="portfoio">
+        {{-- <section id="portfolio" class="portfoio">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -605,10 +608,10 @@
                 </div>
 
             </div>
-        </section><!-- End Portfoio Section -->
+        </section><!-- End Portfoio Section --> --}}
 
         <!-- ======= Team Section ======= -->
-        <section id="team" class="team section-bg">
+        {{-- <section id="team" class="team section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -695,10 +698,10 @@
                 </div>
 
             </div>
-        </section><!-- End Team Section -->
+        </section><!-- End Team Section --> --}}
 
         <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing">
+        {{-- <section id="pricing" class="pricing">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -782,10 +785,10 @@
                 </div>
 
             </div>
-        </section><!-- End Pricing Section -->
+        </section><!-- End Pricing Section --> --}}
 
         <!-- ======= Frequently Asked Questions Section ======= -->
-        <section id="faq" class="faq section-bg">
+        {{-- <section id="faq" class="faq section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -871,7 +874,7 @@
                 </div>
 
             </div>
-        </section><!-- End Frequently Asked Questions Section -->
+        </section><!-- End Frequently Asked Questions Section --> --}}
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
@@ -1003,8 +1006,8 @@
 
                     <div class="col-lg-3 col-md-6 footer-info">
                         <h3>About GRAND SATYA</h3>
-                        <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
-                            valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                        <p>Catered to a large volume of corporate and industrial clients providing rapid growth in services offered of air ticketing service , hotel reservations tih an instant confirmation , travell document arrengement , car rental , etc.
+                            Based in Jakarta and certainly having a wide network throughout national, managed by professional teams who adept at their tasks.</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
