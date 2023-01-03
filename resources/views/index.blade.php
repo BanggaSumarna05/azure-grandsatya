@@ -76,7 +76,7 @@
         <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
                 <i class="bi bi-envelope-fill"></i><a href="mailto:via@grandsatya.com">via@grandsatya.com</a>
-                <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+                <i class="bi bi-phone-fill phone-icon"></i> 62896 3646 3189
             </div>
             <div class="cta d-none d-md-block">
                 <a href="#about" class="scrollto">Get Started</a>
