@@ -76,7 +76,7 @@
         <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
                 <i class="bi bi-envelope-fill"></i><a href="mailto:via@grandsatya.com">via@grandsatya.com</a>
-                <i class="bi bi-phone-fill phone-icon"></i> 62896 3646 3189
+                <i class="bi bi-phone-fill phone-icon"></i> +62 8963 6463 189
             </div>
             <div class="cta d-none d-md-block">
                 <a href="#about" class="scrollto">Get Started</a>
@@ -903,7 +903,7 @@
                             <div class="phone">
                                 <i class="bi bi-phone"></i>
                                 <h4>Call:</h4>
-                                <p>6289636463189</p>
+                                <p>+6289636463189</p>
                             </div>
 
                         </div>
@@ -998,7 +998,7 @@
                             Talavera Office Park lt.15<br>
                             Jl. T.B. Simatupang kav 22-26<br>
                             Indonesia, Jakarta Selatan<br><br>
-                            <strong>Phone:</strong> 6289636463189<br>
+                            <strong>Phone:</strong> +6289636463189<br>
                             <strong>Email:</strong> info@GRAND SATYA.com<br>
                         </p>
 
