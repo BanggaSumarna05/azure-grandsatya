@@ -999,7 +999,7 @@
                             Jl. T.B. Simatupang kav 22-26<br>
                             Indonesia, Jakarta Selatan<br><br>
                             <strong>Phone:</strong> +6289636463189<br>
-                            <strong>Email:</strong> info@GRAND SATYA.com<br>
+                            <strong>Email:</strong> info@grandsatya.com<br>
                         </p>
 
                     </div>
