@@ -193,9 +193,8 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                excepturi sint occaecati cupiditate non provident</p>
+                            <h4 class="title"><a href="">Experienced Driver</a></h4>
+                            <p class="description">Pengemudi yang berpengalaman dalam bidang proyek industri</p>
                         </div>
                     </div>
 
@@ -203,9 +202,8 @@
                         data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur</p>
+                            <h4 class="title"><a href="">Safety</a></h4>
+                            <p class="description">Seluruh armada dilindungi oleh asuransi dengan kondisi kendaraan yang terawat dengan baik yang didukung oleh bagian perawatan yang berpengalaman</p>
                         </div>
                     </div>
 
@@ -213,9 +211,8 @@
                         data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4 class="title"><a href="">Magni Dolores</a></h4>
-                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                officia deserunt mollit anim id est laborum</p>
+                            <h4 class="title"><a href="">24 Hour Assitant</a></h4>
+                            <p class="description">24 Jam melayani penggantian unit jika terjadi sesuatu hal terhadap unit sewa</p>
                         </div>
                     </div>
 
@@ -223,9 +220,8 @@
                         data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-layer"></i></div>
-                            <h4 class="title"><a href="">Nemo Enim</a></h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                blanditiis praesentium voluptatum deleniti atque</p>
+                            <h4 class="title"><a href="">Excelent Services</a></h4>
+                            <p class="description">Kami memiliki customer service yang selalu siap  melayani anda dalam memilih dalam memilih unit</p>
                         </div>
                     </div>
 
