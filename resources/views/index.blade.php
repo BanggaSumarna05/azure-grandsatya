@@ -75,11 +75,11 @@
     <div id="topbar" class="fixed-top d-flex align-items-center ">
         <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope-fill"></i><a href="mailto:via@grandsatya.com">via@grandsatya.com</a>
-                <i class="bi bi-phone-fill phone-icon"></i> +62 8963 6463 189
+                <i class="bi bi-envelope-fill"></i><a href="mailto:cs@grandsatya.com">cs@grandsatya.com</a>
+                <i class="bi bi-phone-fill phone-icon"><a href="tel:+6289636463189">Contact Us</a> </i> 
             </div>
             <div class="cta d-none d-md-block">
-                <a href="#about" class="scrollto">Get Started</a>
+                <!--<a href="#about" class="scrollto">Get Started</a>-->
             </div>
         </div>
     </div>
@@ -88,18 +88,18 @@
     <header id="header" class="fixed-top d-flex align-items-center ">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <h1 class="logo"><a href="#">GRAND SATYA</a></h1>
+            <h1 class="logo"><a href="#"><b>GRAND SATYA</b></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href=index.html" class="logo"><img src="anyar/img/logo.png" alt="" class="img-fluid"></a>-->
 
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <!--<li><a class="nav-link scrollto" href="#about">About</a></li>-->
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+                    <li><a class="nav-link scrollto " href="#hero5">Portfolio</a></li>
+                    <!--<li><a class="nav-link scrollto" href="#team">Team</a></li>-->
+                    <!--<li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>-->
                     {{-- <li><a href="blog.html">Blog</a></li> --}}
                     {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -136,8 +136,8 @@
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown"><span>GRAND SATYA</span></h2>
                     <p class="animate__animated animate__fadeInUp">Welcome to our website esthablished in 2021, catered
-                        to a large volume of corporate and industrial clients providing rapid growth in services offered
-                        of air ticketing service, hotel reservations tih an instant confirmation, travell document
+                        to a large volume of corporate and industrial client providing rapid growth in services offered
+                        of air ticketing services, hotel reservations with an instant confirmation, travel document
                         arrengement, car rental, etc.
                         <br><br>
                     
@@ -147,7 +147,7 @@
             </div>
 
             <!-- Slide 2 -->
-            {{-- <div class="carousel-item">
+            <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
                     <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
@@ -157,10 +157,10 @@
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                         More</a>
                 </div>
-            </div> --}}
+            </div>
 
             <!-- Slide 3 -->
-            {{-- <div class="carousel-item">
+            <div class="carousel-item">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
                     <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
@@ -170,7 +170,7 @@
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                         More</a>
                 </div>
-            </div> --}}
+            </div>
 
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
@@ -186,7 +186,7 @@
     <main id="main">
 
         <!-- ======= Icon Boxes Section ======= -->
-        {{-- <section id="icon-boxes" class="icon-boxes">
+        <section id="icon-boxes" class="icon-boxes">
             <div class="container">
 
                 <div class="row">
@@ -232,78 +232,37 @@
                 </div>
 
             </div>
-        </section><!-- End Icon Boxes Section --> --}}
+        </section><!-- End Icon Boxes Section -->
 
         <!-- ======= About Us Section ======= -->
-        <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
+       
+            <!-- End About Us Section -->
 
-                <div class="section-title">
-                    <h2>About Us</h2>
-                    <p>welcome to our website esthablished in 2021 , catered to a large volume of corporate and industrial clients providing rapid growth in services offered of air ticketing service , hotel reservations tih an instant confirmation , travell document arrengement , car rental , etc.
-
-                        Based in Jakarta and certainly having a wide network throughout national, managed by professional teams who adept at their tasks.</p>
-                </div>
-
-                <div class="row content">
-                    <div class="col-lg-6">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
-                        </p>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat</li>
-                            <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in
-                                voluptate velit</li>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0">
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <a href="#" class="btn-learn-more">Learn More</a>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End About Us Section -->
-
+            <section id="hero5" class="d-flex justify-cntent-center align-items-center">
+            </section>
+            <br>
         <!-- ======= Clients Section ======= -->
-        {{-- <section id="clients" class="clients">
+        <section id="clients" class="clients">
             <div class="container" data-aos="zoom-in">
 
                 <div class="clients-slider swiper">
                     <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="anyar/img/clients/client-1.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="anyar/img/clients/client-2.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="anyar/img/clients/client-3.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="anyar/img/clients/client-4.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="anyar/img/clients/client-5.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="anyar/img/clients/client-6.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="anyar/img/clients/client-7.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="anyar/img/clients/azure.png" class="img-fluid"
                                 alt=""></div>
                         <div class="swiper-slide"><img src="anyar/img/clients/client-8.png" class="img-fluid"
+                            alt=""></div>
+                            <div class="swiper-slide"><img src="anyar/img/clients/swadayagraha.png" class="img-fluid"
                                 alt=""></div>
+                       
                     </div>
-                    <div class="swiper-pagination"></div>
+                       
+                    </div>
+                    {{-- <div class="swiper-pagination"></div> --}}
                 </div>
 
             </div>
-        </section><!-- End Clients Section --> --}}
+        </section>
+        <!-- End Clients Section -->
 
         <!-- ======= Why Us Section ======= -->
         {{-- <section id="why-us" class="why-us">
@@ -881,6 +840,7 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
+                    <br>
                     <h2>Contact Us</h2>
                 </div>
 
@@ -891,20 +851,20 @@
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
                                 <h4>Location:</h4>
-                                <p>Talavera Office Park lt.15 jl. T.B. Simatupang kav 22-26 Jakarta selatan</p>
+                                <p>Talavera Office Park lt.15 jl. T.B. Simatupang Kav 22-26 Jakarta selatan</p>
                             </div>
 
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email:</h4>
-                                <p>via@grandsatya.com</p>
+                                <p>Cs@grandsatya.com</p>
                             </div>
 
-                            <div class="phone">
-                                <i class="bi bi-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+6289636463189</p>
-                            </div>
+                            <!--<div class="phone">-->
+                            <!--    <i class="bi bi-phone"></i>-->
+                            <!--    <h4>Call:</h4>-->
+                            <!--    <p>+6289636463189</p>-->
+                            <!--</div>-->
 
                         </div>
 
@@ -974,21 +934,21 @@
                         <h4>Useful Links</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <!--<li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>-->
+                            <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>-->
+                            <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>-->
+                            <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>-->
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Air Ticketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Car Rental</a></li>
+                            <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>-->
+                            <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>-->
                         </ul>
                     </div>
 
@@ -998,8 +958,8 @@
                             Talavera Office Park lt.15<br>
                             Jl. T.B. Simatupang kav 22-26<br>
                             Indonesia, Jakarta Selatan<br><br>
-                            <strong>Phone:</strong> +6289636463189<br>
-                            <strong>Email:</strong> info@grandsatya.com<br>
+                            <!--<strong>Phone:</strong> +6289636463189<br>-->
+                            <strong>Email:</strong> Cs@grandsatya.com<br>
                         </p>
 
                     </div>
