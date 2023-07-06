@@ -76,7 +76,7 @@
         <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
                 <i class="bi bi-envelope-fill"></i><a href="mailto:cs@grandsatya.com">cs@grandsatya.com</a>
-                <i class="bi bi-phone-fill phone-icon"><a href="tel:+6289636463189">Contact Us</a> </i> 
+                <i class="bi bi-phone-fill phone-icon"><a href="tel:+6289636463189">Contact Us</a> </i>
             </div>
             <div class="cta d-none d-md-block">
                 <!--<a href="#about" class="scrollto">Get Started</a>-->
@@ -97,7 +97,8 @@
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <!--<li><a class="nav-link scrollto" href="#about">About</a></li>-->
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#hero5">Portfolio</a></li>
+                    <li><a class="nav-link scrollto " href="#porto">Portfolio</a></li>
+                    <li><a class="nav-link scrollto " href="{{ route('front.blog') }}">Blog</a></li>
                     <!--<li><a class="nav-link scrollto" href="#team">Team</a></li>-->
                     <!--<li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>-->
                     {{-- <li><a href="blog.html">Blog</a></li> --}}
@@ -129,7 +130,8 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex justify-cntent-center align-items-center">
-        {{-- <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel"> --}}
+        {{-- <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade"
+            data-bs-ride="carousel"> --}}
 
             <!-- Slide 1 -->
             <div class="carousel-item active">
@@ -140,8 +142,10 @@
                         of air ticketing services, hotel reservations with an instant confirmation, travel document
                         arrengement, car rental, etc.
                         <br><br>
-                    
-                        Based in Jakarta and certainly having a wide network throughout national, managed by professional teams who adept at their tasks.</p>
+
+                        Based in Jakarta and certainly having a wide network throughout national, managed by
+                        professional teams who adept at their tasks.
+                    </p>
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
                 </div>
             </div>
@@ -180,7 +184,8 @@
                 <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
             </a>
 
-        {{-- </div> --}}
+            {{--
+        </div> --}}
     </section><!-- End Hero -->
 
     <main id="main">
@@ -203,7 +208,8 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
                             <h4 class="title"><a href="">Safety</a></h4>
-                            <p class="description">The entire fleet is protected by insurance with well-maintained vehicle conditions supported by experienced maintenance department</p>
+                            <p class="description">The entire fleet is protected by insurance with well-maintained
+                                vehicle conditions supported by experienced maintenance department</p>
                         </div>
                     </div>
 
@@ -211,8 +217,9 @@
                         data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4 class="title"><a href="">24 Hour Assitant</a></h4>
-                            <p class="description"> 24 hours service for unit replacement if something happens to the rental unit</p>
+                            <h4 class="title"><a href="">24 Hour Assistance</a></h4>
+                            <p class="description"> 24 hours service for unit replacement if something happens to the
+                                rental unit</p>
                         </div>
                     </div>
 
@@ -221,7 +228,8 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-layer"></i></div>
                             <h4 class="title"><a href="">Excellent Services</a></h4>
-                            <p class="description">We have customer service that is always ready to serve you in choosing a unit</p>
+                            <p class="description">We have customer service that is always ready to serve you in
+                                choosing a unit</p>
                         </div>
                     </div>
 
@@ -231,30 +239,31 @@
         </section><!-- End Icon Boxes Section -->
 
         <!-- ======= About Us Section ======= -->
-       
-            <!-- End About Us Section -->
 
-            <section id="hero5" class="d-flex justify-cntent-center align-items-center">
-            </section>
-            <br>
+        <!-- End About Us Section -->
+
+        <section id="map" class="d-flex justify-cntent-center align-items-center">
+        </section>
+        <br>
         <!-- ======= Clients Section ======= -->
         <section id="clients" class="clients">
             <div class="container" data-aos="zoom-in">
 
                 <div class="clients-slider swiper">
                     <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="anyar/img/clients/azure.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="anyar/img/clients/azure.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="anyar/img/clients/client-8.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="anyar/img/clients/swadayagraha.png" class="img-fluid"
                                 alt=""></div>
-                        <div class="swiper-slide"><img src="anyar/img/clients/client-8.png" class="img-fluid"
-                            alt=""></div>
-                            <div class="swiper-slide"><img src="anyar/img/clients/swadayagraha.png" class="img-fluid"
-                                alt=""></div>
-                       
+                        <div class="swiper-slide"><img src="anyar/img/clients/makadia.jpeg" class="img-fluid" alt="">
+                        </div>
+
                     </div>
-                       
-                    </div>
-                    {{-- <div class="swiper-pagination"></div> --}}
+
                 </div>
+                {{-- <div class="swiper-pagination"></div> --}}
+            </div>
 
             </div>
         </section>
@@ -288,8 +297,7 @@
                                         data-bs-target="#accordion-list-1"><span>01</span> Non consectetur a erat nam
                                         at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i
                                             class="bx bx-chevron-up icon-close"></i></a>
-                                    <div id="accordion-list-1" class="collapse show"
-                                        data-bs-parent=".accordion-list">
+                                    <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                                         <p>
                                             Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
                                             laoreet non curabitur gravida. Venenatis lectus magna fringilla urna
@@ -580,8 +588,7 @@
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="anyar/img/team/team-1.jpg" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="anyar/img/team/team-1.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Walter White</h4>
                                 <span>Chief Executive Officer</span>
@@ -598,8 +605,7 @@
 
                     <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="anyar/img/team/team-2.jpg" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="anyar/img/team/team-2.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Sarah Jhonson</h4>
                                 <span>Product Manager</span>
@@ -616,8 +622,7 @@
 
                     <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="anyar/img/team/team-3.jpg" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="anyar/img/team/team-3.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>William Anderson</h4>
                                 <span>CTO</span>
@@ -634,8 +639,7 @@
 
                     <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="400">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="anyar/img/team/team-4.jpg" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="anyar/img/team/team-4.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Amanda Jepson</h4>
                                 <span>Accountant</span>
@@ -831,16 +835,28 @@
             </div>
         </section><!-- End Frequently Asked Questions Section --> --}}
 
-        <section id="icon-boxes" class="icon-boxes">
+        <section id="porto" class="icon-boxes">
             <div class="container">
                 <div class="section-title">
-                    <h2>Our Units</h2>
+                    <h2>Our Fleet</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
                         <div class="icon-box">
                             {{-- <div class="icon"><i class="bx bxl-dribbble"></i></div> --}}
-                            <center><h4 class="title"><a href="">Lexus RX </a></h4></center>
+                            <center>
+                                <h4 class="title"><a href="">BMW Series 7 730Li </a></h4>
+                            </center>
+                            <img src="anyar/img/clients/bmw.jpeg" class="img-fluid" alt="">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+                        <div class="icon-box">
+                            {{-- <div class="icon"><i class="bx bxl-dribbble"></i></div> --}}
+                            <center>
+                                <h4 class="title"><a href="">Lexus RX </a></h4>
+                            </center>
                             <img src="anyar/img/clients/Lexus.jpeg" class="img-fluid" alt="">
 
                         </div>
@@ -849,7 +865,9 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
                         data-aos-delay="100">
                         <div class="icon-box">
-                           <center><h4 class="title"><a href=""> Toyota Alphard</a></h4></center> 
+                            <center>
+                                <h4 class="title"><a href=""> Toyota Alphard</a></h4>
+                            </center>
                             <img src="anyar/img/clients/alphard.jpeg" class="img-fluid" alt="">
                         </div>
                     </div>
@@ -858,77 +876,116 @@
                         data-aos-delay="200">
                         <div class="icon-box">
                             {{-- <div class="icon"><i class="bx bx-tachometer"></i></div> --}}
-                           <center><h4 class="title"><a href=""> Toyota Fortuner </a></h4></center> 
+                            <center>
+                                <h4 class="title"><a href=""> Toyota Fortuner </a></h4>
+                            </center>
                             <img src="anyar/img/clients/Fortuner.jpeg" class="img-fluid" alt="">
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <div class="icon-box">
-                            {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
-                            <center><h4 class="title"><a href=""> Toyota Innova Reborn</a></h4></center>
-                            <img src="anyar/img/clients/innova.jpeg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <center>
+
+                </div>
+
+            </div>
+            <!-------------------------------------------baris2-->
+
+            <section id="icon-boxes" class="icon-boxes">
+                <div class="container">
+
+                    <div class="row">
                         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <div class="icon-box">
-                            {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
-                            <center><h4 class="title"><a href="">Pajero Sport</a></h4></center>
-                            <img src="anyar/img/clients/pajero_1.jpg" class="img-fluid" alt="">
+                            data-aos-delay="300">
+                            <div class="icon-box">
+                                {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
+                                <center>
+                                    <h4 class="title"><a href=""> Toyota Innova Reborn</a></h4>
+                                </center>
+                                <img src="anyar/img/clients/innova.jpeg" class="img-fluid" alt="">
+                            </div>
                         </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div class="icon-box">
+                                {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
+                                <center>
+                                    <h4 class="title"><a href="">Pajero Sport</a></h4>
+                                </center>
+                                <img src="anyar/img/clients/pajero_1.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+                            <div class="icon-box">
+                                {{-- <div class="icon"><i class="bx bxl-dribbble"></i></div> --}}
+                                <center>
+                                    <h4 class="title"><a href=""> Toyota Avanza Veloz </a></h4>
+                                </center>
+                                <img src="anyar/img/clients/avanza.jpeg" class="img-fluid" alt="">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="icon-box">
+                                <center>
+                                    <h4 class="title"><a href=""> Toyota Yaris </a></h4>
+                                </center>
+                                <img src="anyar/img/clients/yaris.jpeg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
                     </div>
-                    </center>
+            </section>
+
+            <!---------------------------------------------------------->
+            <!-------------------------------------bari 3----------->
+
+            <section id="icon-boxes" class="icon-boxes">
+                <div class="container">
+
+                    <div class="row">
+
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div class="icon-box">
+                                {{-- <div class="icon"><i class="bx bx-tachometer"></i></div> --}}
+                                <center>
+                                    <h4 class="title"><a href="">Hilux Double Cabin </a></h4>
+                                </center>
+                                <img src="anyar/img/clients/hilux.jpeg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div class="icon-box">
+                                {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
+                                <center>
+                                    <h4 class="title"><a href="">Isuzu Micro Bus</a></h4>
+                                </center>
+                                <img src="anyar/img/clients/isuzu.jpeg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="icon-box">
+                                <center>
+                                    <h4 class="title"><a href=""> Isuzu Traga </a></h4>
+                                </center>
+                                <img src="anyar/img/clients/trg.jpeg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
-
-            </div>
+            </section>
+            <!------------------------------------------------------------->
         </section><!-- End Icon Boxes Section -->
-        <section id="icon-boxes" class="icon-boxes">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
-                        <div class="icon-box">
-                            {{-- <div class="icon"><i class="bx bxl-dribbble"></i></div> --}}
-                            <center><h4 class="title"><a href=""> Toyota Avanza Veloz </a></h4></center>
-                            <img src="anyar/img/clients/avanza.jpeg" class="img-fluid" alt="">
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
-                        data-aos-delay="100">
-                        <div class="icon-box">
-                           <center><h4 class="title"><a href=""> Toyota Yaris </a></h4></center> 
-                            <img src="anyar/img/clients/yaris.jpeg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <div class="icon-box">
-                            {{-- <div class="icon"><i class="bx bx-tachometer"></i></div> --}}
-                           <center><h4 class="title"><a href="">Hilux Double Cabin </a></h4></center> 
-                            <img src="anyar/img/clients/hilux.jpeg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <div class="icon-box">
-                            {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
-                            <center><h4 class="title"><a href="">Isuzu Micro Bus</a></h4></center>
-                            <img src="anyar/img/clients/isuzu.jpeg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
@@ -984,7 +1041,8 @@
                                     placeholder="Subject" required>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                    required></textarea>
                             </div>
                             <div class="my-3">
                                 <div class="loading">Loading</div>
@@ -1062,8 +1120,11 @@
 
                     <div class="col-lg-3 col-md-6 footer-info">
                         <h3>About GRAND SATYA</h3>
-                        <p>Catered to a large volume of corporate and industrial clients providing rapid growth in services offered of air ticketing service , hotel reservations with an instant confirmation , travel document arrengement , car rental , etc.
-                            Based in Jakarta and certainly having a wide network throughout National, managed by professional teams who adept at their tasks.</p>
+                        <p>Catered to a large volume of corporate and industrial clients providing rapid growth in
+                            services offered of air ticketing service , hotel reservations with an instant confirmation
+                            , travel document arrengement , car rental , etc.
+                            Based in Jakarta and certainly having a wide network throughout National, managed by
+                            professional teams who adept at their tasks.</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

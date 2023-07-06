@@ -188,7 +188,7 @@ h6 {
 }
 
 #header.header-scrolled {
-    background:rgba(0, 27, 61);
+    background: rgba(0, 27, 61);
     top: 0;
 }
 
@@ -219,8 +219,8 @@ h6 {
 }
 
 .img-gs {
-    height: 70px;
-    width: 259px;
+    height: 72px;
+    width: 265px;
 }
 
 /*--------------------------------------------------------------
@@ -494,8 +494,9 @@ h6 {
     overflow: hidden;
     position: relative;
     background: url("../img/sewamobilmewah.png") top center;
-    background-size: cover;
-    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: center;
     margin-bottom: -90px;
     z-index: 99;
     transition: 0.3s;
@@ -585,18 +586,7 @@ h6 {
         width: 5%;
     }
 }
-#hero5 {
-    width: 100%;
-    height: 110vh;
-    overflow: hidden;
-    position: relative;
-    background: url("../img/azure-map.jpg") top center;
-    background-size: cover;
-    position: relative;
-    margin-bottom: -90px;
-    z-index: 99;
-    transition: 0.3s;
-}
+
 
 @media (max-width: 768px), (max-height: 700px) {
     #hero {
@@ -607,6 +597,20 @@ h6 {
     #hero h2 {
         font-size: 28px;
     }
+}
+
+#map {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background: url("../img/fix-map-gs.jpeg") top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: center;
+    margin-bottom: -90px;
+    z-index: 99;
+    transition: 0.3s;
 }
 
 /*--------------------------------------------------------------
