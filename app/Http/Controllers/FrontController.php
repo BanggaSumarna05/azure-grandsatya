@@ -11,4 +11,10 @@ class FrontController extends Controller
     {
         return view('index');
     }
+    
+    public function postRequest(Request $request)
+    {
+        return $request->all();
+        // return view('index');
+    }
 }

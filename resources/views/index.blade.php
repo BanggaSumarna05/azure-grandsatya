@@ -87,7 +87,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center ">
         <div class="container d-flex align-items-center justify-content-between">
-
+            <!--<img  src="anyar/img/clients/logo_gs.png" class="img-gs" alt="">-->
             <h1 class="logo"><a href="#"><b>GRAND SATYA</b></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href=index.html" class="logo"><img src="anyar/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -134,7 +134,7 @@
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown"><span>GRAND SATYA</span></h2>
+                    {{-- <h2 class="animate__animated animate__fadeInDown"><span>GRAND SATYA</span></h2> --}}
                     <p class="animate__animated animate__fadeInUp">Welcome to our website esthablished in 2021, catered
                         to a large volume of corporate and industrial client providing rapid growth in services offered
                         of air ticketing services, hotel reservations with an instant confirmation, travel document
@@ -149,7 +149,7 @@
             <!-- Slide 2 -->
             <div class="carousel-item">
                 <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+                    <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dphpolor</h2>
                     <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
                         Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut.
                         Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore
@@ -194,7 +194,7 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
                             <h4 class="title"><a href="">Experienced Driver</a></h4>
-                            <p class="description">Pengemudi yang berpengalaman dalam bidang proyek industri</p>
+                            <p class="description"> Experienced driver in the field of industrial projects</p>
                         </div>
                     </div>
 
@@ -203,7 +203,7 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
                             <h4 class="title"><a href="">Safety</a></h4>
-                            <p class="description">Seluruh armada dilindungi oleh asuransi dengan kondisi kendaraan yang terawat dengan baik yang didukung oleh bagian perawatan yang berpengalaman</p>
+                            <p class="description">The entire fleet is protected by insurance with well-maintained vehicle conditions supported by experienced maintenance department</p>
                         </div>
                     </div>
 
@@ -212,7 +212,7 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
                             <h4 class="title"><a href="">24 Hour Assitant</a></h4>
-                            <p class="description">24 Jam melayani penggantian unit jika terjadi sesuatu hal terhadap unit sewa</p>
+                            <p class="description"> 24 hours service for unit replacement if something happens to the rental unit</p>
                         </div>
                     </div>
 
@@ -220,8 +220,8 @@
                         data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-layer"></i></div>
-                            <h4 class="title"><a href="">Excelent Services</a></h4>
-                            <p class="description">Kami memiliki customer service yang selalu siap  melayani anda dalam memilih dalam memilih unit</p>
+                            <h4 class="title"><a href="">Excellent Services</a></h4>
+                            <p class="description">We have customer service that is always ready to serve you in choosing a unit</p>
                         </div>
                     </div>
 
@@ -831,6 +831,105 @@
             </div>
         </section><!-- End Frequently Asked Questions Section --> --}}
 
+        <section id="icon-boxes" class="icon-boxes">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Units</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+                        <div class="icon-box">
+                            {{-- <div class="icon"><i class="bx bxl-dribbble"></i></div> --}}
+                            <center><h4 class="title"><a href="">Lexus RX </a></h4></center>
+                            <img src="anyar/img/clients/Lexus.jpeg" class="img-fluid" alt="">
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="icon-box">
+                           <center><h4 class="title"><a href=""> Toyota Alphard</a></h4></center> 
+                            <img src="anyar/img/clients/alphard.jpeg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="icon-box">
+                            {{-- <div class="icon"><i class="bx bx-tachometer"></i></div> --}}
+                           <center><h4 class="title"><a href=""> Toyota Fortuner </a></h4></center> 
+                            <img src="anyar/img/clients/Fortuner.jpeg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="icon-box">
+                            {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
+                            <center><h4 class="title"><a href=""> Toyota Innova Reborn</a></h4></center>
+                            <img src="anyar/img/clients/innova.jpeg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <center>
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="icon-box">
+                            {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
+                            <center><h4 class="title"><a href="">Pajero Sport</a></h4></center>
+                            <img src="anyar/img/clients/pajero_1.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    </center>
+
+                </div>
+
+            </div>
+        </section><!-- End Icon Boxes Section -->
+        <section id="icon-boxes" class="icon-boxes">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+                        <div class="icon-box">
+                            {{-- <div class="icon"><i class="bx bxl-dribbble"></i></div> --}}
+                            <center><h4 class="title"><a href=""> Toyota Avanza Veloz </a></h4></center>
+                            <img src="anyar/img/clients/avanza.jpeg" class="img-fluid" alt="">
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="icon-box">
+                           <center><h4 class="title"><a href=""> Toyota Yaris </a></h4></center> 
+                            <img src="anyar/img/clients/yaris.jpeg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="icon-box">
+                            {{-- <div class="icon"><i class="bx bx-tachometer"></i></div> --}}
+                           <center><h4 class="title"><a href="">Hilux Double Cabin </a></h4></center> 
+                            <img src="anyar/img/clients/hilux.jpeg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="icon-box">
+                            {{-- <div class="icon"><i class="bx bx-layer"></i></div> --}}
+                            <center><h4 class="title"><a href="">Isuzu Micro Bus</a></h4></center>
+                            <img src="anyar/img/clients/isuzu.jpeg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
@@ -847,7 +946,7 @@
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
                                 <h4>Location:</h4>
-                                <p>Talavera Office Park lt.15 jl. T.B. Simatupang Kav 22-26 Jakarta selatan</p>
+                                <p>Talavera Office Park lt.11 jl. T.B. Simatupang Kav 22-26 Jakarta selatan</p>
                             </div>
 
                             <div class="email">
@@ -868,7 +967,8 @@
 
                     <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
 
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form action="{{ route('postRequest') }}" method="post" role="form" class="php-email-form">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name"
@@ -951,7 +1051,7 @@
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h4>Contact Us</h4>
                         <p>
-                            Talavera Office Park lt.15<br>
+                            Talavera Office Park lt.11<br>
                             Jl. T.B. Simatupang kav 22-26<br>
                             Indonesia, Jakarta Selatan<br><br>
                             <!--<strong>Phone:</strong> +6289636463189<br>-->
@@ -962,8 +1062,8 @@
 
                     <div class="col-lg-3 col-md-6 footer-info">
                         <h3>About GRAND SATYA</h3>
-                        <p>Catered to a large volume of corporate and industrial clients providing rapid growth in services offered of air ticketing service , hotel reservations tih an instant confirmation , travell document arrengement , car rental , etc.
-                            Based in Jakarta and certainly having a wide network throughout national, managed by professional teams who adept at their tasks.</p>
+                        <p>Catered to a large volume of corporate and industrial clients providing rapid growth in services offered of air ticketing service , hotel reservations with an instant confirmation , travel document arrengement , car rental , etc.
+                            Based in Jakarta and certainly having a wide network throughout National, managed by professional teams who adept at their tasks.</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
