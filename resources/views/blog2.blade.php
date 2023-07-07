@@ -108,7 +108,7 @@
 
             <article class="entry">
               <h2 class="entry-title">
-                <a href="{{route('front.blog2')}}">Car Tire Indications Need to Be Replaced</a>
+                <a href="{{route('front.blog2')}}">Indikasi Ban Mobil Harus Diganti </a>
               </h2>
               <div class="">
                 <img src="anyar/img/clients/fortuner.jpeg" alt="" class="img-fluid" style="max-height: 32rem!important">
@@ -116,30 +116,28 @@
 
               <div class="entry-content">
                 <p>
-                  1 Baldness from TWI (Tread Wear Indicator)
+                  1 Kebotakan dari TWI (Tread Wear Indicator)
                   <br>
-                  On the tire wall there is TWI and there is a transverse line between the tire treads, if the mark has
-                  disappeared, it means that the tire must be replaced immediately.
+                  Pada dinding ban terdapat TWI serta ada garis melintang di antara tapak ban, jika tanda itu sudah
+                  menghilang berarti ban harus segera diganti
                   <hr>
-                  2. Torn Tires
+                  2. Ban sobek
                   <br>
-                  The tire was torn due to being hit by a sharp object on the wall, this condition cannot be repaired
-                  and must be replaced.
+                  Ban sobek karena terkena benda tajam dibagian dinding, kondisi seperti ini tidak bisa diperbaiki dan
+                  harus diganti
                   <hr>
-                  3. Bump Tires
+                  3. Ban Benjol
                   <br>
-                  Be careful if there is a lump in the tire, because it will erupt at any time, this lump occurs due to
-                  a break in the steel wire in the tire rubber.
+                  Hati hati bila ada benjolan pada ban, karena akan Meletus sewaktu waktu, benjolan ini terjadi karena
+                  putusnya kawat baja didalam karet ban
                   <hr>
-                  4. Presence of Fine Cracks
+                  4. Adanya retak halus
                   <br>
-                  This happens due to a decrease in quality due to the influence of ozone, wind pressure, and tires that
-                  are less clean (due to soil, mud).
-                  <hr>
-                  5. Patched Too Often
+                  Hal ini terjadi akibat penurunan kualitas karena pengaruh ozon, tekanan angin, dan ban yang kurang
+                  bersih (karena tanah, lumpur)
+                  5. Terlalu Sering Ditambal
                   <br>
-                  Because it has been patched frequently, the tires will be more vulnerable and leak instantly
-                  during the trip.
+                  Karena sudah sering ditambal, ban akan lebih rentan dan bocor seketika saat perjalanan.
                   <!-- 1 Baldness from TWI (Tread Wear Indicator)
                   On the tire wall there is TWI and there .... -->
                 </p>

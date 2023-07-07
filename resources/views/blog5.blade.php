@@ -108,8 +108,8 @@
 
             <article class="entry">
               <h2 class="entry-title">
-                <a href="{{route('front.blog4')}}">11 recommendations for the best glass fungus cleaners that are widely
-                  sold on the market. Here are the options.</a>
+                <a href="{{route('front.blog4')}}">11 rekomendasi obat pembersih jamur kaca terbaik yang banyak dijual
+                  di pasaran. Berikut ini pilihannya.</a>
               </h2>
               <div class="">
                 <img src="anyar/img/clients/fortuner.jpeg" alt="" class="img-fluid" style="max-height: 32rem!important">
@@ -117,6 +117,7 @@
 
               <div class="entry-content">
                 <p>
+                  <b>Rekomendasi Obat Jamur Kaca Mobil</b>
                   1.) Auto Dazzling <br>
                   2.) Glass Scrubs<br>
                   3.) Waxco Glass Clean Polish<br>

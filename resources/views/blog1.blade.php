@@ -114,25 +114,54 @@
                 <img src="{{ asset('anyar/img/clients/bmw.jpeg') }}" alt="" class="img-fluid"
                   style="max-height: 32rem!important">
               </div>
-
-
-
               <div class="entry-content">
                 <p>
-                  5.000 Km Periodic Service
-                  Periodic light servicing of the car begins at a distance of 5,000 to 20,000 km. In this 5,000 km
-                  periodic service, there are usually several components that must be checked and replaced by the
-                  workshop. The components that are checked are usually the same as in the 1,000 km service. But in this
-                  5.000 km service, the oil in the car engine is recommended to be replaced. In addition, other parts
-                  that are also checked include the steering system, brake pads, and fluids in the car.
-                  For information, when the repair shop replaces the engine oil, it is also accompanied by changing the
-                  oil filter to keep the circulation maintained. For this service, usually there is no charge or free.
-                  <!-- 5.000 Km Periodic Service
-                  Periodic light servicing of the car begins at a distance of .... -->
+                  <b>
+                    Servis Berkala 5.000 Km
+                  </b> <br>
+                  Servis ringan secara berkala pada mobil mulai dilakukan pada jarak tempuh 5.000 hingga 20.000 km. Di
+                  servis berkala 5.000 km ini, biasanya terdapat beberapa komponen yang harus dicek dan diganti oleh
+                  pihak bengkel.
+                  Komponen yang dicek biasanya mirip seperti pada servis 1.000 km. Namun di servis 5.000 km ini, oli
+                  pada mesin mobil disarankan untuk diganti.
+                  Selain itu, bagian lainnya yang juga dicek antara lain sistem steering, kampas rem, serta cairan di
+                  mobil. <br>
+                  <b>Servis Berkala 10.000 Km</b> <br>
+                  Pada servis ini, pengecekan akan dilakukan lebih banyak dibandingkan servis berkala 5.000 km.
+                  Biasanya, pengecekan yang dilakukan meliputi beberapa komponen pada mobil secara detail. Pihak bengkel
+                  akan melakukan pengecekan dan pembersihan pada rem di semua roda mobil.
+                  Selain itu, juga akan dilakukan penggantian oli mesin, oli transmisi mobil, rotasi ban menyilang,
+                  spooring, serta balancing.
+                  Biaya servis ini dan servis-servis berkala berikutnya berbeda-berbeda, tergantung dari merek dan
+                  dealer nya. Model kendaraan juga berpengaruh pada biaya servisnya.
+                  Biaya servis berkala 10.000 km dikenai sekitar Rp. 400.000 hingga Rp. 600.000.
+                  <br>
+                  <b>Servis Berkala 15.000 Km</b> <br>
+                  Setelah mencapai 10.000 km, mobil akan melakukan servis berkala selanjutnya di interval 15.000 km.
+                  Pengecekan pada servis berkala ini sama seperti servis berkala 5.000 km, yakni pengecekan baut kolong,
+                  fluida dan minyak, air radiator, suspensi, serta penggantian oli mesin mobil
+                  . <br>
+                  <b>Servis Berkala 20.000 Km</b> <br>
+                  Pada umumnya, servis berkala 20.000 km dinilai cukup besar dan tentunya membutuhkan waktu yang cukup
+                  lama. Ini disebabkan komponen-komponen mobil yang dicek dan dibersihkan oleh pihak bengkel juga
+                  banyak.
+                  br
+                  Sebenarnya, servis berkala ini mirip dengan servis 1.000 km, namun terdapat beberapa perbedaan. <br>
+                  Pada servis berkala 20.000 km, terdapat pengecekan rem di semua roda, pengecekan dan penyetelan klep,
+                  penggantian filter AC, busi, pembersihan saringan udara dan throttle body, kalibrasi idle, balancing,
+                  spooring, serta rotasi ban menyilang.
+                  Biasanya, setelah melakukan servis berkala 20.000 km atau mobil sudah melewati usia pakai 1 tahun,
+                  pemiliknya akan melakukan tune up. Tune up merupakan kegiatan merawat mobil secara rutin dan biasanya
+                  dilakukan satu tahun sekali untuk menjaga performa mobil.
+                  <br>
+                  Pada umumnya, tune up meliputi penggantian beberapa komponen mobil. Meskipun kondisinya masih baik,
+                  namun alangkah baiknya untuk diganti sesuai waktu penggunaannya
+                  Salah satunya, filter udara yang harus diganti satu tahun sekali. Selain itu, tune up juga dapat
+                  diikuti dengan mengganti beberapa komponen lainnya, seperti mengganti kabel busi, filter bahan bakar,
+                  serta penyetelan sensor oksigen pada mobil.
+                  Tune up ini bisa dilakukan di bengkel resmi maupun bengkel umum. Biasanya, tune up dikenai biaya
+                  berkisar Rp300 ribu hingga 1 juta, tergantung pembersihan yang dilakukan
                 </p>
-                <!-- <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div> -->
               </div>
 
             </article>

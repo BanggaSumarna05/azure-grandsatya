@@ -113,23 +113,21 @@
                 </center>
               </div>
               <h2 class="entry-title">
-                <a href="{{route('front.blog1')}}">Periodic Minor Car Servicing</a>
+                <a href="{{route('front.blog1')}}">Servis Ringan Mobil Berkala</a>
               </h2>
-
-
 
               <div class="entry-content">
                 <p>
-                  5.000 Km Periodic Service
-                  Periodic light servicing of the car begins at a distance of 5,000 to 20,000 km. In this 5,000 km
-                  periodic service, there are usually several components that must be checked and replaced by the
-                  workshop. The components that are checked are usually the same as in the 1,000 km service. But in this
-                  5.000 km service, the oil in the car engine is recommended to be replaced. In addition, other parts
-                  that are also checked include the steering system, brake pads, and fluids in the car.
-                  For information, when the repair shop replaces the engine oil, it is also accompanied by changing the
-                  oil filter to keep the circulation maintained. For this service, usually there is no charge or free.
-                  <!-- 5.000 Km Periodic Service
-                  Periodic light servicing of the car begins at a distance of .... -->
+                  <b>Servis Berkala 5.000 Km</b> <br>
+                  Servis ringan secara berkala pada mobil mulai dilakukan pada jarak tempuh 5.000 hingga 20.000 km. Di
+                  servis berkala 5.000 km ini, biasanya terdapat beberapa komponen yang harus dicek dan diganti oleh
+                  pihak bengkel. <br>
+                  Komponen yang dicek biasanya mirip seperti pada servis 1.000 km. Namun di servis 5.000 km ini, oli
+                  pada mesin mobil disarankan untuk diganti. <br>
+                  Selain itu, bagian lainnya yang juga dicek antara lain sistem steering, kampas rem, serta cairan di
+                  mobil. <br>
+                  <b>Servis Berkala 10.000 Km</b> <br>
+                  Pada servis ini, pengecekan akan dilakukan lebih banyak...
                 </p>
                 <!-- <div class="read-more">
                   <a href="blog-single.html">Read More</a>
@@ -145,52 +143,27 @@
                 </center>
               </div>
               <h2 class="entry-title">
-                <a href="{{route('front.blog2')}}">Car Tire Indications Need to Be Replaced</a>
+                <a href="{{route('front.blog2')}}">Indikasi Ban Mobil Harus Diganti </a>
               </h2>
-
-
 
               <div class="entry-content">
                 <p>
-                  1 Baldness from TWI (Tread Wear Indicator)
+                  <b>Kebotakan dari TWI (Tread Wear Indicator)</b> <br>
+                  Pada dinding ban terdapat TWI serta ada garis melintang di antara tapak ban, jika tanda itu sudah
+                  menghilang berarti ban harus segera diganti <br> <br>
+                  <b>Ban sobek</b> <br>
+                  Ban sobek karena terkena benda tajam dibagian dinding, kondisi seperti ini tidak bisa diperbaiki dan
+                  harus diganti <br><br>
+                  <b>
+                    Ban Benjol
+                  </b>
                   <br>
-                  On the tire wall there is TWI and there is a transverse line between the tire treads, if the mark has
-                  disappeared, it means that the tire must be replaced immediately.
-                  <hr>
-                  2. Torn Tires
-                  <br>
-                  The tire was torn due to being hit by a sharp object on the wall, this condition cannot be repaired
-                  and must be replaced.
-                  <hr>
-                  3. Bump Tires
-                  <br>
-                  Be careful if there is a lump in the tire, because it will erupt at any time, this lump occurs due to
-                  a break in the steel wire in the tire rubber.
-                  <hr>
-                  4. Presence of Fine Cracks
-                  <br>
-                  This happens due to a decrease in quality due to the influence of ozone, wind pressure, and tires that
-                  are less clean (due to soil, mud).
-                  <hr>
-                  5. Patched Too Often
-                  <br>
-                  Because it has been patched frequently, the tires will be more vulnerable and leak instantly
-                  during the trip.
-                  <!-- 1 Baldness from TWI (Tread Wear Indicator)
-                  On the tire wall there is TWI and there .... -->
+                  Hati hati bila ada benjolan pada ban, karena akan Meletus sewaktu waktu, benjolan ini terjadi karena
+                  putusnya kawat baja didalam karet ban <br><br>
+                  <b>Adanya retak halus</b><br>
+                  Hal ini terjadi akibat penurunan kualitas karena pengaruh ozon, tekanan angin, dan ban...
                 </p>
-                <!-- <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div> -->
               </div>
-
-              <!-- <div class="blog-pagination">
-                <ul class="justify-content-center">
-                  <li><a href="#">1</a></li>
-                  <li class="active"><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                </ul>
-              </div> -->
             </article>
 
             <article class="entry">
@@ -200,7 +173,7 @@
                 </center>
               </div>
               <h2 class="entry-title">
-                <a href="{{route('front.blog3')}}">4 Ways To Maintain Air Quality In Cars
+                <a href="{{route('front.blog3')}}">4 Cara Menjaga Kualitas Udara Pada Mobil
                 </a>
               </h2>
 
@@ -208,49 +181,15 @@
 
               <div class="entry-content">
                 <p>
-                  Clean the air vents
-                  <br>
-                  One of the most common causes of bad odor in a car is the condition of the air vents. When dirt and
-                  germs accumulate, the air that enters the car will smell. To start, clean the top vents and bottom
-                  vents, also check the cabin air filter which should be changed regularly to keep the car smelling
-                  fresh.
-                  <hr>
-                  Use natural fresheners
-                  <br>
-                  Choose natural fresheners such as coffee beans and essential oils that can absorb bad odors in the
-                  car.
-                  Put some coffee beans (powder) into a small bag and for essential oil you can drip a cotton ball with
-                  essential oil, put it in the vent and leave it under the chair. Don't forget to replace it every few
-                  days to keep it fresh.
-
-                  <hr>
-                  Keep the car clean
-                  <br>
-                  In addition to cleaning the car regularly, keep the air clean in the car by avoiding smoking in the
-                  car and throwing away the trash as soon as you get home. Leaving garbage in the car will cause a bad
-                  smell that is difficult to get rid of.
-
-                  <hr>
-                  Clean the car carpet
-
-                  <br>
-                  Car carpets protect the car because they collect the dirt that we carry every time we get in the car.
-                  Check the floors and trunk mats as it might be time to give them a thorough cleaning.
-                  <!-- 1 Baldness from TWI (Tread Wear Indicator)
-                  On the tire wall there is TWI and there .... -->
+                  <b>Bersihkan ventilasi udara</b> <br>
+                  Salah satu penyebab paling umum dari bau tak sedap pada mobil adalah kondisi ventilasi udara. Saat
+                  kotoran dan kuman menumpuk, udara yang masuk ke dalam mobil akan berbau. Untuk memulai, bersihkan
+                  ventilasi atas dan ventilasi bawah, periksa juga filter udara kabin yang harus diganti secara berkala
+                  agar mobil tetap harum. <br> <br>
+                  <b>Gunakan penyegar alami</b> <br>
+                  Pilih pengharum alami seperti biji kopi dan...
                 </p>
-                <!-- <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div> -->
               </div>
-
-              <!-- <div class="blog-pagination">
-                <ul class="justify-content-center">
-                  <li><a href="#">1</a></li>
-                  <li class="active"><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                </ul>
-              </div> -->
             </article>
 
             <article class="entry">
@@ -260,13 +199,12 @@
                 </center>
               </div>
               <h2 class="entry-title">
-                <a href="{{route('front.blog4')}}">How to Get Rid of Car Window Fungus with Toothpaste</a>
+                <a href="{{route('front.blog4')}}">Cara Menghilangkan Jamur Jendela Mobil dengan Pasta Gigi</a>
               </h2>
               <div class="entry-content">
                 <p>
-                  1.) apply toothpaste on the part of the glass affected by mold, let stand for five minutes. <br>
-                  2.) Then rub with a microfiber cloth until clean. <br>
-                  3.) Repeat the process if there is mold on other parts of the glass, then rinse with clean water.
+                  Oleskan pasta gigi pada bagian kaca yang terkena jamur, diamkan selama lima menit. <br>
+                  Lalu gosok dengan kain microfiber hingga bersih....
                 </p>
               </div>
             </article>
@@ -278,22 +216,13 @@
                 </center>
               </div>
               <h2 class="entry-title">
-                <a href="{{route('front.blog5')}}">11 recommendations for the best glass fungus cleaners that are widely
-                  sold on the market. Here are the options.</a>
+                <a href="{{route('front.blog5')}}">11 rekomendasi obat pembersih jamur kaca terbaik yang banyak dijual
+                  di pasaran. Berikut ini pilihannya.</a>
               </h2>
               <div class="entry-content">
                 <p>
                   1.) Auto Dazzling <br>
-                  2.) Glass Scrubs<br>
-                  3.) Waxco Glass Clean Polish<br>
-                  4.) Glass polish kits<br>
-                  5.) Zerone Glass Super Cleaner<br>
-                  6.) Otobi Waterspot Remover<br>
-                  7.) Otogeek Glass Polish Compound<br>
-                  8.) Masterpiece Glass Compound<br>
-                  9.) Sabusa Waterspot<br>
-                  10.) Maxxim Pro Glass<br>
-                  11.) Mothers Revision<br>
+                  2.) Glass Scrubs...
                 </p>
               </div>
             </article>

@@ -108,7 +108,7 @@
 
             <article class="entry">
               <h2 class="entry-title">
-                <a href="{{route('front.blog4')}}">How to Get Rid of Car Window Fungus with Toothpaste</a>
+                <a href="{{route('front.blog4')}}">Cara Menghilangkan Jamur Jendela Mobil dengan Pasta Gigi</a>
               </h2>
               <div class="">
                 <img src="anyar/img/clients/fortuner.jpeg" alt="" class="img-fluid" style="max-height: 32rem!important">
@@ -116,9 +116,10 @@
 
               <div class="entry-content">
                 <p>
-                  1.) apply toothpaste on the part of the glass affected by mold, let stand for five minutes. <br>
-                  2.) Then rub with a microfiber cloth until clean. <br>
-                  3.) Repeat the process if there is mold on other parts of the glass, then rinse with clean water.
+                  1.) Oleskan pasta gigi pada bagian kaca yang terkena jamur, diamkan selama lima menit. <br>
+                  2.) Lalu gosok dengan kain microfiber hingga bersih. <br>
+                  3.) Ulangi proses tersebut jika terdapat jamur pada bagian kaca yang lain, lalu bilas dengan air
+                  bersih.
                 </p>
                 <!-- <div class="read-more">
                   <a href="blog-single.html">Read More</a>

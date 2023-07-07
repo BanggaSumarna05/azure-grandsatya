@@ -108,7 +108,7 @@
 
             <article class="entry">
               <h2 class="entry-title">
-                <a href="{{route('front.blog2')}}">4 Ways To Maintain Air Quality In Cars</a>
+                <a href="{{route('front.blog2')}}">4 Cara Menjaga Kualitas Udara Pada Mobil</a>
               </h2>
               <div class="">
                 <img src="anyar/img/clients/fortuner.jpeg" alt="" class="img-fluid" style="max-height: 32rem!important">
@@ -116,37 +116,34 @@
 
               <div class="entry-content">
                 <p>
-                  1. Clean the air vents
+                  1. Bersihkan ventilasi udara
                   <br>
-                  One of the most common causes of bad odor in a car is the condition of the air vents. When dirt and
-                  germs accumulate, the air that enters the car will smell. To start, clean the top vents and bottom
-                  vents, also check the cabin air filter which should be changed regularly to keep the car smelling
-                  fresh.
+                  Salah satu penyebab paling umum dari bau tak sedap pada mobil adalah kondisi ventilasi udara. Saat
+                  kotoran dan kuman menumpuk, udara yang masuk ke dalam mobil akan berbau. Untuk memulai, bersihkan
+                  ventilasi atas dan ventilasi bawah, periksa juga filter udara kabin yang harus diganti secara berkala
+                  agar mobil tetap harum.
                   <hr>
-                  2. Use natural fresheners
+                  2. Gunakan penyegar alami
                   <br>
-                  Choose natural fresheners such as coffee beans and essential oils that can absorb bad odors in the
-                  car. Put some coffee beans (powder) into a small bag and for essential oil you can drip a cotton ball
-                  with essential oil, put it in the vent and leave it under the chair. Don't forget to replace it every
-                  few days to keep it fresh.
-                  <hr>
-                  3. Keep the car clean
-                  <br>
-                  In addition to cleaning the car regularly, keep the air clean in the car by avoiding smoking in the
-                  car and throwing away the trash as soon as you get home. Leaving garbage in the car will cause a bad
-                  smell that is difficult to get rid of.
-                  <hr>
-                  4. Clean the car carpet
-                  <br>
-                  Car carpets protect the car because they collect the dirt that we carry every time we get in the car.
-                  Check the floors and trunk mats as it might be time to give them a thorough cleaning.
+                  Pilih pengharum alami seperti biji kopi dan minyak esensial yang dapat menyerap bau tak sedap di dalam
+                  mobil.
+                  Masukkan beberapa biji kopi (bubuk) ke dalam tas kecil dan untuk minyak esensial Anda bisa meneteskan
+                  bola kapas dengan minyak esensial, masukkan ke dalam ventilasi dan tinggalkan di bawah kursi. Jangan
+                  lupa untuk menggantinya setiap beberapa hari sekali agar tetap segar.
 
-                  <!-- 1 Baldness from TWI (Tread Wear Indicator)
-                  On the tire wall there is TWI and there .... -->
+                  <hr>
+                  3. Jaga kebersihan mobil
+                  <br>
+                  Selain membersihkan mobil secara rutin, jaga kebersihan udara di dalam mobil dengan menghindari rokok
+                  di dalam mobil dan membuang sampah begitu tiba di rumah. Membiarkan sampah di dalam mobil akan
+                  menimbulkan bau tak sedap yang sulit dihilangkan.
+                  <hr>
+                  4. Membersihkan karpet mobil
+                  <br>
+                  Karpet mobil melindungi mobil karena mengumpulkan kotoran yang kita bawa setiap kali masuk ke dalam
+                  mobil. Periksa lantai dan alas bagasi karena mungkin sudah waktunya untuk membersihkannya secara
+                  menyeluruh.
                 </p>
-                <!-- <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div> -->
               </div>
 
               <!-- <div class="blog-pagination">
