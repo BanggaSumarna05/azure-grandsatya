@@ -58,6 +58,11 @@
         .my-float {
             margin-top: 16px;
         }
+
+        .zero-padding {
+            padding: 0px !important;
+            margin: 0px !important;
+        }
     </style>
 </head>
 
@@ -854,35 +859,113 @@
         <!-- ======= Portfoio Section ======= -->
         <center>
             <section id="portfolio" class="portfoio">
-                <div class="container" data-aos="fade-up">
+                <div class="container">
 
                     <div class="section-title">
                         <h2>Our Gallery</h2>
                     </div>
+                    <div class="row portfolio-container" style="position: relative; height: 1410px;">
 
-                    <div class="row portfolio-container">
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app"
+                            style="position: absolute; left: 0px; top: 0px;">
+                            <img src="anyar/img/car/car (1).jpeg" class="img-fluid" alt="">
 
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <img src="anyar/img/cars/avanza.jpeg" class="img-fluid" alt="">
                         </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <img src="anyar/img/cars/avanza 2.jpeg" class="img-fluid" alt="">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 360px; top: 0px;">
+                            <img src="anyar/img/car/car (2).jpeg" class="img-fluid" alt="">
+
                         </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <img src="anyar/img/cars/corolla cross.jpeg" class="img-fluid" alt="">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app"
+                            style="position: absolute; left: 0px; top: 282px;">
+                            <img src="anyar/img/car/car (3).jpeg" class="img-fluid" alt="">
+
                         </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <img src="anyar/img/cars/Lexus.jpeg" class="img-fluid" alt="">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card"
+                            style="position: absolute; left: 360px; top: 282px;">
+                            <img src="anyar/img/car/car (4).jpeg" class="img-fluid" alt="">
+
                         </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <img src="anyar/img/cars/lexus.1.jpg" class="img-fluid" alt="">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 564px;">
+                            <img src="anyar/img/car/car (5).jpeg" class="img-fluid" alt="">
+
                         </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <img src="anyar/img/cars/lexus.4.jpeg" class="img-fluid" alt="">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app"
+                            style="position: absolute; left: 360px; top: 564px;">
+                            <img src="anyar/img/car/car (6).jpeg" class="img-fluid" alt="">
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card"
+                            style="position: absolute; left: 0px; top: 846px;">
+                            <img src="anyar/img/car/car (7).jpeg" class="img-fluid" alt="">
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card"
+                            style="position: absolute; left: 360px; top: 846px;">
+                            <img src="anyar/img/car/car (8).jpeg" class="img-fluid" alt="">
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (9).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (9).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (10).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (11).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (12).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (13).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (14).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (15).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (16).jpeg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+                            style="position: absolute; left: 0px; top: 1128px;">
+                            <img src="anyar/img/car/car (17).jpeg" class="img-fluid" alt="">
+
                         </div>
 
                     </div>
-
                 </div>
             </section>
         </center>
