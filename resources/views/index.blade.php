@@ -703,7 +703,33 @@
 
             </div>
         </section><!-- End Frequently Asked Questions Section --> --}}
-
+        <section id="management" class="icon-boxes">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Team</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-lg-8">
+                        <b style="font-size: 32px">Yusmaniar Octavia</b><br><br>
+                        <u style="font-size: 18px">Sales and Operations</u> <br><br>
+                        <p style="font-size: 24px"> Dengan pengalaman lebih dari 5 tahun di F&B service company sebagai
+                            marketing
+                            memiliki
+                            pemahaman
+                            yang kuat tentang pasar produk konsumen dan strategi marketing, pencapaian terbesar termasuk
+                            meningkatkan sales sebesar 50%.
+                            Dengan posisi saya sekarang sebagai sales dan operations di Grand Satya dan sudah memiliki
+                            beberapa
+                            jasa rental yang sudah beroperasi di berbagai lokasi proyek, serta membantu mengelola dan
+                            mengatur
+                            jasa rental untuk kendaraan proyek dan kendaraan business anda.</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <img src="anyar/img/via.jpg" class="img-fluid" alt="" style="border: 2px solid #555;">
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="porto" class="icon-boxes">
             <div class="container">
                 <div class="section-title">
