@@ -721,7 +721,7 @@
                             Dengan posisi saya sekarang sebagai sales dan operations di Grand Satya dan sudah memiliki
                             beberapa
                             jasa rental yang sudah beroperasi di berbagai lokasi proyek, serta membantu mengelola dan
-                            mengatur
+                            mengaturd
                             jasa rental untuk kendaraan proyek dan kendaraan business anda.</p>
                     </div>
                     <div class="col-md-4 col-lg-4">
