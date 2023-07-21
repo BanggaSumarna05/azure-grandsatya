@@ -11,7 +11,8 @@ class FrontController extends Controller
     //
     public function index()
     {
-        return view('index');
+        $data = ['Collaboration', 'Humility', 'Excellence', 'Integrity'];
+        return view('index')->with(['data' => $data]);
     }
 
     public function postRequest(Request $request)

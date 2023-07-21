@@ -725,9 +725,27 @@
                             jasa rental untuk kendaraan proyek dan kendaraan business anda.</p>
                     </div>
                     <div class="col-md-4 col-lg-4">
-                        <img src="anyar/img/via.jpg" class="img-fluid" alt="" style="border: 2px solid #555;">
+                        <img src="anyar/img/via.jpg" class="img-fluid" alt=""
+                            style="border: 2px solid #555; max-height: 28rem!important">
                     </div>
                 </div>
+            </div>
+        </section>
+        <section id="qwe" class="icon-boxes">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Value</h2>
+                </div>
+                <div class="row">
+                    @for($i=0;$i<4;$i++) <div class="col-md-3">
+                        <center>
+                            <img src="anyar/img/icon ({{ $i+1 }}).png" class="img-fluid"
+                                style="max-height: 13rem!important;">
+                            <br>
+                            <a href="#"><b>{{ $data[$i] }}</b></a>
+                        </center>
+                </div>
+                @endfor
             </div>
         </section>
         <section id="porto" class="icon-boxes">
