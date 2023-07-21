@@ -726,7 +726,7 @@
                     </div>
                     <div class="col-md-4 col-lg-4">
                         <img src="anyar/img/via.jpg" class="img-fluid" alt=""
-                            style="border: 2px solid #555; max-height: 28rem!important">
+                            style="border: 2px solid; max-height: 28rem!important">
                     </div>
                 </div>
             </div>
@@ -1154,11 +1154,8 @@
                             Based in Jakarta and certainly having a wide network throughout National, managed by
                             professional teams who adept at their tasks.</p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="https://www.instagram.com/grandsatya/" class="instagram"><i
+                                    class="bx bxl-instagram"></i></a>
                         </div>
                     </div>
 
