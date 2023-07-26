@@ -910,107 +910,13 @@
                         <h2>Our Gallery</h2>
                     </div>
                     <div class="row portfolio-container" style="position: relative; height: 1410px;">
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app"
+                        @for($i=1;$i<=21;$i++) <div class="col-lg-4 col-md-6 portfolio-item filter-app"
                             style="position: absolute; left: 0px; top: 0px;">
-                            <img src="anyar/img/car/car (1).jpeg" class="img-fluid" alt="">
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 360px; top: 0px;">
-                            <img src="anyar/img/car/car (2).jpeg" class="img-fluid" alt="">
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app"
-                            style="position: absolute; left: 0px; top: 282px;">
-                            <img src="anyar/img/car/car (3).jpeg" class="img-fluid" alt="">
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card"
-                            style="position: absolute; left: 360px; top: 282px;">
-                            <img src="anyar/img/car/car (4).jpeg" class="img-fluid" alt="">
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 564px;">
-                            <img src="anyar/img/car/car (5).jpeg" class="img-fluid" alt="">
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app"
-                            style="position: absolute; left: 360px; top: 564px;">
-                            <img src="anyar/img/car/car (6).jpeg" class="img-fluid" alt="">
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card"
-                            style="position: absolute; left: 0px; top: 846px;">
-                            <img src="anyar/img/car/car (7).jpeg" class="img-fluid" alt="">
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card"
-                            style="position: absolute; left: 360px; top: 846px;">
-                            <img src="anyar/img/car/car (8).jpeg" class="img-fluid" alt="">
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (9).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (9).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (10).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (11).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (12).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (13).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (14).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (15).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (16).jpeg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web"
-                            style="position: absolute; left: 0px; top: 1128px;">
-                            <img src="anyar/img/car/car (17).jpeg" class="img-fluid" alt="">
-
-                        </div>
+                            <img src="anyar/img/car/car ({{ $i }}).jpeg" class="img-fluid" alt="">
 
                     </div>
+                    @endfor
+                </div>
                 </div>
             </section>
         </center>
