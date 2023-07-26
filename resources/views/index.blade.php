@@ -104,6 +104,7 @@
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
                     <li><a class="nav-link scrollto " href="#porto">Portfolio</a></li>
                     <li><a class="nav-link scrollto " href="{{ route('front.blog') }}">Blog</a></li>
+                    <li><a class="nav-link scrollto " href="#team">Our Team</a></li>
                     <li><a class="nav-link scrollto " href="#gallery">Gallery</a></li>
                     <!--<li><a class="nav-link scrollto" href="#team">Team</a></li>-->
                     <!--<li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>-->
@@ -703,7 +704,7 @@
 
             </div>
         </section><!-- End Frequently Asked Questions Section --> --}}
-        <section id="management" class="icon-boxes">
+        <section id="team" class="icon-boxes">
             <div class="container">
                 <div class="section-title">
                     <h2>Our Team</h2>
