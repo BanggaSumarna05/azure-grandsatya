@@ -913,7 +913,6 @@
                         @for($i=1;$i<=21;$i++) <div class="col-lg-4 col-md-6 portfolio-item filter-app"
                             style="position: absolute; left: 0px; top: 0px;">
                             <img src="anyar/img/car/car ({{ $i }}).jpeg" class="img-fluid" alt="">
-
                     </div>
                     @endfor
                 </div>
