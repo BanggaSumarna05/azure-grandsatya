@@ -711,8 +711,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-lg-8">
-                        <b style="font-size: 26px">Yusmaniar Octavia</b><br><br>
-                        <u style="font-size: 14px">Sales and Operations</u> <br>
+                        <b style="font-size: 26px">Yusmaniar Octavia</b><br>
+                        <u style="font-size: 18px">Sales and Operations</u> <br> <br>
                         <p style="font-size: 18px"> Dengan pengalaman lebih dari 5 tahun di F&B service company sebagai
                             marketing
                             memiliki
@@ -722,7 +722,7 @@
                             Dengan posisi saya sekarang sebagai sales dan operations di Grand Satya dan sudah memiliki
                             beberapa
                             jasa rental yang sudah beroperasi di berbagai lokasi proyek, serta membantu mengelola dan
-                            mengaturd
+                            mengatur
                             jasa rental untuk kendaraan proyek dan kendaraan business anda.</p>
                     </div>
                     <div class="col-md-4 col-lg-4">
