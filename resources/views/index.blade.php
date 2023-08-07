@@ -732,6 +732,20 @@
                 </div>
             </div>
         </section>
+        <section id="team" class="icon-boxes">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our professional Driver</h2>
+                </div>
+                <div class="row">
+                    @for($i=0;$i<5;$i++) <div class="col-md-3 col-lg-3">
+                        <img src="anyar/img/ourdriver/driver ({{ $i }}).jpeg" class="img-fluid" alt=""
+                            style="border: 2px solid; max-height: 28rem!important">
+                </div>
+                @endfor
+            </div>
+            </div>
+        </section>
         <section id="qwe" class="icon-boxes">
             <div class="container">
                 <div class="section-title">
