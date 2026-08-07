@@ -28,8 +28,10 @@
     "dependencies": {
         "@vueform/multiselect": "^2.3.2",
         "apexcharts": "^3.35.2",
+        "lucide-vue-next": "^1.0.0",
         "maska": "^1.5.0",
         "sweetalert2": "^11.4.0",
+        "swiper": "^14.0.1",
         "vue-currency-input": "^2.4.0",
         "vue-flatpickr-component": "^9.0.5",
         "vue-select": "^4.0.0-beta.3",
@@ -37,6 +39,7 @@
         "vue-sweetalert2": "^5.0.2",
         "vue3-apexcharts": "^1.4.1",
         "vue3-google-map": "^0.11.0",
+        "wildcard": "^2.0.1",
         "ziggy-js": "^1.4.3"
     }
 }

@@ -1,26 +1,31 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 // require __DIR__ . '/auth.php';
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
-Route::post('/postRequest', [FrontController::class, 'postRequest'])->name('postRequest');
-Route::get('/blog', [FrontController::class, 'blog'])->name('front.blog');
-Route::get('/blog/1', [FrontController::class, 'blog1'])->name('front.blog1');
-Route::get('/blog/2', [FrontController::class, 'blog2'])->name('front.blog2');
-Route::get('/blog/3', [FrontController::class, 'blog3'])->name('front.blog3');
-Route::get('/blog/4', [FrontController::class, 'blog4'])->name('front.blog4');
-Route::get('/blog/5', [FrontController::class, 'blog5'])->name('front.blog5');
+
+// Standalone pages
+Route::get('/about',   [FrontController::class, 'about'])->name('front.about');
+Route::get('/services',[FrontController::class, 'services'])->name('front.services');
+Route::get('/gallery', [FrontController::class, 'gallery'])->name('front.gallery');
+Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
+
+// Fleet
+Route::get('/fleet',        [FrontController::class, 'fleetList'])->name('front.fleet.index');
+Route::get('/fleet/{id}',   [FrontController::class, 'fleetShow'])->name('front.fleet.show');
+
+// Blog
+Route::get('/blog',           [FrontController::class, 'blog'])->name('front.blog');
+Route::get('/blog/load-more', [FrontController::class, 'blogLoadMore'])->name('front.blog.loadMore');
+Route::get('/blog/{slug}',    [FrontController::class, 'blogShow'])->name('front.blog.show')
+    ->where('slug', '^(?!load-more)[a-z0-9\-]+$');
+
+// Form
+Route::post('/postRequest',  [FrontController::class, 'postRequest'])->name('postRequest');
+
+// Sitemap
+Route::get('/sitemap.xml',   [SitemapController::class, 'index'])->name('sitemap');

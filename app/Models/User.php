@@ -9,9 +9,22 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+use Filament\Models\Contracts\HasName;
+use Filament\Models\Contracts\FilamentUser;
+
+class User extends Authenticatable implements HasName, FilamentUser
 {
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
+
+    public function canAccessFilament(): bool
+    {
+        return true;
+    }
+
+    public function getFilamentName(): string
+    {
+        return $this->nama;
+    }
 
     /**
      * The attributes that are mass assignable.

@@ -11,7 +11,16 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                serif: ['Fraunces', ...defaultTheme.fontFamily.serif],
+                mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono],
+            },
+            colors: {
+                'navy-ink': '#0B1B3A',
+                'navy-brand': '#1B2F6E',
+                bone: '#EDEBE3',
+                gold: '#B08D45',
+                slate: '#5B6472',
             },
         },
     },

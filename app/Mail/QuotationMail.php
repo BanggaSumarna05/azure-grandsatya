@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
@@ -11,26 +10,19 @@ class QuotationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $detail;
-  
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct($detail)
+    public array $detail;
+
+    public function __construct(array $detail)
     {
         $this->detail = $detail;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
-    public function build()
+    public function build(): static
     {
-          return $this->subject('Request Quotation from')
-                    ->view('formatMail');
+        $senderName = $this->detail['name'] ?? 'Unknown';
+
+        return $this
+            ->subject("Request Quotation dari {$senderName} — Grand Satya")
+            ->view('formatMail');
     }
 }

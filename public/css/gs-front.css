@@ -1,0 +1,5241 @@
+/* ============================================================
+   Grand Satya — Global Front-End Design System
+   Color Palette:
+     --navy:      #001B3D  Prussian Blue  (primary dark)
+     --navy-deep: #001020  deeper shade   (footer bg)
+     --navy-mid:  #243A56  Deep Space Blue (hover / mid tone)
+     --accent:    #4a90d9  (link accent)
+     --light-bg:  #E9EAEC  Platinum       (section alt bg)
+     --border:    #D4D6DA  slightly darker platinum (borders)
+   ============================================================ */
+
+/* ============================================================
+   SCROLL REVEAL — replaces AOS
+   Elements with [data-aos] get .gs-reveal added by JS.
+   When visible, .gs-revealed is added → animates in.
+   ============================================================ */
+.gs-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.28s ease-out, transform 0.28s ease-out;
+  will-change: opacity, transform;
+}
+.gs-reveal--right {
+  transform: translateX(-22px);
+}
+.gs-reveal--left {
+  transform: translateX(22px);
+}
+.gs-reveal--zoom {
+  transform: scale(0.94);
+}
+.gs-revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .gs-reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---- CSS Custom Properties ---- */
+:root {
+  --navy:      #001B3D;
+  --navy-deep: #001020;
+  --navy-mid:  #243A56;
+  --accent:    #4a90d9;
+  --light-bg:  #E9EAEC;
+  --border:    #D4D6DA;
+  --text-muted: #6b7280;
+  --text-dark:  #1f2937;
+  --radius-sm:  1rem;
+  --radius-md:  1.5rem;
+  --radius-lg:  2rem;
+  --radius-xl:  2.5rem;
+}
+
+/* ---- Base Reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { 
+  scroll-behavior: smooth; 
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-dark);
+  background: white;
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; }
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+.gs-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px)  { .gs-container { padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px) { .gs-container { padding-left: 2rem; padding-right: 2rem; } }
+
+.gs-section { padding: 4rem 0; }
+@media (min-width: 768px)  { .gs-section { padding: 5rem 0; } }
+@media (min-width: 1024px) { .gs-section { padding: 6rem 0; } }
+
+/* When section contains a gs-sc card, reduce outer padding to just spacing gap */
+.gs-section:has(.gs-sc) { padding: .625rem 0; background: transparent !important; }
+
+/* ---- Section Head ---- */
+.gs-section-head { text-align: center; margin-bottom: 3rem; }
+@media (min-width: 768px) { .gs-section-head { margin-bottom: 3.5rem; } }
+.gs-section-head .gs-eyebrow { margin-bottom: .75rem; }
+.gs-section-head h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: .75rem;
+}
+.gs-section-head p {
+  color: var(--text-muted);
+  font-size: .9375rem;
+  line-height: 1.75;
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+/* ---- Eyebrow Label ---- */
+.gs-eyebrow {
+  display: block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: .55;
+}
+
+/* ============================================================
+   PAGE HERO (subpages) — Card style with rounded corners
+   ============================================================ */
+
+/* Outer wrapper: white bg + 1rem padding (matches gs-hero-wrap) */
+.gs-page-hero-wrap {
+  padding: calc(72px + 1rem) 1rem 0;
+  background: #fff;
+}
+
+/* The card itself */
+.gs-page-hero {
+  position: relative;
+  border-radius: 1.5rem !important;
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .gs-page-hero { min-height: 320px; padding: 6rem 2rem 5rem; }
+}
+
+/* Dark overlay inside the card */
+.gs-page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6,14,26,.52) 0%, rgba(6,14,26,.72) 55%, rgba(6,14,26,.88) 100%);
+  z-index: 0;
+  border-radius: inherit;
+}
+
+/* All content sits above the overlay */
+.gs-page-hero > * { position: relative; z-index: 1; }
+.gs-page-hero .gs-container { position: relative; z-index: 1; }
+
+.gs-page-hero h1 {
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  font-weight: 800;
+  color: white;
+  margin-bottom: .875rem;
+  letter-spacing: -.025em;
+  line-height: 1.1;
+  text-shadow: 0 2px 16px rgba(0,0,0,.3);
+}
+
+.gs-page-hero p.lead {
+  color: rgba(255,255,255,.7);
+  font-size: .9375rem;
+  max-width: 32rem;
+  margin: 0 auto 1.5rem;
+  line-height: 1.75;
+}
+
+/* Space after hero wrap (no hanging bar on subpages) */
+.gs-page-hero-after {
+  padding-top: 1rem;
+  background: #fff;
+}
+
+/* ---- Breadcrumb ---- */
+.gs-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
+  flex-wrap: wrap;
+}
+.gs-breadcrumb a {
+  color: rgba(255,255,255,.65);
+  text-decoration: none;
+  transition: color .2s;
+}
+.gs-breadcrumb a:hover { color: white; }
+.gs-breadcrumb .sep { font-size: .75rem; opacity: .6; }
+.gs-breadcrumb .current { color: #e84b2a; font-weight: 700; }
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.gs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .875rem 1.75rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .875rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all .25s;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
+}
+.gs-btn-primary {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+.gs-btn-primary:hover {
+  background: var(--navy-mid);
+  border-color: var(--navy-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13,27,46,.25);
+}
+.gs-btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--navy);
+}
+.gs-btn-outline:hover {
+  background: var(--navy);
+  color: white;
+  transform: translateY(-2px);
+}
+.gs-btn-outline-white {
+  background: transparent;
+  color: white;
+  border-color: rgba(255,255,255,.45);
+}
+.gs-btn-outline-white:hover {
+  border-color: white;
+  background: rgba(255,255,255,.1);
+}
+.gs-btn-white {
+  background: white;
+  color: var(--navy);
+  border-color: white;
+}
+.gs-btn-white:hover {
+  background: #e8eef8;
+  transform: translateY(-2px);
+}
+.gs-btn-sm { padding: .625rem 1.25rem; font-size: .8rem; }
+.gs-btn-lg { padding: 1rem 2.25rem; font-size: 1rem; }
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.gs-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all .3s;
+}
+.gs-card:hover {
+  border-color: rgba(13,27,46,.25);
+  box-shadow: 0 16px 48px rgba(13,27,46,.1);
+  transform: translateY(-6px);
+}
+.gs-card-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-md);
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.gs-card-title {
+  font-size: .9375rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.gs-card-text {
+  font-size: .8125rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   FILTER TABS
+   ============================================================ */
+.gs-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  justify-content: flex-start;
+}
+.gs-tabs-center { justify-content: center; }
+.gs-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .45rem 1rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--border);
+  background: #f9fafb;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all .2s;
+  font-family: 'Outfit', sans-serif;
+}
+@media (min-width: 640px) { .gs-tab { padding: .55rem 1.25rem; font-size: .875rem; } }
+.gs-tab:hover, .gs-tab.active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+/* ============================================================
+   FORMS
+   ============================================================ */
+.gs-input,
+.gs-textarea,
+.gs-select {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: .875rem 1.125rem;
+  font-size: .875rem;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-dark);
+  background: white;
+  outline: none;
+  transition: border .2s, box-shadow .2s;
+  box-sizing: border-box;
+}
+.gs-input:focus,
+.gs-textarea:focus,
+.gs-select:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(13,27,46,.08);
+}
+.gs-textarea { resize: vertical; display: block; }
+.gs-label {
+  display: block;
+  font-size: .75rem;
+  font-weight: 700;
+  color: #4b5563;
+  margin-bottom: .4rem;
+  letter-spacing: .02em;
+}
+.gs-form-group { margin-bottom: 1rem; }
+.gs-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 540px) { .gs-form-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ============================================================
+   GRIDS — Responsive
+   ============================================================ */
+
+/* Features 4-col */
+.gs-grid-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 540px) { .gs-grid-features { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .gs-grid-features { grid-template-columns: repeat(4, 1fr); } }
+
+/* Services 3-col */
+.gs-grid-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 540px) { .gs-grid-services { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .gs-grid-services { grid-template-columns: repeat(3, 1fr); } }
+
+/* Fleet 4-col */
+.gs-grid-fleet {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 480px) { .gs-grid-fleet { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .gs-grid-fleet { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1280px) { .gs-grid-fleet { grid-template-columns: repeat(4, 1fr); } }
+
+/* Gallery 3-col */
+.gs-grid-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 480px) { .gs-grid-gallery { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .gs-grid-gallery { grid-template-columns: repeat(3, 1fr); } }
+
+/* Blog 3-col */
+.gs-grid-blog {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 640px) { .gs-grid-blog { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .gs-grid-blog { grid-template-columns: repeat(3, 1fr); } }
+
+/* Values 4-col */
+.gs-grid-values {
+  display: grid;
+  grid-template-columns: 1fr;   /* mobile: 1 col */
+  gap: 1rem;
+}
+@media (min-width: 480px)  { .gs-grid-values { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .gs-grid-values { grid-template-columns: repeat(4, 1fr); } }
+
+/* Drivers 4-col */
+.gs-grid-drivers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+@media (min-width: 640px) { .gs-grid-drivers { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 768px) { .gs-grid-drivers { gap: 1rem; } }
+
+/* Stats 2-col (mobile) → 4-col (desktop) */
+.gs-grid-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px) { .gs-grid-stats { grid-template-columns: repeat(4, 1fr); } }
+
+/* Two-column split */
+.gs-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 1024px) { .gs-split { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+
+/* Contact grid (info + form) */
+.gs-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (min-width: 1024px) { .gs-contact-grid { grid-template-columns: 2fr 3fr; gap: 3rem; } }
+
+/* Related fleet / blog 4-col */
+.gs-grid-related {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) { .gs-grid-related { grid-template-columns: repeat(4, 1fr); } }
+
+/* ============================================================
+   FLEET CARD
+   ============================================================ */
+.gs-fleet-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  transition: all .3s;
+}
+.gs-fleet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.1);
+  border-color: rgba(13,27,46,.25);
+}
+.gs-fleet-card-thumb {
+  position: relative;
+  overflow: hidden;
+  height: 11rem;
+  background: var(--light-bg);
+}
+.gs-fleet-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+  display: block;
+}
+.gs-fleet-card:hover .gs-fleet-card-thumb img { transform: scale(1.06); }
+.gs-fleet-card-badge {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+  background: rgba(13,27,46,.88);
+  color: white;
+  font-size: .65rem;
+  font-weight: 700;
+  padding: .25rem .65rem;
+  border-radius: 9999px;
+  letter-spacing: .05em;
+}
+.gs-fleet-card-body { padding: 1.25rem; }
+.gs-fleet-card-name {
+  font-weight: 800;
+  color: var(--navy);
+  font-size: .875rem;
+  margin-bottom: .4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.gs-fleet-card-meta {
+  color: #9ca3af;
+  font-size: .75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.gs-fleet-card-meta i { color: var(--navy); margin-right: .25rem; }
+
+/* ============================================================
+   BLOG CARD
+   ============================================================ */
+.gs-blog-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all .3s;
+}
+.gs-blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.1);
+  border-color: rgba(13,27,46,.25);
+}
+.gs-blog-card-thumb {
+  overflow: hidden;
+  height: 12rem;
+  background: var(--light-bg);
+  flex-shrink: 0;
+}
+.gs-blog-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+  display: block;
+}
+.gs-blog-card:hover .gs-blog-card-thumb img { transform: scale(1.06); }
+.gs-blog-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.gs-blog-card-meta {
+  font-size: .7rem;
+  color: #9ca3af;
+  font-weight: 600;
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.gs-blog-card-meta i { color: var(--navy); }
+.gs-blog-card-title {
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: .75rem;
+}
+.gs-blog-card-excerpt {
+  color: #9ca3af;
+  font-size: .8125rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+.gs-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--navy);
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap .2s;
+  margin-top: auto;
+}
+.gs-read-more:hover { gap: .7rem; }
+
+/* ============================================================
+   TEAM CARD
+   ============================================================ */
+.gs-team-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all .3s;
+  min-height: 220px;
+}
+@media (min-width: 768px) {
+  .gs-team-card { grid-template-columns: 1fr auto; min-height: 240px; }
+}
+.gs-team-card:hover {
+  border-color: rgba(13,27,46,.25);
+  box-shadow: 0 12px 40px rgba(13,27,46,.08);
+}
+.gs-team-bio {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 768px) { .gs-team-bio { padding: 2.5rem 3rem; } }
+.gs-team-photo {
+  position: relative;
+  min-height: 200px;
+  background: var(--navy);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (min-width: 768px) { .gs-team-photo { width: 280px; min-height: auto; } }
+.gs-team-photo-dots {
+  position: absolute;
+  inset: 0;
+  opacity: .12;
+  background-image: radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* ============================================================
+   CONTACT INFO CARD
+   ============================================================ */
+.gs-contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--light-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  border: 1.5px solid var(--border);
+  transition: all .3s;
+}
+.gs-contact-card:hover {
+  border-color: rgba(13,27,46,.3);
+  box-shadow: 0 8px 24px rgba(13,27,46,.06);
+}
+.gs-contact-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+  font-size: .9rem;
+}
+
+/* ============================================================
+   STAT CARD
+   ============================================================ */
+.gs-stat-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: all .3s;
+}
+.gs-stat-card:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.25);
+}
+.gs-stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: .25rem;
+  line-height: 1;
+}
+.gs-stat-label {
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
+  font-weight: 600;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+#mainNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  transition: box-shadow .3s, border-color .3s;
+}
+#mainNav.scrolled {
+  box-shadow: 0 2px 24px rgba(0,0,0,.10);
+  border-bottom-color: #e8e8e8;
+}
+
+#navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  transition: height .3s;
+}
+@media (min-width: 1024px) { #navInner { padding: 0 2.5rem; } }
+#mainNav.scrolled #navInner { height: 62px; }
+
+/* Logo */
+.nav-logo-link {
+  flex-shrink: 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+#navLogo { height: 2.25rem; transition: height .3s; }
+#mainNav.scrolled #navLogo { height: 1.875rem; }
+.nav-brand-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+.nav-brand-text span { color: var(--navy); }
+
+/* Desktop nav links */
+.nav-links {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: .125rem;
+}
+@media (min-width: 1024px) { .nav-links { display: flex; align-items: center; } }
+
+.nav-link-item {
+  padding: .5rem .9rem;
+  border-radius: 6px;
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: color .2s;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  line-height: inherit;
+}
+.nav-link-item:hover  { color: var(--orange); }
+.nav-link-item.active { color: var(--orange); }
+
+/* ---- Mega trigger chevron ---- */
+.nav-mega-trigger { display: inline-flex; align-items: center; gap: .35rem; }
+.nav-mega-chevron { font-size: .625rem; transition: transform .25s; opacity:.6; }
+.nav-mega-trigger.mega-open .nav-mega-chevron { transform: rotate(180deg); opacity:1; }
+
+/* ---- Has-mega li positioning ---- */
+.nav-has-mega { position: static; }
+
+/* ---- Mega panel (full-width dropdown) ---- */
+.nav-mega-panel {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  z-index: 8999;
+  background: #ffffff;
+  border-top: 2px solid var(--orange);
+  box-shadow: 0 20px 60px rgba(6,14,26,.12);
+  animation: megaSlideIn .22s ease;
+  /* invisible bridge: prevents gap between navbar and panel from firing mouseleave */
+  padding-top: 0;
+}
+/* Pseudo-element fills the 1px gap between navbar bottom and panel top */
+.nav-has-mega::after {
+  content: '';
+  position: fixed;
+  top: 70px; /* just below navbar border */
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 9001;
+  pointer-events: none; /* only used as visual bridge; JS handles the gap via timer */
+}
+#mainNav.scrolled .nav-mega-panel { top: 62px; }
+.nav-mega-panel.open { display: block; }
+
+@keyframes megaSlideIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Inner: highlight + bento grid ---- */
+.nav-mega-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  max-width: 84rem;
+  margin: 0 auto;
+  min-height: 300px;
+}
+
+/* ---- Left: highlight card ---- */
+.nav-mega-highlight {
+  background: var(--navy);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+.nav-mega-highlight::before {
+  content: '✦';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  font-size: 3.5rem;
+  color: rgba(255,255,255,.06);
+  line-height: 1;
+  pointer-events: none;
+}
+.nav-mega-hl-eyebrow {
+  font-size: .6875rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.nav-mega-hl-title {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin: 0 0 .875rem;
+}
+.nav-mega-hl-desc {
+  font-size: .8125rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+}
+.nav-mega-hl-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,.25);
+  border-radius: 9999px;
+  padding: .5rem 1.125rem;
+  width: fit-content;
+  transition: background .2s, border-color .2s;
+}
+.nav-mega-hl-cta:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.5); color: white; }
+
+/* ---- Right: bento grid ---- */
+.nav-mega-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #f0f0f0;
+  align-content: start;
+}
+
+/* ---- Individual bento card ---- */
+.nav-bento-card {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  padding: 1.375rem 1.5rem;
+  background: #ffffff;
+  text-decoration: none;
+  transition: background .18s;
+  position: relative;
+}
+.nav-bento-card:hover { background: #fafafa; }
+.nav-bento-card:hover .nav-bento-icon { background: var(--navy); color: white; }
+
+.nav-bento-icon {
+  width: 2.375rem;
+  height: 2.375rem;
+  border-radius: .625rem;
+  background: var(--orange-light);
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: .25rem;
+  flex-shrink: 0;
+  transition: background .18s, color .18s;
+}
+.nav-bento-title {
+  font-size: .875rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.nav-bento-desc {
+  font-size: .75rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+.nav-bento-card::after {
+  content: '\2197';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: .75rem;
+  color: var(--orange);
+  opacity: 0;
+  transition: opacity .18s;
+}
+.nav-bento-card:hover::after { opacity: 1; }
+
+/* ---- Backdrop ---- */
+#navBackdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 72px;
+  z-index: 8990;
+  background: rgba(6,14,26,.35);
+  backdrop-filter: blur(2px);
+}
+#navBackdrop.show { display: block; }
+
+/* ---- Hide mega on mobile ---- */
+@media (max-width: 1023px) {
+  .nav-has-mega > .nav-mega-panel { display: none !important; }
+  #navBackdrop { display: none !important; }
+}
+
+.nav-cta {
+  display: none;
+  align-items: center;
+  gap: .5rem;
+}
+@media (min-width: 1024px) { .nav-cta { display: flex; } }
+
+.nav-book-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: .625rem 1.5rem;
+  border-radius: 9999px;
+  background: var(--navy);
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s, transform .15s;
+  letter-spacing: .01em;
+}
+.nav-book-btn:hover { background: var(--navy-mid); color: #fff; transform: translateY(-1px); }
+
+.nav-book-icon {
+  width: 2.375rem;
+  height: 2.375rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background .2s, transform .15s;
+}
+.nav-book-icon:hover { background: var(--navy-mid); color: #fff; transform: translateY(-1px) rotate(5deg); }
+
+/* Hamburger */
+.nav-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .45rem;
+  border-radius: 8px;
+  border: 1.5px solid #e2e2e2;
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all .2s;
+}
+.nav-hamburger:hover { background: #f5f5f5; border-color: #ccc; }
+@media (min-width: 1024px) { .nav-hamburger { display: none; } }
+
+/* Mobile Menu */
+#navMobile {
+  display: none;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 8px 32px rgba(0,0,0,.10);
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+}
+#navMobile.open { display: block; }
+
+.nav-mobile-links {
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: .75rem 1.5rem 1.25rem;
+}
+
+.nav-mobile-link {
+  display: block;
+  padding: .875rem 1rem;
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--navy);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all .2s;
+}
+.nav-mobile-link:hover { color: var(--navy); background: var(--light-bg); }
+.nav-mobile-link.active { color: var(--navy); background: var(--light-bg); }
+
+.nav-mobile-divider {
+  border-top: 1px solid #f0f0f0;
+  margin: .5rem 0;
+  padding-top: .875rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* ============================================================
+   TESTIMONIALS (Homepage)
+   ============================================================ */
+.gs-testi-head {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.gs-testi-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .875rem;
+}
+.gs-testi-headline {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+.gs-testi-slider-wrap { position: relative; }
+
+/* card */
+.gs-testi-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+  height: 100%;
+}
+.gs-testi-stars { display: flex; gap: .15rem; }
+.gs-testi-text {
+  font-size: .9rem;
+  color: #4b5563;
+  line-height: 1.75;
+  margin: 0;
+  flex: 1;
+}
+.gs-testi-author {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  margin-top: .5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.gs-testi-author img {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+}
+.gs-testi-name {
+  font-size: .9rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+.gs-testi-role {
+  font-size: .75rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* nav buttons */
+.gs-testi-nav {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  margin-top: 1.75rem;
+}
+.gs-testi-nav-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--navy);
+  background: white;
+  color: var(--navy);
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.gs-testi-nav-btn:hover { background: var(--navy); color: white; }
+
+/* ============================================================
+   CTA BANNER (Homepage)
+   ============================================================ */
+.gs-cta-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 220px;
+  padding: 2.5rem 2rem;
+  gap: 2rem;
+  text-align: center;
+}
+@media (min-width: 768px) { 
+  .gs-cta-card { 
+    flex-direction: row; 
+    text-align: left;
+    padding: 3rem 3.5rem; 
+    min-height: 240px; 
+  } 
+}
+
+.gs-cta-bg { display: none; }
+.gs-cta-left {
+  position: relative;
+  z-index: 1;
+  max-width: 32rem;
+}
+.gs-cta-headline {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  margin-bottom: .875rem;
+}
+.gs-cta-sub {
+  font-size: .875rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 26rem;
+}
+.gs-cta-arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .9375rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background .2s, transform .15s;
+}
+.gs-cta-arrow:hover { background: rgba(255,255,255,.22); color: white; transform: rotate(10deg) scale(1.08); }
+
+.gs-cta-right {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: none;
+}
+@media (min-width: 768px) { .gs-cta-right { display: flex; align-items: flex-end; } }
+.gs-cta-right img {
+  max-height: 200px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.5));
+}
+
+/* ============================================================
+   BLOG (Homepage)
+   ============================================================ */
+.gs-blog-head {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+.gs-blog-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .875rem;
+}
+.gs-blog-headline {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+/* 2-col layout: large featured left, stack right */
+.gs-blog-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 1024px) {
+  .gs-blog-layout { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+}
+
+/* featured post */
+.gs-blog-featured {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  background: var(--navy);
+  aspect-ratio: 4/5;
+}
+@media (min-width: 1024px) { .gs-blog-featured { aspect-ratio: unset; min-height: 480px; } }
+.gs-blog-featured img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.gs-blog-featured:hover img { transform: scale(1.04); }
+.gs-blog-featured-placeholder {
+  position: absolute;
+  inset: 0;
+  background: var(--navy-mid);
+}
+.gs-blog-featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(6,14,26,.92) 100%);
+  z-index: 1;
+}
+.gs-blog-featured-body {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+}
+.gs-blog-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .75rem;
+  color: rgba(255,255,255,.7);
+  margin-bottom: .75rem;
+}
+.gs-blog-featured-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.35;
+  margin: 0;
+}
+.gs-blog-featured-arrow {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.5rem;
+  z-index: 2;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .875rem;
+  transition: background .2s, transform .2s;
+}
+.gs-blog-featured:hover .gs-blog-featured-arrow {
+  background: var(--navy-mid);
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* side posts stack */
+.gs-blog-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.gs-blog-side-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 1rem;
+  padding: .875rem;
+  transition: box-shadow .2s;
+}
+.gs-blog-side-item:hover { box-shadow: 0 4px 20px rgba(13,27,46,.08); }
+
+.gs-blog-side-thumb {
+  width: 5.5rem;
+  min-width: 5.5rem;
+  height: 5.5rem;
+  border-radius: .75rem;
+  overflow: hidden;
+  display: block;
+  background: var(--light-bg);
+  flex-shrink: 0;
+}
+.gs-blog-side-thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s;
+}
+.gs-blog-side-item:hover .gs-blog-side-thumb img { transform: scale(1.06); }
+.gs-blog-side-thumb-placeholder { width: 100%; height: 100%; background: var(--light-bg); }
+
+.gs-blog-side-body {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  flex: 1;
+}
+.gs-blog-side-meta {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .7rem;
+  color: #9ca3af;
+  font-weight: 600;
+}
+.gs-blog-side-title {
+  font-size: .875rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.4;
+  text-decoration: none;
+  display: block;
+}
+.gs-blog-side-title:hover { color: var(--navy); }
+.gs-blog-read-story {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  margin-top: .25rem;
+}
+.gs-blog-read-story:hover { color: var(--navy-mid); }
+.gs-blog-read-dot {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .6rem;
+}
+
+/* ============================================================
+   WHY CHOOSE US (Homepage)
+   ============================================================ */
+.gs-wcu-head {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+.gs-wcu-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .875rem;
+}
+.gs-wcu-headline {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+/* 3-col layout */
+.gs-wcu-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .gs-wcu-layout { grid-template-columns: 1fr auto 1fr; gap: 2.5rem; }
+}
+
+/* feature columns */
+.gs-wcu-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* feature item — icon + text side by side */
+.gs-wcu-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+/* right column items: icon on left (default) */
+.gs-wcu-item-right { flex-direction: row; }
+/* left column items: text on left, icon on right */
+@media (min-width: 1024px) {
+  .gs-wcu-item-right { flex-direction: row-reverse; text-align: right; }
+  .gs-wcu-col-left .gs-wcu-item > div:last-child { display: flex; flex-direction: column; align-items: flex-end; }
+}
+
+.gs-wcu-item-icon {
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  border-radius: 50%;
+  background: var(--light-bg);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+.gs-wcu-item-title {
+  font-size: .9375rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: .35rem;
+}
+.gs-wcu-item-desc {
+  font-size: .8125rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 18rem;
+}
+
+/* center image - square with rounded corners */
+.gs-wcu-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gs-wcu-circle {
+  width: 100%;
+  max-width: 320px;
+  flex-shrink: 0;
+}
+.gs-wcu-circle img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (min-width: 640px) {
+  .gs-wcu-circle { max-width: 360px; }
+}
+@media (min-width: 1024px) {
+  .gs-wcu-circle { width: 360px; }
+}
+
+/* ============================================================
+   FAQ (Homepage)
+   ============================================================ */
+.gs-sc-faq {
+  background: var(--light-bg);
+}
+
+/* 2-col split */
+.gs-faq-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .gs-faq-split { grid-template-columns: 1fr 1fr; gap: 4rem; }
+}
+
+/* left: stacked tilted photos */
+.gs-faq-photos {
+  position: relative;
+  min-height: 300px;
+}
+@media (min-width: 480px) {
+  .gs-faq-photos { min-height: 380px; }
+}
+.gs-faq-photo {
+  position: absolute;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(13,27,46,.15);
+}
+.gs-faq-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gs-faq-photo--back {
+  width: 62%;
+  aspect-ratio: 4/5;
+  bottom: 0;
+  right: 0;
+  transform: rotate(4deg);
+  z-index: 1;
+}
+.gs-faq-photo--front {
+  width: 68%;
+  aspect-ratio: 4/5;
+  bottom: 0;
+  left: 0;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+@media (min-width: 640px) {
+  .gs-faq-photos  { min-height: 440px; }
+  .gs-faq-photo--back  { width: 58%; }
+  .gs-faq-photo--front { width: 64%; }
+}
+@media (max-width: 479px) {
+  .gs-faq-photo--back  { width: 58%; }
+  .gs-faq-photo--front { width: 64%; }
+}
+
+/* right: content */
+.gs-faq-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .875rem;
+}
+.gs-faq-headline {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin-bottom: 2rem;
+}
+
+/* accordion */
+.gs-faq-list {
+  display: flex;
+  flex-direction: column;
+}
+.gs-faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.gs-faq-item:first-child { border-top: 1px solid var(--border); }
+.gs-faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+  font-size: .9375rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+.gs-faq-icon {
+  font-size: .875rem;
+  color: #9ca3af;
+  transition: transform .25s;
+  flex-shrink: 0;
+}
+/* default: chevron-up hidden (collapsed = show chevron-down) */
+.gs-faq-item .gs-faq-icon { transform: rotate(180deg); }
+.gs-faq-item.open .gs-faq-icon { transform: rotate(0deg); }
+.gs-faq-body {
+  display: none;
+  padding: 0 0 1.1rem;
+}
+.gs-faq-item.open .gs-faq-body { display: block; }
+.gs-faq-body p {
+  font-size: .875rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================================
+   HOW IT WORKS (Homepage)
+   ============================================================ */
+.gs-hiw-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .gs-hiw-split { grid-template-columns: 1fr 1fr; gap: 4rem; }
+}
+
+/* left */
+.gs-hiw-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .875rem;
+}
+.gs-hiw-headline {
+  font-size: clamp(1.875rem, 3.5vw, 2.625rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin-bottom: 1rem;
+}
+.gs-hiw-lead {
+  font-size: .9375rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+  max-width: 34rem;
+}
+
+/* accordion steps */
+.gs-hiw-steps {
+  display: flex;
+  flex-direction: column;
+}
+.gs-hiw-step {
+  border-bottom: 1px solid var(--border);
+}
+.gs-hiw-step:first-child { border-top: 1px solid var(--border); }
+.gs-hiw-step-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: 1.1rem 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+}
+.gs-hiw-step-num {
+  font-size: .9375rem;
+  font-weight: 700;
+  color: var(--navy);
+  flex-shrink: 0;
+  min-width: 1.5rem;
+}
+.gs-hiw-step-label {
+  font-size: .9375rem;
+  font-weight: 700;
+  color: var(--navy);
+  flex: 1;
+}
+.gs-hiw-step-icon {
+  font-size: .875rem;
+  color: #9ca3af;
+  transition: transform .25s;
+  flex-shrink: 0;
+}
+.gs-hiw-step.open .gs-hiw-step-icon { transform: rotate(180deg); }
+.gs-hiw-step-body {
+  display: none;
+  padding: 0 0 1rem 2.25rem;
+}
+.gs-hiw-step.open .gs-hiw-step-body { display: block; }
+.gs-hiw-step-body p {
+  font-size: .875rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* right visual */
+.gs-hiw-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .gs-hiw-visual { min-height: 420px; }
+}
+.gs-hiw-circle-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 4/5;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 5px solid #fff;
+  box-shadow: 0 12px 48px rgba(13,27,46,.15);
+  position: relative;
+  z-index: 2;
+}
+.gs-hiw-circle-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+@media (min-width: 480px) {
+  .gs-hiw-circle-img { max-width: 340px; }
+}
+@media (min-width: 640px) {
+  .gs-hiw-circle-img { max-width: 380px; }
+}
+/* asterisk */
+.gs-hiw-asterisk {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  font-size: 3.5rem;
+  color: var(--navy);
+  z-index: 3;
+  user-select: none;
+  animation: gs-spin-slow 18s linear infinite;
+}
+@media (max-width: 767px) {
+  .gs-hiw-asterisk { display: none; }
+}
+/* 4-point star */
+.gs-hiw-star {
+  position: absolute;
+  bottom: 4%;
+  left: 8%;
+  font-size: 1.5rem;
+  color: var(--navy);
+  z-index: 3;
+  user-select: none;
+}
+@media (max-width: 767px) {
+  .gs-hiw-star { display: none; }
+}
+/* floating badge */
+.gs-hiw-badge {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  background: var(--navy);
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  z-index: 4;
+  min-width: 170px;
+  box-shadow: 0 12px 40px rgba(13,27,46,.35);
+}
+@media (max-width: 767px) {
+  .gs-hiw-badge {
+    position: static;
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    min-width: auto;
+  }
+}
+.gs-hiw-badge-stat {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: .2rem;
+}
+.gs-hiw-badge-text {
+  font-size: .75rem;
+  color: rgba(255,255,255,.75);
+  line-height: 1.5;
+  margin-bottom: .875rem;
+}
+.gs-hiw-badge-avatars {
+  display: flex;
+  align-items: center;
+  gap: -4px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  padding-top: .75rem;
+}
+.gs-hiw-badge-avatars img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--navy);
+  margin-right: -6px;
+}
+.gs-hiw-badge-more {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  border: 2px solid rgba(255,255,255,.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+/* ============================================================
+   VIDEO / CTA BANNER (Homepage)
+   ============================================================ */
+.gs-vid-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) { .gs-vid-card { min-height: 520px; } }
+
+.gs-vid-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.gs-vid-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6,14,26,.70);
+  z-index: 1;
+}
+.gs-vid-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 3rem 1.5rem 5rem;
+  width: 100%;
+  max-width: 52rem;
+}
+.gs-vid-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 9999px;
+  padding: .3rem 1rem;
+  letter-spacing: .06em;
+  margin-bottom: 1.25rem;
+}
+.gs-vid-eyebrow span { color: white; }
+.gs-vid-headline {
+  font-size: clamp(1.75rem, 4vw, 2.875rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin-bottom: 2rem;
+}
+.gs-vid-play {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform .2s, background .2s;
+  box-shadow: 0 0 0 8px rgba(13,27,46,.25);
+}
+.gs-vid-play:hover {
+  background: var(--navy-mid);
+  color: white;
+  transform: scale(1.1);
+}
+/* brand logos bar */
+.gs-vid-brands {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  border-top: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  padding: 1.25rem 2rem;
+}
+.gs-vid-brands img {
+  max-height: 1.875rem;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: .65;
+  transition: opacity .2s;
+}
+.gs-vid-brands img:hover { opacity: 1; }
+
+/* ============================================================
+   FLEET (Homepage)
+   ============================================================ */
+
+/* section header */
+.gs-flt-head {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.gs-flt-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .875rem;
+}
+.gs-flt-headline {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+/* ---- slider ---- */
+.gs-flt-slider-wrap { position: relative; margin-bottom: 2rem; }
+
+.gs-flt-slider .swiper-wrapper { align-items: stretch; }
+
+/* individual card */
+.gs-flt-card {
+  background: white;
+  border-radius: 1.25rem;
+  border: 1.5px solid var(--border);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: box-shadow .35s cubic-bezier(.25,.46,.45,.94), transform .35s cubic-bezier(.25,.46,.45,.94), border-color .25s;
+}
+.gs-flt-card:hover {
+  box-shadow: 0 20px 52px rgba(13,27,46,.12);
+  transform: translateY(-4px);
+  border-color: rgba(245,158,11,.3);
+}
+
+/* inner padding wrapper — sits below image */
+.gs-flt-card-inner {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* car image area */
+.gs-flt-card-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #eef0f5 0%, #dde1e8 100%);
+  flex-shrink: 0;
+}
+.gs-flt-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform .5s cubic-bezier(.25,.46,.45,.94);
+}
+.gs-flt-card:hover .gs-flt-card-img img {
+  transform: scale(1.06);
+}
+/* bottom gradient vignette */
+.gs-flt-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    transparent 50%,
+    rgba(0,27,61,.22) 100%
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}
+.gs-flt-card-img-placeholder {
+  font-size: 3rem;
+  color: #c4ccd4;
+}
+
+/* class badge — floats on image */
+.gs-flt-badge {
+  position: absolute;
+  top: .625rem;
+  left: .625rem;
+  z-index: 2;
+  display: inline-block;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 9999px;
+  font-size: .65rem;
+  font-weight: 700;
+  color: #374151;
+  padding: .22rem .75rem;
+  letter-spacing: .04em;
+  align-self: flex-start;
+}
+
+/* inner body wrapper (below image) */
+.gs-flt-card-inner {
+  padding: 1.125rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* car name — clean bold */
+.gs-flt-card-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: .875rem;
+  line-height: 1.3;
+}
+
+/* spec rows */
+.gs-flt-specs {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding-bottom: .875rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: .875rem;
+}
+.gs-flt-spec-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8125rem;
+  color: #6b7280;
+}
+.gs-flt-spec-row i { font-size: .875rem; color: #9ca3af; flex-shrink: 0; }
+.gs-flt-spec-label { flex: 1; }
+.gs-flt-spec-val { font-weight: 700; color: var(--navy); }
+
+/* card footer */
+.gs-flt-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: .5rem;
+}
+
+/* arrow CTA */
+.gs-flt-card-cta {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .9375rem;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+  flex-shrink: 0;
+}
+.gs-flt-card-cta:hover {
+  background: var(--navy-mid);
+  color: #fff;
+  transform: rotate(10deg) scale(1.08);
+}
+
+/* prev/next nav */
+.gs-flt-nav {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+.gs-flt-nav-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--navy);
+  background: white;
+  color: var(--navy);
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.gs-flt-nav-btn:hover {
+  background: var(--navy);
+  color: white;
+}
+
+/* ---- category photo cards ---- */
+.gs-flt-cats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) { .gs-flt-cats { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; } }
+
+.gs-flt-cat-card {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: var(--navy);
+  min-height: 0;
+}
+
+/* Top: car image fills top portion */
+.gs-flt-cat-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #e5e7eb;
+  flex-shrink: 0;
+}
+.gs-flt-cat-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform .4s ease;
+}
+.gs-flt-cat-card:hover .gs-flt-cat-img img {
+  transform: scale(1.06);
+}
+
+/* Bottom: navy info bar */
+.gs-flt-cat-body {
+  background: var(--navy);
+  padding: .875rem 1.125rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-shrink: 0;
+}
+.gs-flt-cat-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+.gs-flt-cat-arrow {
+  flex-shrink: 0;
+  width: 2.125rem;
+  height: 2.125rem;
+  border-radius: 50%;
+  background: var(--orange);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  transition: background .2s, transform .2s;
+}
+.gs-flt-cat-card:hover .gs-flt-cat-arrow {
+  background: var(--orange-hover);
+  transform: rotate(10deg) scale(1.08);
+}
+
+/* hide old absolute overlay (no longer needed) */
+.gs-flt-cat-overlay { display: none; }
+
+/* ============================================================
+   SERVICES (Homepage)
+   ============================================================ */
+
+/* warm cream background for the section */
+.gs-sc-services {
+  background: var(--light-bg);
+  border-radius: 1.5rem;
+  margin: 0 .5rem;
+}
+@media (min-width: 640px)  { .gs-sc-services { margin: 0 1rem; } }
+@media (min-width: 1024px) { .gs-sc-services { margin: 0 2rem; } }
+
+/* section header */
+.gs-svc-head {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+.gs-svc-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .875rem;
+}
+.gs-svc-headline {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+/* 4-col card grid (2 on tablet, 1 on mobile) */
+.gs-svc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.75rem;
+}
+@media (min-width: 640px)  { .gs-svc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .gs-svc-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* individual card */
+.gs-svc-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  box-shadow: 0 2px 16px rgba(13,27,46,.06);
+  transition: box-shadow .25s, transform .25s;
+  position: relative;
+}
+.gs-svc-card:hover {
+  box-shadow: 0 8px 36px rgba(13,27,46,.12);
+  transform: translateY(-4px);
+}
+
+/* icon circle */
+.gs-svc-card-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  color: var(--navy);
+  margin-bottom: .25rem;
+  flex-shrink: 0;
+}
+
+.gs-svc-card-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.3;
+}
+.gs-svc-card-desc {
+  font-size: .875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+/* bottom-left arrow circle */
+.gs-svc-card-arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .9375rem;
+  text-decoration: none;
+  margin-top: .5rem;
+  align-self: flex-start;
+  transition: background .2s, transform .2s;
+  flex-shrink: 0;
+}
+.gs-svc-card-arrow:hover {
+  background: var(--navy-mid);
+  color: #fff;
+  transform: rotate(10deg) scale(1.08);
+}
+
+/* footer below cards */
+.gs-svc-footer {
+  text-align: center;
+}
+.gs-svc-footer-text {
+  font-size: .9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.gs-svc-footer-arrow {
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background .2s, transform .15s;
+}
+.gs-svc-footer-arrow:hover {
+  background: var(--navy-mid);
+  color: #fff;
+  transform: rotate(10deg) scale(1.05);
+}
+
+/* ============================================================
+   ABOUT US (Homepage)
+   ============================================================ */
+.gs-about-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .gs-about-split { grid-template-columns: 1fr 1fr; gap: 4rem; }
+}
+
+/* --- Left: single photo --- */
+.gs-about-photos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gs-about-photo {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 5px solid #fff;
+  box-shadow: 0 12px 48px rgba(13,27,46,.15);
+}
+.gs-about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gs-about-photo--single {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+}
+@media (min-width: 640px) {
+  .gs-about-photo--single { aspect-ratio: 16/10; }
+}
+@media (min-width: 1024px) {
+  .gs-about-photo--single { aspect-ratio: auto; height: 100%; min-height: 480px; }
+}
+@keyframes gs-spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* --- Right: content --- */
+.gs-about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.gs-about-eyebrow-star {
+  color: var(--navy);
+  font-size: 1rem;
+}
+.gs-about-headline {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin-bottom: 1.25rem;
+}
+.gs-about-lead {
+  font-size: .9375rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 34rem;
+  margin-bottom: 2rem;
+}
+
+/* feature rows */
+.gs-about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.gs-about-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.gs-about-feature:first-child { border-top: 1px solid var(--border); }
+
+.gs-about-feature-icon {
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  border-radius: 50%;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--navy);
+  border: 1.5px solid var(--border);
+}
+.gs-about-feature-title {
+  font-size: .9375rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: .35rem;
+}
+.gs-about-feature-desc {
+  font-size: .875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* CTA arrow circle */
+.gs-about-cta-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background .2s, transform .15s;
+}
+.gs-about-cta-icon:hover {
+  background: var(--navy-mid);
+  color: #fff;
+  transform: rotate(10deg) scale(1.05);
+}
+
+/* ============================================================
+   HERO (Homepage)
+   ============================================================ */
+.gs-hero {
+  min-height: 100svh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gs-hero-inner {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+@media (min-width: 640px)  { .gs-hero-inner { padding: 0 1.5rem 4.5rem; } }
+@media (min-width: 1024px) { .gs-hero-inner { padding: 0 2rem 5rem; } }
+.gs-hero-headline {
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.12;
+  letter-spacing: -.02em;
+  margin-bottom: 1.5rem;
+}
+.gs-hero-highlight {
+  color: var(--navy);
+  background: white;
+  padding: .05em .3em;
+  border-radius: var(--radius-md);
+  display: inline-block;
+}
+.gs-hero-sub {
+  color: rgba(255,255,255,.65);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 36rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) { .gs-hero-sub { font-size: 1.0625rem; } }
+
+/* Hero buttons row */
+.gs-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .875rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 360px) {
+  .gs-hero-actions { flex-direction: column; width: 100%; }
+  .gs-hero-actions > * { width: 100%; justify-content: center; }
+}
+
+/* Booking Bar */
+.gs-booking-bar {
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  overflow: hidden;
+}
+.gs-booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  padding: .875rem 1.25rem;
+  border-right: 1px solid rgba(255,255,255,.1);
+  flex: 1;
+  min-width: 140px;
+}
+.gs-booking-field:last-of-type { border-right: none; }
+.gs-booking-field label {
+  font-size: .6rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.gs-booking-field input,
+.gs-booking-field select {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: .875rem;
+  font-weight: 600;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  width: 100%;
+}
+.gs-booking-field input::placeholder { color: rgba(255,255,255,.5); }
+.gs-booking-field select option { background: var(--navy); color: white; }
+.gs-booking-btn {
+  padding: .75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .gs-booking-field { min-width: 100%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .gs-booking-btn { width: 100%; padding: .75rem 1rem; }
+  .gs-booking-btn .gs-btn { width: 100%; }
+}
+
+/* ============================================================
+   GALLERY STRIP (horizontal scroll)
+   ============================================================ */
+.gs-gallery-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: .25rem;
+}
+.gs-gallery-strip::-webkit-scrollbar { display: none; }
+.gs-gallery-strip-item {
+  flex: 0 0 auto;
+  width: clamp(200px, 28vw, 340px);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.gs-gallery-strip-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.gs-gallery-strip-item:hover img { transform: scale(1.06); }
+
+/* ============================================================
+   ARTICLE (Blog Detail)
+   ============================================================ */
+.gs-article-wrap { max-width: 52rem; margin: 0 auto; }
+.gs-article-body {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  border: 1.5px solid var(--border);
+  box-shadow: 0 4px 24px rgba(0,0,0,.06);
+}
+@media (min-width: 768px) { .gs-article-body { padding: 2.5rem 3rem; } }
+.gs-article-cover {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  max-height: 28rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+.gs-article-content {
+  font-size: .9375rem;
+  line-height: 1.8;
+  color: #374151;
+}
+.gs-article-content p { margin-bottom: 1.25rem; }
+.gs-article-content h2,
+.gs-article-content h3,
+.gs-article-content h4 {
+  font-weight: 800;
+  color: var(--navy);
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+  line-height: 1.3;
+}
+.gs-article-content h2 { font-size: 1.375rem; }
+.gs-article-content h3 { font-size: 1.125rem; }
+.gs-article-content strong, .gs-article-content b { color: var(--navy); font-weight: 700; }
+.gs-article-content ul, .gs-article-content ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.gs-article-content li { margin-bottom: .5rem; }
+.gs-article-content img { max-width: 100%; border-radius: var(--radius-md); margin: 1rem 0; }
+.gs-article-content blockquote {
+  border-left: 4px solid var(--navy);
+  background: var(--light-bg);
+  padding: 1rem 1.25rem;
+  border-radius: 0 .75rem .75rem 0;
+  margin: 1.5rem 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ============================================================
+   WHATSAPP FLOAT
+   ============================================================ */
+.gs-wa-float {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  width: 3rem;
+  height: 3rem;
+  background: #25d366;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45);
+  transition: all .3s;
+  text-decoration: none;
+}
+.gs-wa-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 28px rgba(37,211,102,.55);
+}
+@media (min-width: 768px) {
+  .gs-wa-float { bottom: 1.5rem; right: 1.5rem; width: 3.25rem; height: 3.25rem; }
+}
+
+/* ============================================================
+   RESPONSIVE HELPERS
+   ============================================================ */
+@media (max-width: 767px) {
+  .gs-hide-mobile { display: none !important; }
+  .gs-team-photo { width: 100% !important; }
+}
+@media (min-width: 768px) {
+  .gs-hide-desktop { display: none !important; }
+}
+
+/* Spec table (fleet detail) */
+.gs-spec-table { width: 100%; border-collapse: collapse; }
+.gs-spec-table tr { border-bottom: 1px solid #f3f4f6; }
+.gs-spec-table tr:last-child { border-bottom: none; }
+.gs-spec-table td { padding: .875rem .5rem; font-size: .875rem; vertical-align: middle; }
+.gs-spec-table td:first-child { color: var(--text-muted); font-weight: 600; width: 40%; }
+.gs-spec-table td:last-child { color: var(--navy); font-weight: 700; }
+.gs-spec-table td i { color: var(--navy); margin-right: .5rem; }
+
+/* ============================================================
+   BOOKING BAR — Floating overlap card (homepage)
+   ============================================================ */
+
+/* Wrapper sits between hero and next section, pulls card up */
+.gs-booking-float-wrap {
+  position: relative;
+  z-index: 30;
+  margin-top: -4rem;
+  padding-bottom: 0;
+}
+
+/* The white card itself */
+.gs-booking-float {
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px rgba(13,27,46,.18), 0 4px 16px rgba(0,0,0,.08);
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Left label block */
+.gs-booking-float-label {
+  flex: 0 0 auto;
+  min-width: 120px;
+  padding-right: 1.25rem;
+  border-right: 1.5px solid var(--border);
+}
+
+/* Each input field group */
+.gs-booking-float-field {
+  flex: 1;
+  min-width: 130px;
+}
+
+.gs-booking-float-field-label {
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #9ca3af;
+  margin: 0 0 .3rem;
+}
+
+.gs-booking-float-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--navy);
+  font-family: 'Outfit', sans-serif;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gs-booking-float-input::placeholder {
+  color: #c4ccd4;
+  font-weight: 500;
+}
+
+/* Divider between fields */
+.gs-booking-float-field + .gs-booking-float-field {
+  padding-left: 1rem;
+  border-left: 1.5px solid var(--border);
+}
+
+/* Mobile — stack vertically */
+@media (max-width: 767px) {
+  .gs-booking-float-wrap { margin-top: -2rem; }
+
+  .gs-booking-float {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 1.5rem;
+    border-radius: var(--radius-xl);
+  }
+
+  .gs-booking-float-label {
+    border-right: none;
+    border-bottom: 1.5px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .gs-booking-float-field {
+    min-width: 100%;
+    padding: .875rem 0;
+    border-left: none !important;
+    border-bottom: 1.5px solid var(--border);
+  }
+
+  .gs-booking-float-field:last-of-type { border-bottom: none; }
+
+  .gs-booking-float > div:last-child {
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .gs-booking-float > div:last-child .gs-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Tablet — 2 column wrap */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-booking-float-wrap { margin-top: -2.5rem; }
+  .gs-booking-float-label { border-right: none; border-bottom: 1.5px solid var(--border); width: 100%; padding-bottom: .875rem; margin-bottom: .5rem; }
+  .gs-booking-float-field { min-width: calc(50% - 1.25rem); }
+}
+
+/* Also push next section down to give space */
+.gs-booking-float-wrap + section {
+  padding-top: 6rem !important;
+}
+
+/* ============================================================
+   SECTION ROUNDED TOP — "page lift" effect after hero
+   ============================================================ */
+.gs-section-rounded-top {
+  border-radius: 2.5rem 2.5rem 0 0;
+  position: relative;
+  z-index: 10;
+  /* Pull up slightly so it overlaps booking bar bottom edge */
+  margin-top: -1.5rem;
+}
+
+@media (min-width: 768px) {
+  .gs-section-rounded-top {
+    border-radius: 3rem 3rem 0 0;
+    margin-top: -2rem;
+  }
+}
+
+/* ============================================================
+   SECTION CARD — rounded section blocks, not full-width square
+   Wraps content in a rounded card with horizontal margin
+   ============================================================ */
+.gs-section-card {
+  background: transparent !important;
+  padding: 0 1rem;
+}
+.gs-section-card > .gs-section-card-inner {
+  border-radius: 2.5rem;
+  padding: 4rem 1.5rem;
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .gs-section-card { padding: 0 1.5rem; }
+  .gs-section-card > .gs-section-card-inner { padding: 5rem 2.5rem; }
+}
+@media (min-width: 1024px) {
+  .gs-section-card { padding: 0 2rem; }
+  .gs-section-card > .gs-section-card-inner { padding: 5rem 4rem; border-radius: 3rem; }
+}
+
+/* Color variants */
+.gs-section-card-inner.bg-white    { background: white; }
+.gs-section-card-inner.bg-light    { background: var(--light-bg); }
+.gs-section-card-inner.bg-navy     { background: var(--navy); }
+
+/* ============================================================
+   GS-SC — Section Card wrapper
+   Creates rounded, card-like sections with horizontal margin
+   Usage: <section class="gs-section"><div class="gs-sc bg-white">...</div></section>
+   ============================================================ */
+.gs-sc {
+  border-radius: 2.5rem;
+  overflow: hidden;
+  padding: 4rem 1.5rem;
+  margin: 0 .75rem;
+}
+@media (min-width: 640px) {
+  .gs-sc { margin: 0 1.5rem; padding: 5rem 2rem; border-radius: 3rem; }
+}
+@media (min-width: 1024px) {
+  .gs-sc { margin: 0 2rem; padding: 5rem 0; border-radius: 3rem; }
+}
+/* Remove inner container max-width restriction since gs-container handles it */
+.gs-sc > .gs-container { max-width: 80rem; margin: 0 auto; }
+
+/* Color variants */
+.gs-sc.bg-white  { background: white; }
+.gs-sc.bg-light  { background: var(--light-bg); }
+.gs-sc.bg-navy   { background: var(--navy); }
+
+/* Section spacing when using gs-sc — reduce section vertical padding */
+.gs-section:has(.gs-sc) {
+  padding: .75rem 0 !important;
+  background: transparent !important;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.gs-footer-card {
+  position: relative;
+  background: var(--navy-deep);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  padding: 3rem 2rem 0;
+  color: rgba(255,255,255,.55);
+}
+@media (min-width: 1024px) { .gs-footer-card { padding: 3.5rem 3rem 0; } }
+
+/* decorative stars */
+.gs-footer-deco {
+  position: absolute;
+  color: rgba(255,255,255,.07);
+  font-size: 3rem;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+.gs-footer-deco--1 { top: 2.5rem;  left: 38%; font-size: 2rem; }
+.gs-footer-deco--2 { top: 40%;     left: 25%; font-size: 2.5rem; }
+.gs-footer-deco--3 { bottom: 3rem; left: 55%; font-size: 1.5rem; }
+
+/* main grid */
+.gs-footer-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 640px)  { .gs-footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .gs-footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1.6fr; gap: 2rem; } }
+
+/* brand col */
+.gs-footer-tagline {
+  font-size: .875rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,.45);
+  margin: 0;
+  max-width: 20rem;
+}
+
+/* col title */
+.gs-footer-col-title {
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: white;
+  margin: 0 0 1.25rem;
+}
+
+/* links */
+.gs-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+}
+.gs-footer-links a {
+  font-size: .875rem;
+  color: rgba(255,255,255,.45);
+  text-decoration: none;
+  transition: color .2s;
+}
+.gs-footer-links a:hover { color: white; }
+
+/* newsletter */
+.gs-footer-newsletter {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+}
+.gs-footer-email-input {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 9999px;
+  padding: .7rem 1.25rem;
+  font-size: .875rem;
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  outline: none;
+  transition: border-color .2s;
+}
+.gs-footer-email-input::placeholder { color: rgba(255,255,255,.35); }
+.gs-footer-email-input:focus { border-color: rgba(255,255,255,.35); }
+.gs-footer-email-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  border-radius: 50%;
+  background: var(--navy);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  text-decoration: none;
+}
+.gs-footer-email-btn:hover { background: var(--navy-mid); transform: rotate(10deg) scale(1.08); }
+
+/* bottom bar */
+.gs-footer-bottom {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 0;
+}
+.gs-footer-copy {
+  font-size: .8125rem;
+  color: rgba(255,255,255,.3);
+  margin: 0;
+}
+
+/* social icons */
+.gs-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.gs-footer-social-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,.18);
+  color: rgba(255,255,255,.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .875rem;
+  text-decoration: none;
+  transition: border-color .2s, color .2s, background .2s;
+}
+.gs-footer-social-btn:hover {
+  border-color: rgba(255,255,255,.5);
+  color: white;
+  background: rgba(255,255,255,.08);
+}
+
+
+/* ============================================================
+   NOVARIDE STYLE OVERRIDES — Orange Theme
+   ============================================================ */
+
+/* ---- CSS Variables — Amber Gold System ---- */
+:root {
+  --orange:       #F59E0B;
+  --orange-hover: #D97706;
+  --orange-light: #FFFBEB;
+}
+
+/* ---- Primary Buttons → Orange ---- */
+.gs-btn-primary {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: white;
+}
+.gs-btn-primary:hover {
+  background: var(--orange-hover);
+  border-color: var(--orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245,158,11,.3);
+}
+
+/* ---- Navbar → Orange ---- */
+.nav-book-btn {
+  background: var(--orange);
+  color: #fff;
+}
+.nav-book-btn:hover {
+  background: var(--orange-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.nav-book-icon {
+  background: var(--orange);
+  color: #fff;
+}
+.nav-book-icon:hover {
+  background: var(--orange-hover);
+  color: #fff;
+  transform: translateY(-1px) rotate(5deg);
+}
+.nav-link-item.active { color: var(--orange); }
+.nav-link-item:hover  { color: var(--orange); }
+.nav-mobile-link:hover  { color: var(--orange); background: var(--orange-light); }
+.nav-mobile-link.active { color: var(--orange); background: var(--orange-light); }
+
+/* ---- Breadcrumb current → Orange ---- */
+.gs-breadcrumb .current { color: var(--orange); font-weight: 700; }
+
+/* ---- Page Hero → edge-to-edge, min 60vh ---- */
+.gs-page-hero {
+  border-radius: 0;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+.gs-page-hero .gs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- Read More → Orange ---- */
+.gs-read-more { color: var(--orange); }
+.gs-read-more:hover { color: var(--orange-hover); }
+
+/* ---- Blog card meta icon → Orange ---- */
+.gs-blog-card-meta i { color: var(--orange); }
+
+/* ---- Contact icon → Orange ---- */
+.gs-contact-icon { background: var(--orange); }
+
+/* ---- Fleet card badge → Novaride pill ---- */
+.gs-fleet-card-badge {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid var(--border);
+  top: .75rem;
+  left: .75rem;
+  position: absolute;
+}
+
+/* ---- Filter tabs → Orange when active ---- */
+.gs-tab:hover, .gs-tab.active {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+
+/* ---- Arrow circle CTAs → Orange ---- */
+.gs-svc-card-arrow,
+.gs-flt-card-cta,
+.gs-about-cta-icon,
+.gs-cta-arrow,
+.gs-svc-footer-arrow,
+.gs-blog-featured-arrow,
+.gs-flt-cat-arrow,
+.gs-blog-read-dot,
+.gs-vid-play {
+  background: var(--orange);
+  color: white;
+}
+.gs-svc-card-arrow:hover,
+.gs-flt-card-cta:hover,
+.gs-about-cta-icon:hover,
+.gs-cta-arrow:hover,
+.gs-svc-footer-arrow:hover,
+.gs-flt-cat-arrow:hover,
+.gs-blog-read-story:hover .gs-blog-read-dot {
+  background: var(--orange-hover);
+  color: white;
+}
+.gs-vid-play:hover { background: var(--orange-hover); color: white; }
+
+/* ---- Form focus → orange ---- */
+.gs-input:focus,
+.gs-textarea:focus,
+.gs-select:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(245,158,11,.1);
+}
+
+/* ============================================================
+   NEW CLASSES — Novaride Component System
+   ============================================================ */
+
+/* Orange arrow CTA circle */
+.gs-arrow-cta {
+  width: 2.25rem; height: 2.25rem;
+  border-radius: 50%;
+  background: var(--orange);
+  color: white;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: .875rem;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+  flex-shrink: 0;
+}
+.gs-arrow-cta:hover {
+  background: var(--orange-hover);
+  color: white;
+  transform: rotate(10deg) scale(1.08);
+}
+
+/* Section eyebrow — orange */
+.gs-eyebrow-orange {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-size: .75rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: .625rem;
+}
+
+/* Read More link — orange */
+.gs-read-more-orange {
+  display: inline-flex; align-items: center; gap: .5rem;
+  color: var(--orange); font-size: .8125rem; font-weight: 700;
+  text-decoration: none; margin-top: auto;
+  transition: gap .2s;
+}
+.gs-read-more-orange:hover { gap: .75rem; color: var(--orange-hover); }
+.gs-read-more-orange .dot {
+  width: 1.625rem; height: 1.625rem; border-radius: 50%;
+  background: var(--orange); color: white;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: .7rem; flex-shrink: 0;
+  transition: background .2s;
+}
+.gs-read-more-orange:hover .dot { background: var(--orange-hover); }
+
+/* Contact dark info card */
+.gs-contact-dark-card {
+  background: var(--navy);
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  color: white;
+  height: 100%;
+}
+.gs-contact-dark-card h3 { color: white; font-size: 1.5rem; margin-bottom: .5rem; }
+.gs-contact-dark-card p.subtitle { color: rgba(255,255,255,.6); font-size: .875rem; line-height: 1.6; margin-bottom: 2rem; }
+.gs-contact-dark-row {
+  display: flex; align-items: flex-start; gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.gs-contact-dark-icon {
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .875rem; color: white; flex-shrink: 0;
+}
+.gs-contact-dark-text { font-size: .875rem; color: rgba(255,255,255,.8); line-height: 1.5; }
+.gs-contact-dark-label { font-size: .7rem; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .15rem; }
+.gs-contact-social-row { display: flex; gap: .625rem; margin-top: 2rem; flex-wrap: wrap; }
+.gs-contact-social-btn {
+  width: 2.25rem; height: 2.25rem; border-radius: 50%;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .875rem; color: white; text-decoration: none;
+  transition: background .2s;
+}
+.gs-contact-social-btn:hover { background: var(--orange); border-color: var(--orange); color: white; }
+
+/* Fleet card — Novaride style */
+.gs-fleet-nv-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all .35s cubic-bezier(.25,.46,.45,.94);
+  display: flex; flex-direction: column;
+}
+.gs-fleet-nv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(0,0,0,.13);
+  border-color: rgba(245,158,11,.35);
+}
+
+/* --- Image area --- */
+.gs-fleet-nv-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #eef0f5 0%, #dde1e8 100%);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.gs-fleet-nv-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .5s cubic-bezier(.25,.46,.45,.94);
+  display: block;
+}
+.gs-fleet-nv-card:hover .gs-fleet-nv-thumb img {
+  transform: scale(1.07);
+}
+/* subtle gradient vignette at bottom of image */
+.gs-fleet-nv-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    transparent 45%,
+    rgba(0,27,61,.28) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+/* badge floating on image */
+.gs-fleet-nv-thumb .gs-fleet-nv-badge {
+  position: absolute;
+  top: .625rem;
+  left: .625rem;
+  z-index: 2;
+  margin: 0;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.6);
+  color: #374151;
+  font-size: .6rem;
+  font-weight: 700;
+  padding: .2rem .65rem;
+  border-radius: 9999px;
+  letter-spacing: .05em;
+}
+
+.gs-fleet-nv-body { padding: 1.25rem; display: flex; flex-direction: column; flex: 1; }
+.gs-fleet-nv-badge {
+  display: inline-block;
+  background: #f3f4f6; color: #374151;
+  font-size: .65rem; font-weight: 700;
+  padding: .2rem .75rem; border-radius: 9999px;
+  border: 1px solid var(--border);
+  letter-spacing: .04em; margin-bottom: .625rem; align-self: flex-start;
+}
+/* Hide badge in body when it's rendered on the image instead */
+.gs-fleet-nv-body > .gs-fleet-nv-badge { display: none; }
+.gs-fleet-nv-name {
+  font-size: 1rem; font-weight: 800; color: var(--navy);
+  margin-bottom: .625rem; line-height: 1.3;
+}
+.gs-fleet-nv-specs { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1rem; }
+.gs-fleet-nv-spec {
+  display: flex; align-items: center; gap: .5rem;
+  font-size: .8125rem; color: #9ca3af;
+}
+.gs-fleet-nv-spec i { font-size: .875rem; color: #c4c9d1; flex-shrink: 0; }
+.gs-fleet-nv-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: auto; padding-top: .875rem;
+  border-top: 1px solid var(--border);
+}
+.gs-fleet-nv-price { font-size: .875rem; font-weight: 700; color: var(--navy); }
+.gs-fleet-nv-price span { font-size: .7rem; font-weight: 500; color: #9ca3af; }
+
+/* Blog card — Novaride style */
+.gs-blog-nv-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: all .3s;
+  text-decoration: none;
+}
+.gs-blog-nv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.1);
+  border-color: rgba(245,158,11,.25);
+}
+.gs-blog-nv-thumb {
+  height: 13rem; overflow: hidden; flex-shrink: 0;
+  background: var(--light-bg);
+}
+.gs-blog-nv-thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .4s; display: block;
+}
+.gs-blog-nv-card:hover .gs-blog-nv-thumb img { transform: scale(1.05); }
+.gs-blog-nv-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex; flex-direction: column; flex: 1;
+}
+.gs-blog-nv-meta {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .75rem; color: #9ca3af; font-weight: 600;
+  margin-bottom: .75rem;
+}
+.gs-blog-nv-meta i { color: var(--orange); font-size: .8rem; }
+.gs-blog-nv-title {
+  font-size: .9375rem; font-weight: 800; color: var(--navy);
+  line-height: 1.4; margin-bottom: 1rem; flex: 1;
+}
+
+/* Fleet sidebar filter */
+.gs-fleet-sidebar {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  position: sticky; top: 5.5rem;
+}
+.gs-fleet-sidebar-title {
+  font-size: .8rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .12em; color: #9ca3af; margin-bottom: 1rem;
+}
+.gs-fleet-sidebar input[type=text],
+.gs-fleet-sidebar input[type=search] {
+  width: 100%; border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); padding: .75rem 1rem;
+  font-size: .875rem; outline: none; margin-bottom: 1.5rem;
+  font-family: 'Outfit', sans-serif; color: var(--text-dark);
+  transition: border .2s;
+  box-sizing: border-box;
+}
+.gs-fleet-sidebar input[type=text]:focus,
+.gs-fleet-sidebar input[type=search]:focus { border-color: var(--orange); }
+.gs-fleet-sidebar-check {
+  display: flex; align-items: center; gap: .625rem;
+  font-size: .875rem; color: var(--text-dark);
+  padding: .4rem 0; cursor: pointer;
+}
+.gs-fleet-sidebar-check input[type=checkbox] {
+  width: 1rem; height: 1rem;
+  accent-color: var(--orange); cursor: pointer; flex-shrink: 0;
+}
+.gs-fleet-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .gs-fleet-layout { grid-template-columns: 240px 1fr; }
+}
+
+/* ============================================================
+   RESPONSIVE OVERRIDES — Mobile First Pass
+   ============================================================ */
+
+/* ---- Global: prevent overflow ---- */
+*, section, div, main { max-width: 100%; }
+.gs-container { overflow-x: clip; }
+
+/* ---- Booking Float Bar — stack on mobile ---- */
+.gs-booking-float {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+@media (max-width: 767px) {
+  .gs-booking-float {
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+  .gs-booking-float-label { width: 100%; }
+  .gs-booking-float-field { width: 100%; }
+  .gs-booking-float-field input { width: 100%; }
+  .gs-booking-float > div:last-child { width: 100%; }
+  .gs-booking-float > div:last-child a,
+  .gs-booking-float > div:last-child button { width: 100%; justify-content: center; }
+}
+
+/* ---- About Us split — stack on mobile ---- */
+.gs-about-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 1024px) {
+  .gs-about-split { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+}
+
+/* ---- HIW split — stack on mobile ---- */
+.gs-hiw-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 1024px) {
+  .gs-hiw-split { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+}
+/* On mobile center the hiw-visual content */
+@media (max-width: 1023px) {
+  .gs-hiw-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ---- WCU layout — stack on mobile ---- */
+@media (max-width: 1023px) {
+  .gs-wcu-layout { gap: 1.5rem; }
+  .gs-wcu-col { gap: 1.5rem; }
+  .gs-wcu-item-right { flex-direction: row !important; text-align: left !important; }
+  .gs-wcu-col-left .gs-wcu-item > div:last-child { align-items: flex-start !important; }
+  .gs-wcu-item-desc { max-width: 100%; }
+}
+
+/* ---- FAQ split — stack on mobile ---- */
+@media (max-width: 1023px) {
+  .gs-faq-split { gap: 2rem; }
+}
+
+/* ---- Coverage / Stats split ---- */
+.gs-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .gs-split { grid-template-columns: 1fr 1fr; gap: 4rem; }
+}
+@media (max-width: 767px) {
+  .gs-split img { width: 100%; height: auto; border-radius: 1rem; }
+}
+
+/* ---- Stats numbers ---- */
+@media (max-width: 479px) {
+  .gs-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+  }
+}
+
+/* ---- Fleet grid mobile ---- */
+@media (max-width: 479px) {
+  .gs-flt-grid { grid-template-columns: 1fr; }
+  .gs-flt-cat-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---- Fleet category cards ---- */
+/* (styles now handled in the gs-flt-cat-card block above) */
+
+/* ---- Blog section layout ---- */
+@media (max-width: 1023px) {
+  .gs-blog-layout {
+    grid-template-columns: 1fr !important;
+  }
+  .gs-blog-featured-col { display: none; }
+}
+
+/* ---- Blog side items ---- */
+@media (max-width: 767px) {
+  .gs-blog-side-item {
+    flex-direction: column;
+  }
+  .gs-blog-side-thumb {
+    width: 100% !important;
+    height: 12rem;
+  }
+}
+
+/* ---- Contact grid ---- */
+.gs-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .gs-contact-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+}
+
+/* ---- Contact form ---- */
+@media (max-width: 539px) {
+  .gs-form-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ---- Footer responsive ---- */
+@media (max-width: 639px) {
+  .gs-footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* ---- Navbar brand on small screens ---- */
+@media (max-width: 360px) {
+  .nav-brand img { height: 36px !important; }
+  .nav-cta-btn { display: none; }
+}
+
+/* ---- Section head on small screens ---- */
+@media (max-width: 479px) {
+  .gs-section-head h2,
+  .gs-wcu-headline,
+  .gs-faq-headline,
+  .gs-hiw-headline,
+  .gs-about-headline,
+  .gs-svc-headline {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+  .gs-svc-head, .gs-wcu-head, .gs-section-head {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ---- Coverage area map image ---- */
+@media (max-width: 767px) {
+  .gs-coverage-map { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 1rem; }
+}
+
+/* ---- Prevent text overflow on narrow screens ---- */
+@media (max-width: 360px) {
+  p, li, span { font-size: .8125rem; }
+  .gs-btn-lg { padding: .65rem 1.25rem; font-size: .875rem; }
+}
+
+/* ---- Booking bar input overflow fix ---- */
+.gs-booking-float-input { max-width: 100%; box-sizing: border-box; }
+
+/* ---- Fleet cards on index ---- */
+@media (max-width: 479px) {
+  .gs-flt-card { min-width: 0; }
+}
+
+/* ---- CTA section left content center on mobile ---- */
+@media (max-width: 767px) {
+  .gs-cta-left { max-width: 100%; }
+  .gs-cta-sub { max-width: 100%; }
+}
+
+
+/* ============================================================
+   RESPONSIVE FIXES — Grand Satya
+   Comprehensive responsive improvements for all devices.
+   Breakpoints: xs <360, sm 360-479, md 480-639, 
+                tablet 640-767, tablet-lg 768-1023, 
+                desktop 1024+, wide 1280+
+   ============================================================ */
+
+/* ============================================================
+   GLOBAL — prevent overflow on all screens
+   ============================================================ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+* { min-width: 0; }
+
+/* ============================================================
+   NAVBAR — mobile improvements
+   ============================================================ */
+@media (max-width: 359px) {
+  #navInner { padding: 0 .75rem; }
+  #navLogo  { height: 1.875rem; }
+  .nav-hamburger { padding: .35rem; }
+}
+
+/* Mobile menu scroll fix */
+#navMobile {
+  max-height: calc(100dvh - 72px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-mobile-links { padding: .5rem 1rem 1rem; }
+
+/* Compact mobile menu on very small screens */
+@media (max-width: 479px) {
+  .nav-mobile-link { padding: .75rem .875rem; font-size: .875rem; }
+}
+
+/* ============================================================
+   HERO WRAP — homepage hero
+   ============================================================ */
+
+/* xs: strip the 1rem side padding so hero fills edge-to-edge */
+@media (max-width: 479px) {
+  .gs-hero-wrap { padding: calc(72px + .5rem) .5rem 0; }
+  .gs-hero-card {
+    border-radius: 1rem;
+    min-height: 80vh;
+    padding: 4.5rem 1rem 5rem;
+  }
+  .gs-hero-card-inner-clip { border-radius: 1rem; }
+  .gs-hero-headline-nova  { font-size: clamp(1.75rem, 7.5vw, 2.25rem); }
+  .gs-hero-sub-nova       { font-size: .8125rem; }
+  .gs-hero-actions        { flex-direction: column; align-items: center; }
+  .gs-hero-actions > *    { width: 100%; justify-content: center; }
+  .gs-btn-outline-pill    { justify-content: center; }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-hero-card { min-height: 82vh; padding: 5rem 1.25rem 5.5rem; }
+  .gs-hero-headline-nova { font-size: clamp(2rem, 6vw, 2.5rem); }
+}
+
+/* Tablet: show booking bar, adjust position */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-hero-card { min-height: 85vh; padding: 5rem 2rem 6rem; }
+  .gs-hero-headline-nova { font-size: clamp(2.25rem, 4.5vw, 3rem); }
+}
+
+/* Booking bar adjustments */
+@media (max-width: 767px) {
+  .gs-hero-booking-row { display: none !important; }
+  .gs-hero-after-space  { padding-top: 0 !important; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gs-booking-float {
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+  .gs-booking-float-field { min-width: calc(50% - .75rem); flex: 1 1 calc(50% - .75rem); }
+  .gs-booking-float-label {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1.5px solid var(--border);
+    padding-right: 0;
+    padding-bottom: .875rem;
+    margin-bottom: .25rem;
+    flex: 0 0 100%;
+  }
+  .gs-booking-float-field + .gs-booking-float-field {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+/* ============================================================
+   PAGE HERO (subpages) — responsive fixes
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-page-hero-wrap { padding: calc(72px + .5rem) .5rem 0; }
+  .gs-page-hero {
+    min-height: 42vh;
+    padding: 5.5rem 1rem 3rem;
+    border-radius: 1rem !important;
+  }
+  .gs-page-hero h1 { font-size: clamp(1.75rem, 8vw, 2.25rem); }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-page-hero { min-height: 48vh; padding: 6rem 1.25rem 3.5rem; }
+  .gs-page-hero h1 { font-size: clamp(2rem, 6vw, 2.5rem); }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-page-hero { min-height: 52vh; }
+}
+.gs-page-hero-after { padding-top: .75rem; }
+
+/* ============================================================
+   SECTION CARDS (gs-sc) — prevent tiny margin overflow
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-sc {
+    margin: 0 .25rem;
+    border-radius: 1.25rem;
+    padding: 3rem 1rem;
+  }
+  .gs-sc-services { margin: 0 .25rem; }
+  .gs-sc-faq      { margin: 0 .25rem; }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  .gs-sc {
+    margin: 0 .5rem;
+    border-radius: 1.5rem;
+    padding: 3.5rem 1.25rem;
+  }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-sc { padding: 4rem 1.5rem; border-radius: 2rem; }
+}
+
+/* ============================================================
+   ABOUT SPLIT (homepage)
+   ============================================================ */
+@media (max-width: 639px) {
+  .gs-about-split { gap: 2rem; }
+  .gs-about-photo--single { aspect-ratio: 4/3; }
+  .gs-about-lead { font-size: .875rem; margin-bottom: 1.5rem; }
+  .gs-about-headline { font-size: clamp(1.5rem, 5vw, 2rem); }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-about-split { gap: 2.5rem; }
+  .gs-about-photo--single { aspect-ratio: 16/9; }
+}
+
+/* About page — overlapping photos */
+@media (max-width: 639px) {
+  .gs-about-nv-photos { min-height: 280px; }
+  .gs-about-nv-photo-main img { height: 240px; }
+  .gs-about-nv-photo-side img { height: 160px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-about-nv-photos { min-height: 360px; }
+  .gs-about-nv-photo-main img { height: 320px; }
+}
+
+/* ============================================================
+   SERVICES GRID
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-svc-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .gs-svc-card { padding: 1.5rem 1.25rem 1.25rem; }
+  .gs-svc-card-icon { width: 2.875rem; height: 2.875rem; font-size: 1.25rem; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-svc-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
+
+/* Services page card */
+@media (max-width: 479px) {
+  .gs-svc-nv-card { padding: 1.375rem; }
+}
+
+/* ============================================================
+   FLEET SECTION (homepage slider + cats)
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-flt-cats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+  }
+  .gs-flt-cat-label { font-size: .875rem; }
+  .gs-flt-nav { margin-top: 1rem; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-flt-cats { gap: .875rem; }
+}
+
+/* Fleet page grid */
+@media (max-width: 479px) {
+  .gs-grid-fleet { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* ============================================================
+   HOW IT WORKS SECTION
+   ============================================================ */
+@media (max-width: 767px) {
+  .gs-hiw-split { gap: 2rem; }
+  .gs-hiw-headline { font-size: clamp(1.5rem, 5vw, 2rem); }
+  .gs-hiw-visual   { min-height: auto; flex-direction: column; align-items: center; }
+  .gs-hiw-circle-img { max-width: 280px; }
+  .gs-hiw-badge {
+    position: static;
+    margin-top: 1.25rem;
+    width: 100%;
+    max-width: 300px;
+    min-width: auto;
+    align-self: center;
+  }
+  .gs-hiw-asterisk,
+  .gs-hiw-star { display: none; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-hiw-circle-img { max-width: 320px; }
+  .gs-hiw-badge { min-width: 150px; }
+}
+
+/* ============================================================
+   WHY CHOOSE US (WCU) — 3-col layout on mobile
+   ============================================================ */
+@media (max-width: 1023px) {
+  .gs-wcu-layout {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+  /* Reorder: center image first on mobile */
+  .gs-wcu-center { order: -1; }
+  .gs-wcu-circle { max-width: 260px; }
+
+  /* Left col items: normal direction on mobile */
+  .gs-wcu-item-right { flex-direction: row !important; text-align: left !important; }
+  .gs-wcu-col-left .gs-wcu-item > div:last-child {
+    display: block !important;
+    align-items: unset !important;
+  }
+  .gs-wcu-col { gap: 1.5rem; }
+}
+@media (max-width: 479px) {
+  .gs-wcu-circle { max-width: 220px; }
+  .gs-wcu-item-title { font-size: .875rem; }
+  .gs-wcu-item-desc  { font-size: .8rem; }
+}
+
+/* ============================================================
+   FAQ SECTION
+   ============================================================ */
+@media (max-width: 767px) {
+  .gs-faq-split { gap: 2rem; }
+  .gs-faq-photos { min-height: 240px; }
+  .gs-faq-photo--back  { width: 55%; }
+  .gs-faq-photo--front { width: 60%; }
+  .gs-faq-headline { font-size: clamp(1.375rem, 5vw, 1.875rem); }
+}
+@media (max-width: 479px) {
+  .gs-faq-photos  { min-height: 200px; margin-bottom: 1rem; }
+  .gs-faq-photo--back  { width: 52%; }
+  .gs-faq-photo--front { width: 58%; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-faq-split { gap: 2.5rem; }
+  .gs-faq-photos { min-height: 320px; }
+}
+
+/* ============================================================
+   COVERAGE / SPLIT SECTION (2-col grid)
+   ============================================================ */
+@media (max-width: 639px) {
+  .gs-split { gap: 2rem; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-split { gap: 2.5rem; }
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-testi-card { padding: 1.375rem 1.25rem; }
+  .gs-testi-text { font-size: .8125rem; }
+  .gs-testi-headline { font-size: clamp(1.375rem, 5vw, 1.875rem); }
+}
+
+/* ============================================================
+   CTA BANNER
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-cta-card {
+    padding: 2rem 1.25rem;
+    border-radius: 1.25rem;
+    gap: 1.5rem;
+  }
+  .gs-cta-headline { font-size: clamp(1.375rem, 5.5vw, 1.75rem); }
+  .gs-cta-sub { font-size: .8125rem; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-cta-card { padding: 2rem 1.5rem; border-radius: 1.5rem; }
+}
+
+/* Make CTA padding wrapper also responsive */
+@media (max-width: 479px) {
+  section > div[style*="padding:0 1rem"] { padding: 0 .375rem !important; }
+}
+
+/* ============================================================
+   BLOG LAYOUT
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-blog-layout { gap: 1rem; }
+  .gs-blog-featured { aspect-ratio: 3/2; }
+  .gs-blog-featured-title { font-size: 1rem; }
+  .gs-blog-side { gap: .75rem; }
+  .gs-blog-side-item { padding: .75rem; gap: .75rem; }
+  .gs-blog-side-thumb { width: 4.5rem; min-width: 4.5rem; height: 4.5rem; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-blog-featured { aspect-ratio: 16/9; }
+}
+
+/* ============================================================
+   GALLERY GRID
+   ============================================================ */
+@media (max-width: 359px) {
+  .gs-grid-gallery { grid-template-columns: 1fr; }
+}
+@media (min-width: 360px) and (max-width: 479px) {
+  .gs-grid-gallery { grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+}
+
+/* Gallery page items height */
+@media (max-width: 479px) {
+  .gs-gallery-nv-item img { height: 11rem; }
+}
+
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-contact-grid { gap: 1.5rem; }
+  .gs-form-grid { grid-template-columns: 1fr; }
+  .gs-contact-dark-card { padding: 1.75rem 1.25rem; border-radius: 1.25rem; }
+  .gs-contact-dark-card h3 { font-size: 1.25rem; }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  .gs-form-grid { grid-template-columns: 1fr; }
+}
+
+/* Contact page grid */
+@media (max-width: 479px) {
+  .gs-contact-nv-grid { gap: 1.5rem; }
+}
+
+/* ============================================================
+   FOOTER — grid & bottom bar
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-footer-card { padding: 2rem 1.25rem 0; border-radius: 1.25rem; }
+  .gs-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .gs-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+    padding: 1rem 0;
+  }
+  .gs-footer-socials { flex-wrap: wrap; gap: .375rem; }
+  .gs-footer-tagline { font-size: .8125rem; }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  .gs-footer-grid { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+  .gs-footer-card { padding: 2.25rem 1.5rem 0; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+/* footer wrapper padding */
+@media (max-width: 479px) {
+  div[style*="padding:0 1rem 1.5rem"] { padding: 0 .375rem 1rem !important; }
+}
+
+/* ============================================================
+   STATS GRID (about page)
+   ============================================================ */
+@media (max-width: 359px) {
+  .gs-grid-stats { grid-template-columns: 1fr 1fr; gap: .75rem; }
+  .gs-stat-nv-num { font-size: 1.625rem; }
+}
+
+/* ============================================================
+   DRIVERS GRID (about page)
+   ============================================================ */
+@media (max-width: 359px) {
+  .gs-grid-drivers { grid-template-columns: 1fr 1fr; gap: .5rem; }
+}
+
+/* ============================================================
+   FEATURES GRID (about page)
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-grid-features { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* ============================================================
+   VALUES GRID (homepage)
+   ============================================================ */
+/* ── Values grid — earlier override, now handled in base definition ── */
+
+/* ============================================================
+   SECTION SPACING — tighter on mobile
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-section { padding: 2.5rem 0; }
+  .gs-section-head { margin-bottom: 2rem; }
+  .gs-section-head h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-section { padding: 3rem 0; }
+}
+
+/* ============================================================
+   SECTION CONTAINER padding on small screens
+   ============================================================ */
+@media (max-width: 359px) {
+  .gs-container { padding-left: .75rem; padding-right: .75rem; }
+}
+
+/* ============================================================
+   ARTICLE (blog detail) — mobile reading fix
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-article-body { padding: 1.25rem; border-radius: var(--radius-md); }
+  .gs-article-content { font-size: .875rem; }
+  .gs-article-content h2 { font-size: 1.25rem; }
+  .gs-article-content h3 { font-size: 1.0625rem; }
+  .gs-article-cover { max-height: 14rem; border-radius: var(--radius-md); }
+}
+
+/* ============================================================
+   TEAM CARD
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-team-bio { padding: 1.5rem; }
+}
+
+/* ============================================================
+   SPEC TABLE (fleet detail)
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-spec-table td { padding: .625rem .375rem; font-size: .8rem; }
+  .gs-spec-table td:first-child { width: 45%; }
+}
+
+/* ============================================================
+   SWIPER slides — ensure correct height on mobile
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-flt-slider .swiper-wrapper { align-items: stretch; }
+  .gs-flt-card-img { aspect-ratio: 4/3; }
+}
+
+/* ============================================================
+   FLOATING WHATSAPP — avoid overlap with content on small screens
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-wa-float {
+    bottom: .75rem;
+    right: .75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .gs-wa-float svg { width: 22px; height: 22px; }
+}
+
+/* ============================================================
+   MEGA MENU — desktop only, ensure it never breaks on tablets
+   ============================================================ */
+@media (max-width: 1023px) {
+  .nav-mega-panel { display: none !important; }
+  #navBackdrop    { display: none !important; }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .nav-mega-inner { grid-template-columns: 240px 1fr; }
+  .nav-mega-bento { grid-template-columns: repeat(3, 1fr); }
+  .nav-bento-card { padding: 1.125rem 1.25rem; }
+}
+
+/* ============================================================
+   IFRAME (contact map) — responsive height on mobile
+   ============================================================ */
+@media (max-width: 479px) {
+  iframe[title="Grand Satya Office Location"] { height: 280px !important; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  iframe[title="Grand Satya Office Location"] { height: 320px !important; }
+}
+
+/* ============================================================
+   FLEET SIDEBAR (fleet page)
+   ============================================================ */
+@media (max-width: 1023px) {
+  .gs-fleet-layout { grid-template-columns: 1fr !important; gap: 1.5rem; }
+  .gs-fleet-sidebar { position: static; }
+}
+
+/* ============================================================
+   FLEET DETAIL PAGE — specs and image
+   ============================================================ */
+@media (max-width: 639px) {
+  .gs-fleet-nv-thumb { aspect-ratio: 4/3; }
+}
+
+/* ============================================================
+   GRID SERVICES — services page
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-grid-services { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-grid-services { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
+
+/* ============================================================
+   TRUSTED PARTNERS (clients logos)
+   ============================================================ */
+@media (max-width: 479px) {
+  /* Ensure client logos wrap nicely */
+  div[style*="display:flex;flex-wrap:wrap;align-items:center;justify-content:center"] {
+    gap: 1.5rem 2rem !important;
+  }
+  div[style*="display:flex;flex-wrap:wrap;align-items:center;justify-content:center"] img {
+    max-height: 2rem !important;
+  }
+}
+
+/* ============================================================
+   TAB FILTERS (gallery page)
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-tabs { gap: .3rem; }
+  .gs-tab  { padding: .4rem .75rem; font-size: .75rem; }
+}
+
+/* ============================================================
+   TYPOGRAPHY — clamp adjustments for xs
+   ============================================================ */
+@media (max-width: 359px) {
+  h1, h2 { word-break: break-word; }
+  .gs-svc-headline,
+  .gs-flt-headline,
+  .gs-wcu-headline,
+  .gs-hiw-headline,
+  .gs-testi-headline,
+  .gs-blog-headline,
+  .gs-cta-headline,
+  .gs-faq-headline {
+    font-size: clamp(1.375rem, 8vw, 1.75rem) !important;
+  }
+}
+
+/* ============================================================
+   PRINT — ensure page doesn't overflow
+   ============================================================ */
+@media print {
+  .gs-wa-float,
+  #mainNav,
+  .gs-hero-booking-row,
+  .nav-hamburger { display: none !important; }
+}
+
+/* ============================================================
+   FOOTER OUTER WRAPPER
+   ============================================================ */
+.gs-footer-outer {
+  padding: 0 1rem 1.5rem;
+  background: #fff;
+}
+@media (max-width: 479px) {
+  .gs-footer-outer { padding: 0 .375rem 1rem; }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  .gs-footer-outer { padding: 0 .625rem 1.25rem; }
+}
+
+/* ============================================================
+   CTA SECTION WRAPPER — responsive padding fix
+   ============================================================ */
+.gs-cta-outer {
+  padding: 0 1rem;
+}
+@media (max-width: 479px) {
+  .gs-cta-outer { padding: 0 .375rem; }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  .gs-cta-outer { padding: 0 .625rem; }
+}
+
+/* ============================================================
+   FLEET PAGE — sidebar mobile layout
+   ============================================================ */
+@media (max-width: 1023px) {
+  /* Sidebar is hidden by default, shown via toggle class */
+  .gs-fleet-layout {
+    grid-template-columns: 1fr !important;
+    gap: 0;
+  }
+  .gs-fleet-sidebar {
+    margin-bottom: 1.5rem;
+    position: static !important;
+    top: auto !important;
+  }
+}
+
+/* Fleet grid responsive */
+@media (max-width: 359px) {
+  .gs-grid-fleet { grid-template-columns: 1fr; }
+}
+@media (min-width: 360px) and (max-width: 479px) {
+  .gs-grid-fleet { grid-template-columns: repeat(2, 1fr); gap: .875rem; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-grid-fleet { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-grid-fleet { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================================
+   FLEET DETAIL PAGE
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-fleet-detail-grid { gap: 1.5rem; }
+
+  /* Photo container padding */
+  .gs-fleet-detail-grid > div:first-child
+    div[style*="padding:2rem"] { padding: 1.25rem !important; min-height: 13rem !important; }
+  .gs-fleet-detail-grid > div:first-child
+    img[style*="max-height:16rem"] { max-height: 11rem !important; }
+
+  /* Specs & features cards */
+  .gs-fleet-detail-grid div[style*="padding:1.5rem;border:1.5px solid var(--border)"] {
+    padding: 1.125rem !important;
+  }
+
+  /* h2 title */
+  .gs-fleet-detail-grid h2[style*="font-size:1.875rem"] {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-fleet-detail-grid > div:first-child
+    div[style*="padding:2rem"] { padding: 1.5rem !important; min-height: 15rem !important; }
+}
+
+/* Related fleet grid */
+.gs-related-nv-grid .gs-fleet-nv-thumb { aspect-ratio: 4/3; }
+@media (max-width: 359px) {
+  .gs-related-nv-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   BLOG PAGE
+   ============================================================ */
+@media (max-width: 359px) {
+  .gs-grid-blog { grid-template-columns: 1fr; }
+}
+@media (min-width: 360px) and (max-width: 479px) {
+  .gs-grid-blog { grid-template-columns: 1fr; gap: 1.125rem; }
+  .gs-blog-nv-thumb { height: 11rem; }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  .gs-grid-blog { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .gs-blog-nv-thumb { height: 10rem; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-grid-blog { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Blog pagination */
+@media (max-width: 479px) {
+  /* Pagination row wraps nicely on small screens — no change needed */
+  div[style*="margin-top:3rem;display:flex;justify-content:center"] {
+    gap: .3rem !important;
+  }
+}
+
+/* ============================================================
+   BLOG DETAIL PAGE
+   ============================================================ */
+@media (max-width: 479px) {
+  /* Article wrap: remove max-width constraint */
+  .gs-article-wrap { max-width: 100%; }
+
+  /* Article body */
+  .gs-article-body { padding: 1.25rem; border-radius: 1rem; }
+  .gs-article-cover { max-height: 12rem; border-radius: .875rem; }
+
+  /* Hero title on blog detail */
+  .gs-page-hero h1[style*="max-width:44rem"] {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    max-width: 100% !important;
+  }
+
+  /* Related blog section */
+  .gs-related-blog-grid { grid-template-columns: 1fr; }
+  div[style*="max-width:54rem;margin:3.5rem auto 0"] {
+    max-width: 100% !important;
+    margin-top: 2.5rem !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-article-body { padding: 1.5rem; }
+  .gs-article-wrap { max-width: 100%; }
+  div[style*="max-width:54rem;margin:3.5rem auto 0"] { max-width: 100% !important; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-article-wrap { max-width: 100%; }
+  div[style*="max-width:54rem;margin:3.5rem auto 0"] { max-width: 100% !important; }
+}
+
+/* ============================================================
+   BACK BUTTON — ensure it doesn't overflow on xs
+   ============================================================ */
+@media (max-width: 359px) {
+  div[style*="margin-bottom:1.75rem"] .gs-btn { font-size: .75rem; padding: .5rem 1rem; }
+}
+
+/* ============================================================
+   INLINE STYLES OVERRIDE — homepage sections
+   ============================================================ */
+
+/* Coverage section map image */
+@media (max-width: 639px) {
+  .gs-split > div > img[alt="Service Area Map"] {
+    border-radius: 1rem !important;
+  }
+}
+
+/* Values grid cards */
+@media (max-width: 479px) {
+  .gs-grid-values .gs-card[style*="padding:1.75rem"] {
+    padding: 1.25rem 1rem !important;
+  }
+  .gs-grid-values .gs-card img[style*="max-height:4.5rem"] {
+    max-height: 3.5rem !important;
+  }
+}
+
+/* Services page — trusted brands */
+@media (max-width: 479px) {
+  div[style*="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem"] {
+    gap: 1.25rem 2rem !important;
+  }
+}
+
+/* About page — stats */
+@media (max-width: 359px) {
+  .gs-grid-stats .gs-stat-nv { padding: 1rem; }
+}
+
+/* ============================================================
+   HERO actions - ensure buttons never overflow on xs
+   ============================================================ */
+@media (max-width: 360px) {
+  .gs-hero-actions > .gs-btn,
+  .gs-hero-actions > .gs-btn-outline-pill {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   GS-SC section card — inner section padding on tablet portrait
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-sc { padding: 4rem 2rem; }
+  .gs-sc-services { padding: 4rem 1.5rem; }
+}
+
+/* ============================================================
+   BOOKING FLOAT — tablet landscape fix
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 900px) {
+  .gs-booking-float-field { min-width: calc(33% - 1rem); }
+  .gs-hero-booking-row { left: 1rem; right: 1rem; }
+}
+
+/* ============================================================
+   SECTION HEAD text wrapping on small screens
+   ============================================================ */
+@media (max-width: 479px) {
+  .gs-svc-headline br,
+  .gs-flt-headline br,
+  .gs-wcu-headline br,
+  .gs-testi-headline br,
+  .gs-blog-headline br,
+  .gs-hiw-headline br,
+  .gs-faq-headline br { display: none; }
+}
+
+/* ============================================================
+   TESTIMONIAL CARD — fix min-height on slider
+   ============================================================ */
+.swiper-slide .gs-testi-card { height: 100%; }
+@media (max-width: 479px) {
+  .gs-testi-card { padding: 1.25rem; }
+  .gs-testi-nav-btn { width: 2.375rem; height: 2.375rem; font-size: .875rem; }
+}
+
+/* ============================================================
+   FLEET SLIDER — prev/next nav position on tablet
+   ============================================================ */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-flt-nav-btn { width: 2.5rem; height: 2.5rem; }
+}
+
+/* ============================================================
+   CONTACT PAGE — map height on tablet
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  iframe[title="Grand Satya Office Location"] { height: 360px !important; }
+}
+
+/* ============================================================
+   GALLERY NV item height — consistent across breakpoints
+   ============================================================ */
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-gallery-nv-item img { height: 12.5rem; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gs-gallery-nv-item img { height: 14rem; }
+}
+
+/* ============================================================
+   PREVENT TEXT OVERFLOW in cards/sections across all pages
+   ============================================================ */
+.gs-svc-nv-title,
+.gs-svc-card-title,
+.gs-fleet-nv-name,
+.gs-blog-nv-title,
+.gs-testi-name,
+.gs-wcu-item-title,
+.gs-about-feature-title,
+.gs-hiw-step-label {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ============================================================
+   ENSURE ALL IMAGES are responsive
+   ============================================================ */
+.gs-about-nv-photo-main img,
+.gs-about-nv-photo-side img,
+.gs-flt-cat-img img,
+.gs-fleet-nv-thumb img,
+.gs-blog-nv-thumb img,
+.gs-faq-photo img {
+  max-width: 100%;
+}
+
+
+/* ============================================================
+   RESPONSIVE AUDIT FIXES — Grand Satya
+   Fixing all 37 issues identified in full audit
+   ============================================================ */
+
+/* ── ISSUE 1 · Hero booking bar — orphaned field borders on tablet ── */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gs-booking-float-field {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+  /* Restore dividers only between adjacent same-row items via outline */
+  .gs-booking-float-field ~ .gs-booking-float-field {
+    padding-left: .875rem;
+    border-left: 1.5px solid var(--border) !important;
+  }
+  /* When they wrap (2 per row), the first of each row must NOT have border-left */
+  .gs-booking-float-field:nth-child(odd) {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* ── ISSUE 2 · Hero headline forced <br> at small mobile ── */
+@media (max-width: 479px) {
+  .gs-hero-headline-nova br { display: none; }
+  .gs-hero-headline-nova    { font-size: clamp(1.625rem, 7vw, 2.125rem); }
+}
+
+/* ── ISSUE 3 · Hero actions pill button wraps as orphan 361–479px ── */
+@media (min-width: 361px) and (max-width: 479px) {
+  .gs-hero-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .gs-hero-actions > * { width: 100%; justify-content: center; }
+}
+
+/* ── ISSUE 4 · About CTA row cramped at <360px ── */
+@media (max-width: 359px) {
+  .gs-about-content > div[style*="display:flex;align-items:center;gap:.625rem"] {
+    flex-wrap: wrap;
+  }
+  /* Generic fix for any flex CTAs that pair button + icon */
+  .gs-about-split div[style*="display:flex;align-items:center;gap:.625rem"] {
+    flex-wrap: wrap;
+  }
+}
+
+/* ── ISSUE 5 · Fleet category label overflow at 320px ── */
+.gs-flt-cat-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: clamp(.8125rem, 2.8vw, 1rem);
+}
+
+/* ── ISSUE 6 · Fleet card name — add ellipsis truncation ── */
+.gs-flt-card-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── ISSUE 7 · HIW badge avatars — invalid negative gap ── */
+.gs-hiw-badge-avatars {
+  gap: 0 !important; /* gap cannot be negative; rely on margin-right:-6px on imgs */
+}
+.gs-hiw-badge-avatars img {
+  margin-right: -8px;
+}
+.gs-hiw-badge-avatars .gs-hiw-badge-more {
+  margin-left: 6px;
+}
+
+/* ── ISSUE 9 · WCU layout — image order on mobile ── */
+@media (max-width: 1023px) {
+  .gs-wcu-layout {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  /* Put center image first */
+  .gs-wcu-center    { order: 0; }
+  .gs-wcu-col-left  { order: 1; }
+  .gs-wcu-col-right { order: 2; }
+
+  /* Remove 3-col grid forced from earlier fix */
+  .gs-wcu-layout {
+    grid-template-columns: unset !important;
+  }
+
+  /* Items: normal L-to-R on mobile */
+  .gs-wcu-item-right,
+  .gs-wcu-item-left {
+    flex-direction: row !important;
+    text-align: left !important;
+  }
+  .gs-wcu-col-left .gs-wcu-item > div:last-child {
+    align-items: flex-start !important;
+  }
+}
+
+/* ── ISSUE 10 · WCU item desc max-width constraint on tablet ── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-wcu-item-desc { max-width: 100% !important; }
+}
+
+/* ── ISSUE 11 · FAQ photos rotated corners overflow container ── */
+.gs-faq-photos {
+  overflow: hidden;
+  padding: .5rem;          /* gives rotated corners room within box */
+  box-sizing: content-box;
+}
+
+/* ── ISSUE 12 · Coverage map image — needs aspect-ratio for object-fit ── */
+.gs-split > div > img[alt="Service Area Map"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+@media (max-width: 639px) {
+  .gs-split > div > img[alt="Service Area Map"] {
+    aspect-ratio: 16/9;
+  }
+}
+
+/* ── ISSUE 13 · Values grid — handled in base definition above ── */
+
+/* ── ISSUE 14 · CTA button row flex-wrap ── */
+.gs-cta-left div[style*="display:flex;align-items:center;gap:.625rem"] {
+  flex-wrap: wrap;
+}
+
+/* ── ISSUE 15 · Blog featured — aspect-ratio 4/5 too tall on tablet ── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gs-blog-featured {
+    aspect-ratio: 16/9 !important;
+    min-height: 320px;
+  }
+}
+@media (max-width: 639px) {
+  .gs-blog-featured { aspect-ratio: 3/2 !important; }
+}
+
+/* ── ISSUE 16 · Blog side thumb — smaller on <360px ── */
+@media (max-width: 359px) {
+  .gs-blog-side-thumb {
+    width: 4rem !important;
+    min-width: 4rem !important;
+    height: 4rem !important;
+  }
+  .gs-blog-side-body { gap: .25rem; }
+  .gs-blog-side-title { font-size: .8125rem; }
+}
+
+/* ── ISSUE 19 · About intro — side photo overlap too aggressive at <480px ── */
+@media (max-width: 479px) {
+  /* Stack photos vertically at xs — abandon the absolute overlay */
+  .gs-about-nv-photos {
+    flex-direction: column;
+    align-items: center;
+    min-height: auto !important;
+    gap: .75rem;
+  }
+  .gs-about-nv-photo-main {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
+  .gs-about-nv-photo-main img { height: 220px !important; }
+  .gs-about-nv-photo-side {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 80% !important;
+    border: 3px solid white;
+    z-index: 3;
+  }
+  .gs-about-nv-photo-side img { height: 160px !important; }
+  .gs-about-nv-asterisk { display: none !important; }
+}
+
+/* ── ISSUE 20 · About stats grid — 1-column at xs ── */
+@media (max-width: 359px) {
+  .gs-grid-stats { grid-template-columns: 1fr !important; }
+}
+
+/* ── ISSUE 22 / 24 · Testimonials 3rd-card orphan in 2-col grid ── */
+/* Fix: use auto-fit so 3 cards fill row evenly */
+@media (min-width: 540px) and (max-width: 1023px) {
+  .gs-grid-services {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+/* ── ISSUE 23 · Contact map iframe height ── */
+@media (max-width: 639px) {
+  iframe[title="Grand Satya Office Location"] { height: 260px !important; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  iframe[title="Grand Satya Office Location"] { height: 340px !important; }
+}
+
+/* ── ISSUE 27 · Fleet card thumbnail too short in 2-col at 480–639px ── */
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-fleet-nv-thumb { aspect-ratio: 4/3 !important; }
+}
+
+/* ── ISSUE 28 · Fleet detail photo container — reduce min-height on mobile ── */
+@media (max-width: 479px) {
+  .gs-fleet-detail-grid div[style*="min-height:18rem"] {
+    min-height: 12rem !important;
+    padding: 1rem !important;
+  }
+  .gs-fleet-detail-grid img[style*="max-height:16rem"] {
+    max-height: 9rem !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .gs-fleet-detail-grid div[style*="min-height:18rem"] {
+    min-height: 14rem !important;
+  }
+  .gs-fleet-detail-grid img[style*="max-height:16rem"] {
+    max-height: 11rem !important;
+  }
+}
+
+/* ── ISSUE 29 · Fleet detail features grid — force 1-col at xs ── */
+@media (max-width: 359px) {
+  .gs-fleet-features-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── ISSUE 30 · Related fleet grid — 1-col at xs ── */
+@media (max-width: 359px) {
+  .gs-related-nv-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── ISSUE 32 · Blog detail share buttons overflow 360–430px ── */
+@media (max-width: 479px) {
+  .gs-blog-share-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .gs-blog-share-row .gs-btn { width: 100%; justify-content: center; }
+  .gs-blog-share-row > span { margin-bottom: .25rem; }
+}
+
+/* ── ISSUE 33 · Navbar — body scroll-lock handled via JS (see fix below) ── */
+body.nav-menu-open { overflow: hidden; }
+
+/* ── ISSUE 34 · Hamburger tap target ── */
+.nav-hamburger {
+  padding: .625rem !important;   /* 22px icon + 10px padding each side ≈ 44px */
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* ── ISSUE 36 · Footer hours — remove &nbsp; spacing hack ── */
+/* Applied via CSS — the &nbsp; is in Blade, we use padding-left instead */
+.gs-footer-hours-indent {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
+}
+
+/* ── ISSUE 37 · Footer bottom bar — center content at <480px ── */
+@media (max-width: 479px) {
+  .gs-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .875rem;
+  }
+  .gs-footer-copy { text-align: center; }
+}
+
+/* ── WCU circle — responsive sizes ── */
+@media (max-width: 479px)  { .gs-wcu-circle { max-width: 200px; } }
+@media (min-width: 480px) and (max-width: 1023px) { .gs-wcu-circle { max-width: 280px; } }
+
+/* ── Services footer CTA row — flex-wrap ── */
+.gs-svc-footer div[style*="display:flex;align-items:center;justify-content:center"] {
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+/* ── HIW visual — min-height only on desktop ── */
+@media (max-width: 1023px) {
+  .gs-hiw-visual { min-height: auto; }
+}
+
+/* ── FAQ photos — ensure proper stacking on xs ── */
+@media (max-width: 479px) {
+  .gs-faq-photos {
+    min-height: 220px !important;
+    overflow: hidden;
+  }
+}
+
+/* ── Fleet card name — ensure uniform text truncation on all sizes ── */
+.gs-fleet-nv-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Blog page: pagination accessible on very small screens ── */
+@media (max-width: 359px) {
+  div[style*="display:flex;justify-content:center;align-items:center;gap:.5rem"] {
+    gap: .25rem !important;
+  }
+  div[style*="border-radius:50%;width:2.5rem;height:2.5rem"] {
+    width: 2rem !important;
+    height: 2rem !important;
+    font-size: .75rem !important;
+  }
+}
+
+/* ── Values cards — ensure text fits at xs 2-col ── */
+@media (min-width: 360px) and (max-width: 479px) {
+  .gs-grid-values .gs-card[style*="padding:1.75rem"] {
+    padding: 1.125rem .875rem !important;
+  }
+  .gs-grid-values .gs-card-title { font-size: .8125rem; }
+  .gs-grid-values .gs-card-text  { font-size: .75rem; }
+}
+
+/* ── Hero sub text — remove <br> effect at xs ── */
+@media (max-width: 479px) {
+  .gs-hero-sub-nova br { display: none; }
+}
+
+/* ── Ensure all inline flex CTAs wrap gracefully ── */
+@media (max-width: 479px) {
+  div[style*="display:flex;align-items:center;gap:.625rem;margin-top"] {
+    flex-wrap: wrap;
+  }
+  div[style*="display:flex;align-items:center;gap:.625rem;margin-top"] > .gs-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
+
+
+/* ── WCU layout — ensure desktop 3-col and mobile flex-column with correct order ── */
+@media (min-width: 1024px) {
+  .gs-wcu-layout {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  /* Reset order on desktop */
+  .gs-wcu-center    { order: unset !important; }
+  .gs-wcu-col-left  { order: unset !important; }
+  .gs-wcu-col-right { order: unset !important; }
+
+  /* Left col items reverse (icon right) */
+  .gs-wcu-item-right {
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+  }
+  .gs-wcu-col-left .gs-wcu-item > div:last-child {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+  }
+  .gs-wcu-item-desc { max-width: 18rem; }
+}
+
+@media (max-width: 1023px) {
+  .gs-wcu-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 2rem;
+  }
+  .gs-wcu-center    { order: 0; display: flex; justify-content: center; }
+  .gs-wcu-col-left  { order: 1; }
+  .gs-wcu-col-right { order: 2; }
+  .gs-wcu-item-desc { max-width: 100% !important; }
+  .gs-wcu-col { gap: 1.25rem; }
+}
+
+
+/* ============================================================
+   OUR VALUES — responsive card fixes
+   ============================================================ */
+
+/* Mobile: kartu full-width, layout horizontal (icon + text side by side) */
+@media (max-width: 479px) {
+  .gs-grid-values .gs-card[style*="padding"] {
+    padding: 1.25rem !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+  .gs-grid-values .gs-card[style*="padding"] img[style*="max-height"] {
+    max-height: 3rem !important;
+    width: auto !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+  }
+  .gs-grid-values .gs-card-title {
+    font-size: .9375rem;
+    margin-bottom: .35rem;
+  }
+  .gs-grid-values .gs-card-text {
+    font-size: .8125rem;
+    line-height: 1.55;
+  }
+}
+
+/* Tablet 2-col: tetap centered seperti desktop */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .gs-grid-values .gs-card[style*="padding"] {
+    padding: 1.5rem 1.25rem !important;
+    text-align: center !important;
+  }
+  .gs-grid-values .gs-card[style*="padding"] img[style*="max-height"] {
+    max-height: 3.75rem !important;
+    margin: 0 auto 1rem !important;
+  }
+}
+
+
+/* ============================================================
+   ABOUT PAGE — comprehensive responsive fixes
+   ============================================================ */
+
+/* gs-about-wcu-item — clean vertical card, NO forced flex-row (causes title truncation) */
+.gs-about-wcu-item {
+  background: white;
+  border-radius: 1.25rem;
+  border: 1.5px solid var(--border);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  transition: box-shadow .2s, transform .2s;
+}
+.gs-about-wcu-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.08);
+}
+.gs-about-wcu-item > div:first-child { margin: 0 auto 1.125rem !important; }
+.gs-about-wcu-item > div:last-child  { text-align: center; }
+
+/* Mobile <540px: still vertical, just left-align text and tighter padding */
+@media (max-width: 539px) {
+  .gs-about-wcu-item { padding: 1.375rem 1rem; text-align: left; }
+  .gs-about-wcu-item > div:first-child { margin: 0 0 .875rem !important; }
+  .gs-about-wcu-item > div:last-child  { text-align: left; }
+}
+
+/* Stats: always 2-col, just tighter on xs */
+.gs-grid-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .gs-grid-stats { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 359px) {
+  .gs-grid-stats { gap: .625rem; }
+  .gs-stat-nv { padding: .875rem .75rem; }
+  .gs-stat-nv-num { font-size: 1.5rem; }
+}
+
+/* Drivers: better column distribution */
+.gs-grid-drivers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .875rem;
+}
+@media (min-width: 640px)  { .gs-grid-drivers { grid-template-columns: repeat(3, 1fr); gap: 1rem; } }
+@media (min-width: 1024px) { .gs-grid-drivers { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; } }
+@media (max-width: 359px)  { .gs-grid-drivers { gap: .625rem; } }
+
+/* Testimonials auto-fit (no orphan card) */
+.gs-testi-grid-about {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 1.25rem !important;
+}
+@media (min-width: 640px) {
+  .gs-testi-grid-about {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  }
+}
+
+/* d-none / d-md-block utilities */
+.d-none { display: none; }
+@media (min-width: 768px) { .d-none.d-md-block { display: inline; } }
+
+/* Trusted brands logos — tighter gap on mobile */
+@media (max-width: 479px) {
+  .gs-about-brands-row {
+    gap: 1.25rem 1.75rem !important;
+  }
+  .gs-about-brands-row img {
+    max-height: 1.75rem !important;
+  }
+}
+
+
+/* ============================================================
+   HOW IT WORKS — mobile fix (screenshot issue)
+   ============================================================ */
+
+/* Mobile: visual section stack cleanly */
+@media (max-width: 767px) {
+  .gs-hiw-split {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .gs-hiw-visual {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: auto !important;
+    gap: 1.25rem;
+  }
+
+  /* Image centered, reasonable size */
+  .gs-hiw-circle-img {
+    max-width: min(280px, 80vw) !important;
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+  /* Badge: full-width card below image */
+  .gs-hiw-badge {
+    position: static !important;
+    bottom: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: min(320px, 90vw) !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    border-radius: 1rem !important;
+    padding: 1rem 1.25rem !important;
+    box-shadow: 0 8px 28px rgba(13,27,46,.25) !important;
+  }
+
+  /* Decorative elements hidden on mobile */
+  .gs-hiw-asterisk,
+  .gs-hiw-star { display: none !important; }
+}
+
+/* ============================================================
+   OUR VALUES — fix text overflow in horizontal card layout
+   ============================================================ */
+
+/* Remove the horizontal layout that causes truncation,
+   keep centered vertical layout at all sizes but tighten padding */
+@media (max-width: 479px) {
+  .gs-grid-values .gs-card[style*="padding"] {
+    display: block !important;      /* remove forced flex row */
+    text-align: center !important;
+    padding: 1.25rem 1rem !important;
+  }
+  .gs-grid-values .gs-card[style*="padding"] img[style*="max-height"] {
+    max-height: 2.75rem !important;
+    margin: 0 auto .875rem !important;
+    display: block !important;
+  }
+  .gs-grid-values .gs-card-title {
+    font-size: .875rem !important;
+    margin-bottom: .3rem;
+    word-break: break-word;
+  }
+  .gs-grid-values .gs-card-text {
+    font-size: .75rem !important;
+    line-height: 1.55;
+    word-break: break-word;
+  }
+}
+
+/* gs-grid-features about page — override to prevent 4-col at 540px on about */
+@media (min-width: 540px) and (max-width: 1023px) {
+  .gs-grid-features { grid-template-columns: 1fr 1fr !important; gap: 1rem; }
+}
