@@ -29,25 +29,9 @@ class AppServiceProvider extends ServiceProvider
             ]);
         });
 
-        // HTML Minification for production
+        // Force HTTPS in production if needed
         if (config('app.env') === 'production') {
-            $this->enableHtmlMinification();
+            \Illuminate\Support\Facades\URL::forceScheme('https');
         }
     }
 
-    /**
-     * Enable HTML output minification
-     */
-    protected function enableHtmlMinification()
-    {
-        $this->app['blade.compiler']->precompiler(function ($string) {
-            // Remove HTML comments (except IE conditionals)
-            $string = preg_replace('/<!--(?!\[if)(?!<!)[^\[>].*?-->/s', '', $string);
-            // Remove whitespace between tags
-            $string = preg_replace('/>\s+</', '><', $string);
-            // Remove multiple spaces
-            $string = preg_replace('/\s+/', ' ', $string);
-            return $string;
-        });
-    }
-}
