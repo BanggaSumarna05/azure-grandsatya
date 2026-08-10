@@ -30,7 +30,8 @@
     <meta name="twitter:image"       content="@yield('og_image', asset('images/hero/hero2.png'))">
 
     {{-- ── Favicon ─────────────────────────────────────────────────── --}}
-    <link rel="icon" href="{{ asset('anyar/img/favicon.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
     {{-- ── DNS Prefetch / Preconnect ──────────────────────────────── --}}
     <link rel="dns-prefetch"  href="https://fonts.googleapis.com">
