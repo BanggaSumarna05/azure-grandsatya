@@ -1,9 +1,9 @@
 @extends('layouts.front')
 
-@section('title', 'Services — Grand Satya | Corporate Car Rental, Project Transport & Travel Management')
-@section('meta_description', 'Grand Satya menyediakan layanan Corporate Car Rental, Executive Car Rental, Project Transportation, Professional Driver Service, Airport Transfer, dan Corporate Travel Management di seluruh Indonesia.')
-@section('og_title',       'Layanan Grand Satya — Corporate Car Rental & Travel Management')
-@section('og_description', 'Satu mitra untuk semua kebutuhan transportasi dan perjalanan bisnis perusahaan Anda. Corporate Rental, Executive Fleet, Project Transport, dan Travel Management di seluruh Indonesia.')
+@section('title', 'Services — Grand Satya | Rental Kendaraan Mobil & Alat Berat')
+@section('meta_description', 'Grand Satya menyediakan layanan rental mobil operasional, sewa mobil eksekutif, rental alat berat (excavator, bulldozer, crane), kendaraan proyek, dengan atau tanpa operator/driver di seluruh Indonesia.')
+@section('og_title',       'Layanan Grand Satya — Rental Kendaraan Mobil & Alat Berat')
+@section('og_description', 'Satu mitra untuk semua kebutuhan sewa kendaraan dan alat berat perusahaan Anda. Mobil operasional, eksekutif, dump truck, excavator, crane, dan heavy equipment industri.')
 @section('og_image',        asset('images/hero/hero2.png'))
 
 @push('styles')
@@ -60,19 +60,19 @@
     <div class="gs-container">
         <div style="text-align:center;margin-bottom:3rem" data-aos="fade-up">
             <span class="gs-eyebrow-orange">★ Core Services</span>
-            <h2 style="font-size:clamp(1.75rem,4vw,2.5rem)">Solusi Mobilitas Korporasi<br>yang Terintegrasi</h2>
+            <h2 style="font-size:clamp(1.75rem,4vw,2.5rem)">Solusi Rental Kendaraan<br>&amp; Alat Berat Terlengkap</h2>
             <p style="color:var(--text-muted);font-size:.9375rem;max-width:36rem;margin:1rem auto 0;line-height:1.75">
-                Satu mitra untuk seluruh kebutuhan transportasi dan perjalanan bisnis perusahaan Anda.
+                Satu mitra untuk seluruh kebutuhan sewa kendaraan mobil dan alat berat perusahaan Anda.
             </p>
         </div>
         <div class="gs-grid-services">
             @foreach([
-                ['bi-car-front-fill',    'Corporate Car Rental',        'Penyewaan kendaraan untuk perjalanan dinas, kunjungan bisnis, executive meeting, site visit, hingga operasional proyek perusahaan. Tersedia paket harian, bulanan, dan kontrak jangka panjang.'],
-                ['bi-gem',               'Executive Car Rental',        'Pilihan kendaraan premium untuk kebutuhan eksekutif: BMW 730Li, Lexus RX, Alphard, Camry. Representatif, nyaman, dan berkesan untuk tamu VIP dan direksi.'],
-                ['bi-airplane-fill',     'Airport Transfer',            'Layanan jemput-antar bandara tepat waktu untuk tamu perusahaan dan perjalanan dinas. Driver profesional, tarif transparan, dan gratis waiting time.'],
-                ['bi-person-badge-fill', 'Professional Driver Service', 'Pengemudi profesional berpengalaman, disiplin, berpenampilan rapi, dan memahami standar operasional korporasi maupun kebutuhan proyek industri.'],
-                ['bi-tools',             'Project Transportation',      'Penyediaan armada operasional untuk proyek industri: Construction, Mining, Oil & Gas, Manufacturing. Tersedia Long Term Rental dan Monthly Rental.'],
-                ['bi-briefcase-fill',    'Corporate Travel Management', 'Solusi perjalanan bisnis terpadu: tiket pesawat, hotel, kereta, airport transfer, asuransi perjalanan, visa & passport assistance, dan business trip arrangement.'],
+                ['bi-car-front-fill',    'Rental Mobil Operasional',    'Sewa kendaraan untuk kebutuhan operasional harian perusahaan, antar jemput karyawan, site visit, dan perjalanan dinas. Tersedia paket harian, mingguan, dan bulanan dengan armada terawat.'],
+                ['bi-gem',               'Rental Mobil Eksekutif',      'Pilihan kendaraan premium untuk kebutuhan VIP dan pimpinan: Alphard, Camry, Fortuner, Innova Zenix. Representatif, nyaman, dan berkesan untuk tamu penting dan direksi.'],
+                ['bi-tools',             'Rental Alat Berat',           'Penyediaan heavy equipment untuk proyek: excavator, bulldozer, motor grader, vibro compactor, crane, dan forklift. Tersedia dengan atau tanpa operator bersertifikat SIO.'],
+                ['bi-truck',             'Rental Kendaraan Proyek',     'Armada kendaraan proyek industri: double cabin, dump truck, tronton, tangki, mixer truck, dan flatbed. Melayani sektor Construction, Mining, Oil & Gas, dan Manufacturing.'],
+                ['bi-person-badge-fill', 'Dengan Operator / Driver',    'Operator alat berat bersertifikat SIO dan driver profesional berpengalaman tersedia untuk mendampingi setiap unit. Disiplin, terlatih, dan memahami standar keselamatan industri.'],
+                ['bi-clipboard-check',   'Kontrak Jangka Panjang',      'Paket sewa bulanan dan tahunan untuk kebutuhan jangka panjang dengan harga kompetitif. Cocok untuk perusahaan dengan kebutuhan unit secara konsisten dan proyek berdurasi panjang.'],
             ] as $i => [$icon,$title,$desc])
             <div class="gs-svc-nv-card" data-aos="fade-up" data-aos-delay="{{ ($i % 3) * 80 }}">
                 <div class="gs-svc-nv-icon">
@@ -95,8 +95,7 @@
         <div style="text-align:center;margin-bottom:2.5rem" data-aos="fade-up">
             <span class="gs-eyebrow-orange">★ Klien Kami</span>
             <h2 style="font-size:clamp(1.75rem,4vw,2.5rem)">Dipercaya oleh Perusahaan-Perusahaan Terkemuka</h2>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem 3rem" data-aos="fade-up" data-aos-delay="80">
+        </div>        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem 3rem" data-aos="fade-up" data-aos-delay="80">
             @foreach([
                 ['azure.png','Azure'],
                 ['swadayagraha.png','Swadaya Graha'],
@@ -123,9 +122,9 @@
         </div>
         <div class="gs-grid-services" style="gap:1.5rem">
             @foreach([
-                ['Budi Santoso','Corporate Manager — PT Azure Group','Grand Satya selalu memberikan pelayanan yang cepat dan profesional untuk kebutuhan transportasi perusahaan kami. Driver tepat waktu, armada terawat, dan tim sangat responsif.',5,'0'],
-                ['Hendra Wijaya','Project Manager — Swadaya Graha','Kebutuhan transportasi proyek industri kami tertangani dengan sangat baik oleh Grand Satya. Mereka benar-benar memahami kebutuhan operasional di lapangan.',5,'2'],
-                ['Rina Kusuma','HR Director','Grand Satya menjadi mitra transportasi utama kami untuk seluruh kebutuhan mobilitas karyawan. Pelayanan konsisten dan profesional.',5,'1'],
+                ['Budi Santoso','Corporate Manager — PT Azure Group','Grand Satya selalu memberikan pelayanan yang cepat dan profesional untuk kebutuhan sewa kendaraan dan alat berat proyek kami. Unit terawat, tepat waktu, dan tim sangat responsif.',5,'0'],
+                ['Hendra Wijaya','Project Manager — Swadaya Graha','Kebutuhan alat berat dan kendaraan proyek industri kami tertangani dengan sangat baik oleh Grand Satya. Mereka benar-benar memahami kebutuhan operasional di lapangan.',5,'2'],
+                ['Rina Kusuma','HR Director','Grand Satya menjadi mitra rental utama kami untuk seluruh kebutuhan sewa kendaraan operasional karyawan. Pelayanan konsisten dan profesional.',5,'1'],
             ] as [$name,$role,$text,$stars,$img])
             <div class="gs-testi-card" data-aos="fade-up" data-aos-delay="{{ $loop->index * 80 }}">
                 <div class="gs-testi-stars">

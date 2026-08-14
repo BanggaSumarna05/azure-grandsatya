@@ -1,9 +1,9 @@
 ﻿@extends('layouts.front')
 
-@section('title', 'Contact Us — Grand Satya | Request Quotation Corporate Transportation')
-@section('meta_description', 'Hubungi Grand Satya untuk konsultasi dan Request Quotation layanan Corporate Transportation, Executive Car Rental, dan Business Travel Management. WhatsApp: 0896-3646-3189 | cs@grandsatya.com')
-@section('og_title',       'Hubungi Grand Satya — Request Quotation Corporate Transportation')
-@section('og_description', 'Konsultasikan kebutuhan transportasi korporasi Anda. Hubungi tim Grand Satya via WhatsApp 0896-3646-3189 atau isi formulir Request Quotation.')
+@section('title', 'Contact Us — Grand Satya | Request Quotation Rental Kendaraan & Alat Berat')
+@section('meta_description', 'Hubungi Grand Satya untuk konsultasi dan Request Quotation layanan rental kendaraan mobil dan alat berat. WhatsApp: 0896-3646-3189 | cs@grandsatya.com')
+@section('og_title',       'Hubungi Grand Satya — Request Quotation Rental Kendaraan & Alat Berat')
+@section('og_description', 'Konsultasikan kebutuhan sewa kendaraan dan alat berat Anda. Hubungi tim Grand Satya via WhatsApp 0896-3646-3189 atau isi formulir Request Quotation.')
 @section('og_image',        asset('images/hero/hero2.png'))
 
 @push('styles')
@@ -57,7 +57,7 @@
             <div data-aos="fade-right">
                 <div class="gs-contact-dark-card">
                     <h3>Hubungi Grand Satya</h3>
-                    <p class="subtitle">Tim kami siap membantu kebutuhan corporate transportation Anda.</p>
+                    <p class="subtitle">Tim kami siap membantu kebutuhan rental kendaraan dan alat berat Anda.</p>
 
                     <div class="gs-contact-dark-row">
                         <div class="gs-contact-dark-icon">
@@ -124,7 +124,7 @@
                     </div>
                     <div class="gs-form-group">
                         <label class="gs-label">Pesan / Kebutuhan Layanan <span style="color:#ef4444">*</span></label>
-                        <textarea name="message" rows="5" placeholder="Ceritakan kebutuhan transportasi korporasi Anda..." required class="gs-input gs-textarea">{{ old('message') }}</textarea>
+                        <textarea name="message" rows="5" placeholder="Ceritakan kebutuhan sewa kendaraan atau alat berat Anda (jenis unit, durasi, lokasi, jumlah)..." required class="gs-input gs-textarea">{{ old('message') }}</textarea>
                         @error('message')<p style="color:#ef4444;font-size:.75rem;margin:.25rem 0 0">{{ $message }}</p>@enderror
                     </div>
                     <button type="submit" class="gs-btn gs-btn-primary">

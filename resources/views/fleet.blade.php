@@ -1,9 +1,9 @@
 @extends('layouts.front')
 
-@section('title', 'Our Fleet — Grand Satya')
-@section('meta_description', 'Lihat daftar lengkap armada Grand Satya. MPV, SUV, Luxury, hingga Bus untuk kebutuhan sewa mobil perusahaan dan perorangan.')
-@section('og_title',       'Armada Grand Satya — Fleet Premium Corporate Transportation')
-@section('og_description', 'Pilihan armada lengkap: BMW 730Li, Lexus RX, Alphard, Fortuner, Innova, hingga kendaraan proyek industri. Terawat, berasuransi, dan siap melayani.')
+@section('title', 'Armada — Grand Satya | Rental Kendaraan Mobil & Alat Berat')
+@section('meta_description', 'Lihat daftar lengkap armada Grand Satya. Mobil operasional, eksekutif, kendaraan proyek, hingga alat berat (excavator, bulldozer, crane, dump truck) siap disewa.')
+@section('og_title',       'Armada Grand Satya — Rental Kendaraan Mobil & Alat Berat')
+@section('og_description', 'Pilihan unit lengkap: Alphard, Fortuner, Innova, Hiace, Double Cabin, Dump Truck, Excavator, Bulldozer, Crane. Terawat, berasuransi, dan siap melayani.')
 @section('og_image',        asset('images/hero/hero-fleet.jpg'))
 
 @php use Illuminate\Support\Facades\Storage; @endphp
@@ -15,7 +15,7 @@
 @push('styles')
 <style>
 .gs-page-hero {
-    background-image: url('{{ asset("images/hero/hero-fleet.jpg") }}');
+    background-image: url('{{ asset("images/hero/hero2.png") }}');
 }
 /* Fleet sidebar toggle button — mobile only */
 .gs-fleet-filter-toggle {
@@ -69,7 +69,7 @@
 
             {{-- Mobile filter toggle --}}
             <button class="gs-fleet-filter-toggle" id="fleetFilterToggle" type="button">
-                <span><i class="bi bi-funnel-fill" style="margin-right:.5rem"></i>Filter Armada</span>
+                <span><i class="bi bi-funnel-fill" style="margin-right:.5rem"></i>Filter Kendaraan</span>
                 <i class="bi bi-chevron-down" id="fleetFilterChevron"></i>
             </button>
 
@@ -78,7 +78,7 @@
                 <input type="search" id="fleetSearch" placeholder="Search ..."
                        aria-label="Search fleet">
 
-                <p class="gs-fleet-sidebar-title">Car Types</p>
+                <p class="gs-fleet-sidebar-title">Kategori Unit</p>
                 @php
                     $classes = $fleets->pluck('class')->unique()->sort()->values();
                 @endphp
@@ -114,11 +114,13 @@
                         <div class="gs-fleet-nv-body">
                             <div class="gs-fleet-nv-name">{{ $fleet->name }}</div>
                             <div class="gs-fleet-nv-specs">
+                                @php $isHeavy = str_contains(strtolower($fleet->class), 'alat berat') || str_contains(strtolower($fleet->class), 'heavy'); @endphp
                                 <div class="gs-fleet-nv-spec">
-                                    <i class="bi bi-door-closed"></i> Doors &nbsp; 4
+                                    <i class="bi bi-tag"></i>&nbsp; {{ $fleet->class }}
                                 </div>
                                 <div class="gs-fleet-nv-spec">
-                                    <i class="bi bi-people"></i> Passengers &nbsp; {{ $fleet->capacity ?? '—' }}
+                                    <i class="bi bi-{{ $isHeavy ? 'gear' : 'people' }}"></i>&nbsp;
+                                    {{ $isHeavy ? 'Kapasitas' : 'Penumpang' }} &nbsp; {{ $fleet->capacity ?? '—' }}
                                 </div>
                             </div>
                             <div class="gs-fleet-nv-footer">
@@ -135,7 +137,7 @@
                     @empty
                     <div style="text-align:center;padding:4rem;color:#9ca3af;grid-column:1/-1">
                         <i class="bi bi-truck" style="font-size:3rem;display:block;margin-bottom:1rem;opacity:.4"></i>
-                        <p style="font-size:.9375rem;font-weight:600">Armada sedang diperbarui.</p>
+                        <p style="font-size:.9375rem;font-weight:600">Unit sedang diperbarui.</p>
                     </div>
                     @endforelse
                 </div>

@@ -18,7 +18,7 @@
                 </span>
             </a>
             <p class="gs-footer-tagline">
-                Grand Satya  Corporate Transportation, Executive Car Rental, dan Business Travel Management terpercaya di Indonesia. Driving Business Forward.
+                Grand Satya — Rental kendaraan mobil dan alat berat terpercaya di Indonesia. Melayani sewa mobil operasional, kendaraan proyek, dan heavy equipment untuk industri konstruksi, tambang, migas, dan korporasi.
             </p>
         </div>
 
@@ -26,11 +26,11 @@
         <div>
             <h5 class="gs-footer-col-title">Our Services</h5>
             <ul class="gs-footer-links">
-                <li><a href="{{ route('front.services') }}">Corporate Car Rental</a></li>
-                <li><a href="{{ route('front.services') }}">Executive Car Rental</a></li>
-                <li><a href="{{ route('front.services') }}">Project Transportation</a></li>
-                <li><a href="{{ route('front.services') }}">Professional Driver</a></li>
-                <li><a href="{{ route('front.services') }}">Corporate Travel Management</a></li>
+                <li><a href="{{ route('front.services') }}">Rental Mobil Operasional</a></li>
+                <li><a href="{{ route('front.services') }}">Rental Mobil Eksekutif</a></li>
+                <li><a href="{{ route('front.services') }}">Rental Alat Berat</a></li>
+                <li><a href="{{ route('front.services') }}">Rental Kendaraan Proyek</a></li>
+                <li><a href="{{ route('front.services') }}">Dengan Operator / Driver</a></li>
             </ul>
         </div>
 

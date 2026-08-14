@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
-@section('title', 'Grand Satya   Corporate Mobility & Travel Management Solutions | Sewa Mobil Corporate Jakarta')
-@section('meta_description', 'Grand Satya, perusahaan Corporate Transportation & Business Travel Management terpercaya di Indonesia. Melayani Executive Car Rental, Project Transportation, Professional Driver, dan Corporate Travel Management. Hubungi 0896-3646-3189')
+@section('title', 'Grand Satya — Rental Kendaraan Mobil & Alat Berat | Sewa Mobil & Heavy Equipment Jakarta')
+@section('meta_description', 'Grand Satya, perusahaan rental kendaraan mobil dan alat berat terpercaya di Indonesia. Melayani sewa mobil operasional, kendaraan proyek, excavator, bulldozer, crane, dan heavy equipment. Hubungi 0896-3646-3189')
 
 @php use Illuminate\Support\Facades\Storage; @endphp
 
@@ -16,8 +16,8 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Grand Satya",
-  "alternateName": "Grand Satya Corporate Transportation",
-  "description": "Perusahaan Corporate Transportation, Executive Car Rental, dan Business Travel Management yang berfokus pada penyediaan solusi mobilitas bagi perusahaan, institusi, dan sektor industri di Indonesia.",
+  "alternateName": "Grand Satya Rental Kendaraan & Alat Berat",
+  "description": "Perusahaan rental kendaraan mobil dan alat berat yang berfokus pada penyediaan solusi sewa kendaraan operasional, eksekutif, proyek industri, excavator, bulldozer, crane, dan heavy equipment di seluruh Indonesia.",
   "foundingDate": "2021",
   "url": "{{ url('/') }}",
   "logo": "{{ asset('anyar/img/logo.png') }}",
@@ -46,12 +46,14 @@
   ],
   "areaServed": ["Jakarta","Cilegon","Gresik","Medan","Pekanbaru","Balikpapan","Sumba","Indonesia"],
   "serviceType": [
-    "Corporate Car Rental",
-    "Executive Car Rental",
-    "Project Transportation",
-    "Professional Driver Service",
-    "Corporate Travel Management",
-    "Airport Transfer"
+    "Rental Mobil Operasional",
+    "Rental Mobil Eksekutif",
+    "Rental Alat Berat",
+    "Rental Kendaraan Proyek",
+    "Sewa Excavator",
+    "Sewa Bulldozer",
+    "Sewa Crane",
+    "Heavy Equipment Rental"
   ]
 }
 </script>
@@ -66,23 +68,23 @@
       "name": "Apakah tersedia paket sewa bulanan atau kontrak jangka panjang?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ya, Grand Satya menyediakan paket sewa bulanan maupun kontrak jangka panjang yang fleksibel untuk kebutuhan perusahaan dan proyek industri."
+        "text": "Ya, Grand Satya menyediakan paket sewa harian, mingguan, bulanan, maupun kontrak jangka panjang untuk kendaraan mobil dan alat berat."
       }
     },
     {
       "@type": "Question",
-      "name": "Apakah Grand Satya bisa melayani operasional proyek industri?",
+      "name": "Alat berat apa saja yang tersedia untuk disewa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ya, kami memiliki armada dan pengemudi berpengalaman untuk mendukung operasional proyek di sektor Construction, Mining, Oil & Gas, dan Manufacturing."
+        "text": "Kami menyediakan excavator, bulldozer, motor grader, vibro compactor, crane, dump truck, dan berbagai heavy equipment lainnya untuk proyek konstruksi, pertambangan, dan migas."
       }
     },
     {
       "@type": "Question",
-      "name": "Apakah armada sudah termasuk pengemudi profesional?",
+      "name": "Apakah sewa alat berat sudah termasuk operator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tersedia pilihan dengan maupun tanpa pengemudi. Pengemudi Grand Satya telah berpengalaman menangani perjalanan korporat dan operasional proyek industri."
+        "text": "Tersedia pilihan dengan maupun tanpa operator. Operator Grand Satya telah bersertifikat dan berpengalaman di bidang operasional alat berat untuk berbagai jenis proyek industri."
       }
     },
     {
@@ -95,7 +97,7 @@
     },
     {
       "@type": "Question",
-      "name": "Bagaimana cara meminta quotation?",
+      "name": "Bagaimana cara meminta quotation sewa kendaraan atau alat berat?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Anda dapat menghubungi tim kami melalui WhatsApp 0896-3646-3189 atau mengisi formulir Request Quotation di halaman Contact kami. Tim kami akan merespons dengan cepat."
@@ -252,13 +254,13 @@
         {{-- Content --}}
         <div style="position:relative;z-index:10;max-width:54rem;width:100%;text-align:center">
             <div class="gs-hero-eyebrow-nova" data-aos="fade-down" data-aos-delay="0">
-                <span class="star"></span> Trusted Corporate Transportation & Travel Partner
+                <span class="star"></span> Trusted Rental Kendaraan & Alat Berat
             </div>
             <h1 class="gs-hero-headline-nova" data-aos="fade-up" data-aos-delay="50">
-                Corporate Mobility &amp;<br>Travel Management Solutions
+                Rental Kendaraan Mobil<br>&amp; Alat Berat Terpercaya
             </h1>
             <p class="gs-hero-sub-nova" data-aos="fade-up" data-aos-delay="80">
-                Grand Satya hadir sebagai mitra strategis perusahaan Anda dalam penyediaan Corporate Car Rental, Executive Transportation, Project Fleet, dan Business Travel Management di seluruh Indonesia.
+                Grand Satya hadir sebagai mitra terpercaya untuk kebutuhan sewa kendaraan operasional, mobil eksekutif, kendaraan proyek, hingga heavy equipment — excavator, bulldozer, crane, dan dump truck untuk industri konstruksi, tambang, dan migas di seluruh Indonesia.
             </p>
             <div class="gs-hero-actions" style="justify-content:center" data-aos="fade-up" data-aos-delay="100">
                 <a href="#contact" class="gs-btn gs-btn-primary gs-btn-lg" style="border-radius:9999px">
@@ -277,7 +279,7 @@
                 @csrf
                 <div class="gs-booking-float-label">
                     <p style="font-size:.7rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.12em;margin:0 0 .35rem">Request Quotation</p>
-                    <p style="font-size:1.0625rem;font-weight:800;color:var(--navy);margin:0;line-height:1.3">Butuh Armada<br>Corporate Hari Ini?</p>
+                    <p style="font-size:1.0625rem;font-weight:800;color:var(--navy);margin:0;line-height:1.3">Butuh Kendaraan atau<br>Alat Berat Hari Ini?</p>
                 </div>
                 <div class="gs-booking-float-field">
                     <p class="gs-booking-float-field-label">Nama / Perusahaan</p>
@@ -288,8 +290,8 @@
                     <input type="tel" name="contact" placeholder="08xx-xxxx-xxxx" class="gs-booking-float-input">
                 </div>
                 <div class="gs-booking-float-field">
-                    <p class="gs-booking-float-field-label">Kebutuhan Layanan</p>
-                    <input type="text" name="subject" placeholder="Corporate Rental / Project / Travel" class="gs-booking-float-input">
+                    <p class="gs-booking-float-field-label">Kebutuhan</p>
+                    <input type="text" name="subject" placeholder="Mobil Operasional / Alat Berat / Proyek" class="gs-booking-float-input">
                 </div>
                 <div class="gs-booking-float-field">
                     <p class="gs-booking-float-field-label">Pesan Singkat</p>
@@ -333,17 +335,17 @@
                         Mitra Strategis Mobilitas<br>Korporasi Anda
                     </h2>
                     <p class="gs-about-lead">
-                        Grand Satya adalah perusahaan yang bergerak di bidang <strong>Corporate Transportation, Executive Car Rental,</strong> dan <strong>Business Travel Management</strong>   berfokus pada penyediaan solusi mobilitas bagi perusahaan, institusi, dan sektor industri di Indonesia.
+                        Grand Satya adalah perusahaan yang bergerak di bidang <strong>Rental Kendaraan Mobil</strong> dan <strong>Rental Alat Berat</strong> — menyediakan solusi sewa lengkap untuk kebutuhan operasional perusahaan, kendaraan eksekutif, kendaraan proyek, hingga heavy equipment industri di seluruh Indonesia.
                     </p>
                     <p class="gs-about-lead" style="margin-top:.75rem">
-                        Didirikan pada tahun 2021, kami hadir sebagai mitra terpercaya yang memahami bahwa mobilitas adalah bagian penting dari operasional bisnis. Kami menghadirkan layanan terpadu mulai dari penyewaan kendaraan, pengemudi profesional, hingga pengelolaan perjalanan dinas perusahaan secara menyeluruh.
+                        Didirikan pada tahun 2021, kami hadir sebagai mitra terpercaya yang memahami bahwa ketersediaan kendaraan dan alat berat yang handal adalah bagian krusial dari operasional bisnis dan proyek. Kami menghadirkan layanan terpadu mulai dari sewa mobil harian, kontrak bulanan, hingga pengadaan excavator, bulldozer, crane, dan dump truck untuk sektor konstruksi, pertambangan, dan migas.
                     </p>
 
                     {{-- Feature list --}}
                     <div class="gs-about-features">
                         @foreach([
-                            ['bi-patch-check','Professional Corporate Partner','Kami memahami standar operasional perusahaan sehingga setiap layanan dirancang memenuhi kebutuhan bisnis secara profesional.'],
-                            ['bi-shield-check','Safety First & Fully Insured','Seluruh armada dilengkapi perlindungan asuransi serta didukung prosedur keselamatan ketat. Unit pengganti tersedia bila terjadi kendala operasional.'],
+                            ['bi-patch-check','Armada Lengkap & Terawat','Kendaraan dan alat berat selalu dalam kondisi prima dengan perawatan berkala dan inspeksi rutin oleh tim teknisi berpengalaman.'],
+                            ['bi-shield-check','Safety First & Fully Insured','Seluruh unit dilengkapi perlindungan asuransi serta prosedur keselamatan ketat. Unit pengganti tersedia bila terjadi kendala operasional.'],
                         ] as [$icon, $title, $desc])
                         <div class="gs-about-feature">
                             <div class="gs-about-feature-icon">
@@ -384,17 +386,17 @@
                     <span></span> Core Services
                 </div>
                 <h2 class="gs-svc-headline">
-                    Solusi Mobilitas Korporasi<br>yang Terintegrasi
+                    Solusi Rental Kendaraan<br>&amp; Alat Berat Terlengkap
                 </h2>
             </div>
 
             {{-- Cards grid   hanya 4 layanan utama di homepage --}}
             <div class="gs-svc-grid">
                 @foreach([
-                    ['bi-car-front-fill',    'Corporate Car Rental',        'Penyewaan kendaraan untuk perjalanan dinas, kunjungan bisnis, executive meeting, site visit, hingga operasional proyek perusahaan.'],
-                    ['bi-gem',               'Executive Car Rental',        'Kendaraan premium pilihan eksekutif: BMW 730Li, Lexus RX, Alphard, Camry. Representatif, nyaman, dan berkesan untuk setiap perjalanan VIP.'],
-                    ['bi-tools',             'Project Transportation',      'Armada operasional untuk proyek industri: Construction, Mining, Oil & Gas, Manufacturing. Tersedia Long Term & Monthly Rental.'],
-                    ['bi-briefcase-fill',    'Corporate Travel Management', 'Solusi perjalanan dinas terpadu: tiket pesawat, hotel, kereta, asuransi perjalanan, visa, dan pengaturan business trip menyeluruh.'],
+                    ['bi-car-front-fill',    'Rental Mobil Operasional',  'Sewa kendaraan untuk kebutuhan operasional harian perusahaan, antar jemput karyawan, site visit, kunjungan bisnis, dan perjalanan dinas. Tersedia paket harian, mingguan, dan bulanan.'],
+                    ['bi-gem',               'Rental Mobil Eksekutif',    'Kendaraan premium pilihan: Alphard, Camry, Fortuner, Innova Zenix. Representatif, nyaman, dan berkesan untuk tamu VIP, pimpinan, dan meeting penting.'],
+                    ['bi-tools',             'Rental Alat Berat',         'Penyediaan heavy equipment untuk proyek: excavator, bulldozer, motor grader, vibro compactor, crane. Tersedia dengan atau tanpa operator bersertifikat.'],
+                    ['bi-truck',             'Rental Kendaraan Proyek',   'Armada kendaraan proyek industri: double cabin, dump truck, tronton, tangki, dan mixer untuk sektor Construction, Mining, Oil & Gas, dan Manufacturing.'],
                 ] as $i => [$icon, $title, $desc])
                 <div class="gs-svc-card" data-aos="fade-up" data-aos-delay="{{ ($i % 4) * 40 }}">
                     <div class="gs-svc-card-icon">
@@ -412,8 +414,8 @@
             {{-- Footer CTA --}}
             <div class="gs-svc-footer" data-aos="fade-up">
                 <p class="gs-svc-footer-text">
-                    Grand Satya menyediakan solusi mobilitas korporasi yang terpadu   satu mitra untuk seluruh kebutuhan transportasi dan perjalanan bisnis perusahaan Anda.<br>
-                    Armada premium, pengemudi profesional, dan customer support 24/7.
+                    Grand Satya menyediakan solusi rental kendaraan dan alat berat yang terpadu — satu mitra untuk seluruh kebutuhan sewa mobil operasional, eksekutif, kendaraan proyek, hingga heavy equipment industri.<br>
+                    Armada terawat, operator &amp; driver profesional, dan customer support 24/7.
                 </p>
                 <div style="display:flex;align-items:center;justify-content:center;gap:.625rem">
                     <a href="{{ route('front.services') }}" class="gs-btn gs-btn-primary" style="border-radius:9999px;padding:.75rem 2rem">
@@ -437,7 +439,7 @@
             {{-- Section head --}}
             <div class="gs-flt-head" data-aos="fade-up">
                 <div class="gs-flt-eyebrow"><span></span> Armada Grand Satya</div>
-                <h2 class="gs-flt-headline">Fleet Premium Terawat<br>Siap Mendukung Bisnis Anda</h2>
+                <h2 class="gs-flt-headline">Kendaraan & Alat Berat<br>Siap Pakai untuk Bisnis Anda</h2>
             </div>
 
             @if($fleets->isEmpty())
@@ -459,9 +461,19 @@
                                     @else
                                     @php
                                         $sliderFallbacks = [
-                                            'luxury'=>'images/cars/lexus.jpg','mpv'=>'images/cars/innova.jpg',
-                                            'suv'=>'images/cars/fortuner.jpg','eksekutif'=>'images/cars/alphard.jpg',
-                                            'executive'=>'images/cars/alphard.jpg','sedan'=>'images/cars/camry.jpg',
+                                            'mobil eksekutif'   => 'images/cars/alphard.jpg',
+                                            'eksekutif'         => 'images/cars/alphard.jpg',
+                                            'executive'         => 'images/cars/alphard.jpg',
+                                            'mobil operasional' => 'images/cars/innova.jpg',
+                                            'operasional'       => 'images/cars/innova.jpg',
+                                            'mpv'               => 'images/cars/innova.jpg',
+                                            'suv'               => 'images/cars/fortuner.jpg',
+                                            'van'               => 'images/cars/avanza.jpg',
+                                            'kendaraan proyek'  => 'images/cars/hilux.jpg',
+                                            'proyek'            => 'images/cars/hilux.jpg',
+                                            'double cabin'      => 'images/cars/hilux.jpg',
+                                            'alat berat'        => 'images/cars/excavator.jpg',
+                                            'heavy equipment'   => 'images/cars/excavator.jpg',
                                         ];
                                         $sf = $sliderFallbacks[strtolower($car->class)] ?? 'images/cars/car-1.jpg';
                                     @endphp
@@ -475,16 +487,17 @@
                                 {{-- Name --}}
                                 <div class="gs-flt-card-name">{{ $car->name }}</div>
                                 {{-- Specs --}}
+                                @php $isHeavyUnit = str_contains(strtolower($car->class), 'alat berat') || str_contains(strtolower($car->class), 'heavy'); @endphp
                                 <div class="gs-flt-specs">
                                     <div class="gs-flt-spec-row">
-                                        <i class="bi bi-door-closed"></i>
-                                        <span class="gs-flt-spec-label">Doors</span>
-                                        <span class="gs-flt-spec-val">4</span>
+                                        <i class="bi bi-tag"></i>
+                                        <span class="gs-flt-spec-label">Kategori</span>
+                                        <span class="gs-flt-spec-val" style="font-size:.7rem">{{ $car->class }}</span>
                                     </div>
                                     <div class="gs-flt-spec-row">
-                                        <i class="bi bi-people"></i>
-                                        <span class="gs-flt-spec-label">Passengers</span>
-                                        <span class="gs-flt-spec-val">{{ $car->capacity ?? ' ' }}</span>
+                                        <i class="bi bi-{{ $isHeavyUnit ? 'gear' : 'people' }}"></i>
+                                        <span class="gs-flt-spec-label">{{ $isHeavyUnit ? 'Kapasitas' : 'Penumpang' }}</span>
+                                        <span class="gs-flt-spec-val">{{ $car->capacity ?? '—' }}</span>
                                     </div>
                                 </div>
                                 {{-- Footer: CTA --}}
@@ -511,47 +524,6 @@
                 </div>
             </div>
 
-            {{-- Category cards --}}
-            @php $classes = $fleets->pluck('class')->unique()->values(); @endphp
-            @if($classes->count() > 0)
-            <div class="gs-flt-cats" data-aos="fade-up" data-aos-delay="60">
-                @foreach($classes->take(4) as $ci => $cls)
-                @php
-                    $catCar = $fleets->firstWhere('class', $cls);
-                    $catFallbacks = [
-                        'luxury'    => 'images/cars/lexus.jpg',
-                        'mpv'       => 'images/cars/innova.jpg',
-                        'suv'       => 'images/cars/fortuner.jpg',
-                        'eksekutif' => 'images/cars/alphard.jpg',
-                        'executive' => 'images/cars/alphard.jpg',
-                        'sedan'     => 'images/cars/camry.jpg',
-                        'minibus'   => 'images/cars/avanza.jpg',
-                        'pick up'   => 'images/cars/hilux.jpg',
-                        'double cabin' => 'images/cars/hilux.jpg',
-                        'project'   => 'images/cars/hilux.jpg',
-                    ];
-                    $fallbackKey = strtolower($cls);
-                    $catFallback = $catFallbacks[$fallbackKey] ?? 'images/cars/car-1.jpg';
-                @endphp
-                <a href="{{ route('front.fleet.index') }}" class="gs-flt-cat-card">
-                    <div class="gs-flt-cat-img">
-                        @if($catCar && $catCar->photo)
-                        <img src="{{ Storage::url($catCar->photo) }}" alt="{{ $cls }}" loading="lazy"
-                             onerror="this.src='{{ asset($catFallback) }}'">
-                        @else
-                        <img src="{{ asset($catFallback) }}" alt="{{ $cls }}" loading="lazy">
-                        @endif
-                    </div>
-                    <div class="gs-flt-cat-body">
-                        <span class="gs-flt-cat-label">{{ $cls }}</span>
-                        <span class="gs-flt-cat-arrow"><i class="bi bi-arrow-up-right"></i></span>
-                    </div>
-                    <div class="gs-flt-cat-overlay"></div>
-                </a>
-                @endforeach
-            </div>
-            @endif
-
             @endif
 
         </div>
@@ -573,17 +545,17 @@
                         Proses Cepat &amp; Profesional<br>dari Konsultasi ke Eksekusi
                     </h2>
                     <p class="gs-hiw-lead">
-                        Grand Satya merancang proses layanan yang efisien agar kebutuhan transportasi dan perjalanan bisnis perusahaan Anda tertangani dengan cepat, terstruktur, dan tanpa hambatan.
+                        Grand Satya merancang proses layanan yang efisien agar kebutuhan sewa kendaraan dan alat berat perusahaan Anda tertangani dengan cepat, terstruktur, dan tanpa hambatan.
                     </p>
 
                     {{-- Accordion steps --}}
                     <div class="gs-hiw-steps">
                         @foreach([
-                            ['Consultation',      'Diskusikan kebutuhan transportasi perusahaan Anda   jenis armada, rute, durasi, dan jumlah unit yang diperlukan.'],
-                            ['Quotation',         'Tim Grand Satya menyiapkan penawaran harga terbaik yang disesuaikan dengan kebutuhan dan anggaran perusahaan Anda.'],
-                            ['Confirmation',      'Konfirmasi jadwal, armada, dan detail layanan. Kami memastikan semua siap sebelum hari pelaksanaan.'],
-                            ['Service Delivery',  'Tim kami menjalankan layanan sesuai standar profesional. Driver tepat waktu, armada prima, dan prosedur keselamatan terjaga.'],
-                            ['Ongoing Support',   'Customer support Grand Satya siap membantu selama 24 jam. Unit pengganti tersedia jika terjadi kendala operasional.'],
+                            ['Konsultasi',        'Diskusikan kebutuhan Anda — jenis kendaraan atau alat berat, lokasi proyek, durasi, jumlah unit, dan apakah perlu operator/driver.'],
+                            ['Penawaran Harga',   'Tim Grand Satya menyiapkan quotation terbaik yang disesuaikan dengan spesifikasi dan anggaran proyek atau operasional perusahaan Anda.'],
+                            ['Konfirmasi',        'Konfirmasi detail unit, jadwal pengiriman, dan lokasi. Kami memastikan semua kesiapan unit sebelum hari pelaksanaan.'],
+                            ['Pengiriman Unit',   'Unit dikirim ke lokasi sesuai jadwal. Kendaraan dan alat berat dalam kondisi prima, operator/driver siap bertugas profesional.'],
+                            ['Dukungan Penuh',    'Customer support Grand Satya siap 24 jam. Unit pengganti tersedia jika terjadi kendala operasional di lapangan.'],
                         ] as $si => [$step, $desc])
                         <div class="gs-hiw-step {{ $si === 0 ? 'open' : '' }}">
                             <button class="gs-hiw-step-btn" type="button">
@@ -614,7 +586,7 @@
                     {{-- Floating badge --}}
                     <div class="gs-hiw-badge" data-aos="zoom-in" data-aos-delay="100">
                         <div class="gs-hiw-badge-stat">5+</div>
-                        <div class="gs-hiw-badge-text">Dipercaya<br>Banyak<br>clients</div>
+                        <div class="gs-hiw-badge-text">Dipercaya<br>Banyak<br>Klien</div>
                         <div class="gs-hiw-badge-avatars">
                             @for($a = 0; $a <= 2; $a++)
                             <div style="width:2rem;height:2rem;border-radius:50%;background:#e9eaec;border:2px solid white;display:flex;align-items:center;justify-content:center;flex-shrink:0">
@@ -759,7 +731,7 @@
                         Grand Satya Hadir<br>di Seluruh Indonesia
                     </h2>
                     <p style="color:var(--text-muted);font-size:.9375rem;line-height:1.75;margin-bottom:1.5rem">
-                        Dari kawasan bisnis Jakarta hingga area proyek industri di Kalimantan dan Nusa Tenggara   Grand Satya melayani kebutuhan corporate transportation di kota-kota strategis seluruh Indonesia.
+                        Dari kawasan bisnis Jakarta hingga area proyek industri di Kalimantan dan Nusa Tenggara — Grand Satya melayani kebutuhan rental kendaraan dan alat berat di kota-kota strategis seluruh Indonesia.
                     </p>
                     <ul style="list-style:none;padding:0;margin:0 0 2rem">
                         @foreach([
@@ -827,9 +799,9 @@
                 <div class="swiper testiSwiper">
                     <div class="swiper-wrapper">
                         @foreach([
-                            ['Budi Santoso',  'Corporate Manager   PT Azure Group',    'Grand Satya selalu memberikan pelayanan yang cepat dan profesional untuk kebutuhan transportasi perusahaan kami. Driver tepat waktu, armada terawat, dan tim yang sangat responsif.', 5, '1'],
-                            ['Hendra Wijaya', 'Project Manager   Swadaya Graha',       'Site visit ke lokasi proyek jadi jauh lebih terorganisir dengan Grand Satya. Mereka benar-benar memahami kebutuhan operasional di lapangan dan selalu siap memberikan solusi terbaik.', 5, '3'],
-                            ['Rina Kusuma',   'HR Director',                           'Grand Satya menjadi mitra transportasi utama kami untuk seluruh kebutuhan mobilitas karyawan. Pelayanan konsisten, profesional, dan harga sangat kompetitif.', 5, '4'],
+                            ['Budi Santoso',  'Corporate Manager — PT Azure Group',    'Grand Satya selalu memberikan pelayanan yang cepat dan profesional untuk kebutuhan sewa kendaraan dan alat berat proyek kami. Unit terawat, tepat jadwal, dan tim yang sangat responsif.', 5, '1'],
+                            ['Hendra Wijaya', 'Project Manager — Swadaya Graha',       'Mobilisasi excavator dan dump truck ke lokasi proyek jadi jauh lebih mudah dengan Grand Satya. Mereka benar-benar memahami kebutuhan operasional di lapangan dan selalu siap memberikan solusi terbaik.', 5, '3'],
+                            ['Rina Kusuma',   'HR Director',                           'Grand Satya menjadi mitra rental utama kami untuk seluruh kebutuhan sewa kendaraan operasional karyawan. Pelayanan konsisten, profesional, dan harga sangat kompetitif.', 5, '4'],
                             ['Sari Dewi',     'Operations Manager',                    'Untuk kebutuhan corporate travel dan antar jemput eksekutif, Grand Satya tidak pernah mengecewakan. Koordinasi mudah, armada premium, dan support 24 jam benar-benar terasa manfaatnya.', 5, '2'],
                         ] as [$name, $role, $review, $rating, $img])
                         <div class="swiper-slide">
@@ -1025,10 +997,10 @@
                             <input type="email" name="email" placeholder="Email Perusahaan" required class="gs-input">
                         </div>
                         <div class="gs-form-group">
-                            <input type="text" name="subject" placeholder="Kebutuhan Layanan (Corporate Rental / Project / Travel Management)" required class="gs-input">
+                            <input type="text" name="subject" placeholder="Kebutuhan (Rental Mobil / Alat Berat / Kendaraan Proyek)" required class="gs-input">
                         </div>
                         <div class="gs-form-group">
-                            <textarea name="message" rows="5" placeholder="Ceritakan kebutuhan transportasi perusahaan Anda..." required class="gs-input gs-textarea"></textarea>
+                            <textarea name="message" rows="5" placeholder="Ceritakan kebutuhan sewa kendaraan atau alat berat Anda (jenis unit, lokasi, durasi)..." required class="gs-input gs-textarea"></textarea>
                         </div>
                         <button type="submit" class="gs-btn gs-btn-primary" style="width:100%;border-radius:var(--radius-lg);padding:1rem">
                             Kirim Request Quotation <i class="bi bi-send-fill"></i>

@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title', '404 — Halaman Tidak Ditemukan | Grand Satya')
-@section('meta_description', 'Halaman yang Anda cari tidak ditemukan. Kembali ke Grand Satya untuk layanan Corporate Transportation terbaik.')
+@section('meta_description', 'Halaman yang Anda cari tidak ditemukan. Kembali ke Grand Satya untuk layanan rental kendaraan dan alat berat terbaik.')
 
 @push('styles')
 <style>

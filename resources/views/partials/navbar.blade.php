@@ -33,8 +33,8 @@
                         {{-- Col 1: Highlight card --}}
                         <div class="nav-mega-highlight">
                             <div class="nav-mega-hl-eyebrow"> Core Services</div>
-                            <h3 class="nav-mega-hl-title">Solusi Mobilitas<br>Korporasi Terpadu</h3>
-                            <p class="nav-mega-hl-desc">Satu mitra untuk seluruh kebutuhan transportasi dan perjalanan bisnis perusahaan Anda.</p>
+                            <h3 class="nav-mega-hl-title">Solusi Rental<br>Lengkap & Terpadu</h3>
+                            <p class="nav-mega-hl-desc">Satu mitra untuk seluruh kebutuhan sewa kendaraan mobil dan alat berat perusahaan Anda.</p>
                             <a href="{{ route('front.services') }}" class="nav-mega-hl-cta">
                                 Lihat Semua Layanan <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -43,12 +43,12 @@
                         {{-- Col 2 & 3: Bento service cards --}}
                         <div class="nav-mega-bento">
                             @foreach([
-                                ['bi-car-front-fill',    'Corporate Car Rental',        'Perjalanan dinas, site visit, dan operasional perusahaan.',  route('front.services')],
-                                ['bi-gem',               'Executive Car Rental',        'BMW, Lexus, Alphard untuk tamu VIP dan eksekutif.',          route('front.services')],
-                                ['bi-airplane-fill',     'Airport Transfer',            'Jemput-antar bandara tepat waktu, tarif transparan.',         route('front.services')],
-                                ['bi-person-badge-fill', 'Professional Driver',         'Driver berpengalaman, disiplin, standar korporasi.',          route('front.services')],
-                                ['bi-tools',             'Project Transportation',      'Armada untuk Mining, Oil & Gas, Construction.',              route('front.services')],
-                                ['bi-briefcase-fill',    'Corporate Travel Management', 'Tiket, hotel, visa & business trip arrangement.',             route('front.services')],
+                                ['bi-car-front-fill',    'Rental Mobil Operasional',    'Sewa harian, mingguan, bulanan untuk kebutuhan operasional.',route('front.services')],
+                                ['bi-gem',               'Rental Mobil Eksekutif',      'Alphard, Camry, Fortuner untuk tamu VIP dan pimpinan.',      route('front.services')],
+                                ['bi-truck',             'Rental Alat Berat',           'Excavator, bulldozer, crane untuk proyek konstruksi & tambang.',route('front.services')],
+                                ['bi-tools',             'Rental Kendaraan Proyek',     'Double cabin, pickup, dump truck untuk lapangan industri.',  route('front.services')],
+                                ['bi-person-badge-fill', 'Dengan Operator/Driver',      'Operator alat berat & driver profesional berpengalaman.',    route('front.services')],
+                                ['bi-clipboard-check',   'Kontrak Jangka Panjang',      'Paket bulanan & tahunan dengan harga kompetitif.',           route('front.services')],
                             ] as [$icon, $title, $desc, $url])
                             <a href="{{ $url }}" class="nav-bento-card">
                                 <div class="nav-bento-icon"><i class="bi {{ $icon }}"></i></div>
@@ -73,8 +73,8 @@
                         {{-- Col 1: Highlight --}}
                         <div class="nav-mega-highlight">
                             <div class="nav-mega-hl-eyebrow"> Armada Grand Satya</div>
-                            <h3 class="nav-mega-hl-title">Fleet Premium<br>Terawat & Prima</h3>
-                            <p class="nav-mega-hl-desc">Pilihan armada lengkap dari kendaraan eksekutif hingga kendaraan operasional proyek industri.</p>
+                            <h3 class="nav-mega-hl-title">Kendaraan & Alat<br>Berat Siap Pakai</h3>
+                            <p class="nav-mega-hl-desc">Pilihan lengkap dari kendaraan penumpang eksekutif hingga alat berat industri.</p>
                             <a href="{{ route('front.fleet.index') }}" class="nav-mega-hl-cta">
                                 Lihat Semua Armada <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -83,12 +83,12 @@
                         {{-- Bento fleet categories --}}
                         <div class="nav-mega-bento">
                             @foreach([
-                                ['bi-gem',         'Executive',      'BMW 730Li · Lexus RX · Alphard · Camry',            route('front.fleet.index')],
-                                ['bi-car-front-fill','Premium',      'Fortuner · Pajero · Innova Zenix',                  route('front.fleet.index')],
-                                ['bi-people-fill', 'Business',       'Innova Reborn · Avanza · Xenia',                   route('front.fleet.index')],
-                                ['bi-truck-front-fill','Group Transport','Hiace · Elf · Medium Bus · Big Bus',              route('front.fleet.index')],
-                                ['bi-truck',       'Project Fleet',  'Double Cabin · Pickup · 4WD Industrial',            route('front.fleet.index')],
-                                ['bi-shield-check','Insured & Safe', 'Semua unit berasuransi & diinspeksi berkala.',      route('front.fleet.index')],
+                                ['bi-gem',               'Eksekutif',      'Alphard · Camry · Fortuner · Innova',              route('front.fleet.index')],
+                                ['bi-car-front-fill',    'Operasional',    'Avanza · Xenia · Ertiga · Pickup',                 route('front.fleet.index')],
+                                ['bi-truck-front-fill',  'Angkutan Grup',  'Hiace · Elf · Medium Bus · Big Bus',               route('front.fleet.index')],
+                                ['bi-truck',             'Alat Berat',     'Excavator · Bulldozer · Motor Grader · Crane',     route('front.fleet.index')],
+                                ['bi-tools',             'Kendaraan Proyek','Double Cabin · Dump Truck · Tronton · Mixer',    route('front.fleet.index')],
+                                ['bi-shield-check',      'Terawat & Aman', 'Semua unit diasuransikan & diinspeksi berkala.',   route('front.fleet.index')],
                             ] as [$icon, $title, $desc, $url])
                             <a href="{{ $url }}" class="nav-bento-card">
                                 <div class="nav-bento-icon"><i class="bi {{ $icon }}"></i></div>

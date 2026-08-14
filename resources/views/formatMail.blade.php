@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request Quotation — Grand Satya</title>
+  <title>Request Quotation — Grand Satya Rental</title>
   <style>
     body { font-family: Arial, sans-serif; background:#f4f4f4; margin:0; padding:0; }
     .wrap { max-width:600px; margin:32px auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.08); }
@@ -24,7 +24,7 @@
   <div class="wrap">
     <div class="header">
       <h1>Request Quotation</h1>
-      <p>Pesan masuk melalui website Grand Satya — {{ now()->format('d M Y, H:i') }} WIB</p>
+      <p>Pesan masuk melalui website Grand Satya Rental — {{ now()->format('d M Y, H:i') }} WIB</p>
     </div>
     <div class="body">
       <span class="badge">NEW REQUEST</span>
@@ -42,7 +42,7 @@
       <div class="value">{{ $detail['contact'] ?? '-' }}</div>
 
       @if(!empty($detail['subject']))
-      <div class="label">Layanan / Kebutuhan</div>
+      <div class="label">Kebutuhan / Jenis Unit</div>
       <div class="value">{{ $detail['subject'] }}</div>
       @endif
 

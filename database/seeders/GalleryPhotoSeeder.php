@@ -10,68 +10,87 @@ class GalleryPhotoSeeder extends Seeder
     public function run(): void
     {
         $photos = [
-            // Armada
+            // Fleet — Kendaraan
             [
-                'photo'    => '/anyar/img/gallery/armada-1.jpg',
-                'caption'  => 'Armada Lexus ES 300h siap melayani',
-                'category' => 'Armada',
+                'photo'    => '/anyar/img/gallery/alphard-fleet.jpg',
+                'caption'  => 'Toyota Alphard — Rental Mobil Eksekutif',
+                'category' => 'fleet',
                 'order'    => 1,
             ],
             [
-                'photo'    => '/anyar/img/gallery/armada-2.jpg',
-                'caption'  => 'Interior Toyota Alphard yang mewah',
-                'category' => 'Armada',
+                'photo'    => '/anyar/img/gallery/fortuner-fleet.jpg',
+                'caption'  => 'Toyota Fortuner — Rental Mobil Operasional',
+                'category' => 'fleet',
                 'order'    => 2,
             ],
             [
-                'photo'    => '/anyar/img/gallery/armada-3.jpg',
-                'caption'  => 'Toyota Fortuner untuk perjalanan tangguh',
-                'category' => 'Armada',
+                'photo'    => '/anyar/img/gallery/hiace-fleet.jpg',
+                'caption'  => 'Toyota Hiace — Antar Jemput Karyawan',
+                'category' => 'fleet',
                 'order'    => 3,
             ],
             [
-                'photo'    => '/anyar/img/gallery/armada-4.jpg',
-                'caption'  => 'Hiace berkapasitas besar untuk grup',
-                'category' => 'Armada',
+                'photo'    => '/anyar/img/gallery/hilux-fleet.jpg',
+                'caption'  => 'Toyota Hilux Double Cabin — Kendaraan Proyek',
+                'category' => 'fleet',
                 'order'    => 4,
             ],
-            // Layanan
             [
-                'photo'    => '/anyar/img/gallery/layanan-1.jpg',
-                'caption'  => 'Layanan airport transfer profesional',
-                'category' => 'Layanan',
+                'photo'    => '/anyar/img/gallery/dump-truck.jpg',
+                'caption'  => 'Dump Truck Hino — Angkutan Material Proyek',
+                'category' => 'fleet',
                 'order'    => 5,
             ],
+            // Fleet — Alat Berat
             [
-                'photo'    => '/anyar/img/gallery/layanan-2.jpg',
-                'caption'  => 'Antar jemput karyawan perusahaan',
-                'category' => 'Layanan',
+                'photo'    => '/anyar/img/gallery/excavator.jpg',
+                'caption'  => 'Excavator Komatsu PC200 — Rental Alat Berat',
+                'category' => 'fleet',
                 'order'    => 6,
             ],
             [
-                'photo'    => '/anyar/img/gallery/layanan-3.jpg',
-                'caption'  => 'Transportasi acara korporat',
-                'category' => 'Layanan',
+                'photo'    => '/anyar/img/gallery/bulldozer.jpg',
+                'caption'  => 'Bulldozer Komatsu D85 — Perataan Lahan',
+                'category' => 'fleet',
                 'order'    => 7,
             ],
-            // Kegiatan
             [
-                'photo'    => '/anyar/img/gallery/kegiatan-1.jpg',
-                'caption'  => 'Pelatihan keselamatan berkendara tim driver',
-                'category' => 'Kegiatan',
+                'photo'    => '/anyar/img/gallery/crane.jpg',
+                'caption'  => 'Mobile Crane Tadano 25 Ton — Pengangkatan Struktur',
+                'category' => 'fleet',
                 'order'    => 8,
             ],
+            // Service
             [
-                'photo'    => '/anyar/img/gallery/kegiatan-2.jpg',
-                'caption'  => 'Servis rutin armada di bengkel resmi',
-                'category' => 'Kegiatan',
+                'photo'    => '/anyar/img/gallery/service-1.jpg',
+                'caption'  => 'Mobilisasi alat berat ke lokasi proyek konstruksi',
+                'category' => 'service',
                 'order'    => 9,
             ],
             [
-                'photo'    => '/anyar/img/gallery/kegiatan-3.jpg',
-                'caption'  => 'Kunjungan klien korporat ke kantor Grand Satya',
-                'category' => 'Kegiatan',
+                'photo'    => '/anyar/img/gallery/service-2.jpg',
+                'caption'  => 'Inspeksi unit sebelum pengiriman ke klien',
+                'category' => 'service',
                 'order'    => 10,
+            ],
+            [
+                'photo'    => '/anyar/img/gallery/service-3.jpg',
+                'caption'  => 'Operasional kendaraan proyek di lapangan tambang',
+                'category' => 'service',
+                'order'    => 11,
+            ],
+            // Events
+            [
+                'photo'    => '/anyar/img/gallery/event-1.jpg',
+                'caption'  => 'Serah terima unit rental kepada klien korporasi',
+                'category' => 'events',
+                'order'    => 12,
+            ],
+            [
+                'photo'    => '/anyar/img/gallery/event-2.jpg',
+                'caption'  => 'Pelatihan operator alat berat bersertifikat SIO',
+                'category' => 'events',
+                'order'    => 13,
             ],
         ];
 

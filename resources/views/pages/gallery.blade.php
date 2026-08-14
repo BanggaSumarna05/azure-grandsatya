@@ -1,9 +1,9 @@
 @extends('layouts.front')
 
-@section('title', 'Gallery — Grand Satya | Armada & Layanan Corporate Transportation')
-@section('meta_description', 'Lihat galeri foto armada, layanan, dan momen-momen Grand Satya Transportation — Corporate Car Rental & Travel Management terpercaya di Indonesia.')
-@section('og_title',       'Gallery Grand Satya — Armada & Layanan Corporate Transportation')
-@section('og_description', 'Foto-foto armada premium, kegiatan layanan, dan momen bersama klien Grand Satya Transportation di seluruh Indonesia.')
+@section('title', 'Gallery — Grand Satya | Armada Kendaraan & Alat Berat')
+@section('meta_description', 'Lihat galeri foto armada, kendaraan proyek, alat berat, dan momen operasional Grand Satya — Rental Kendaraan & Alat Berat terpercaya di Indonesia.')
+@section('og_title',       'Gallery Grand Satya — Armada Kendaraan & Alat Berat')
+@section('og_description', 'Foto-foto armada kendaraan, alat berat, kegiatan operasional, dan momen bersama klien Grand Satya di seluruh Indonesia.')
 @section('og_image',        asset('images/hero/hero-blog.jpg'))
 
 @php use Illuminate\Support\Facades\Storage; @endphp

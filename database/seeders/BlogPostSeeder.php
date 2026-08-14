@@ -12,110 +12,145 @@ class BlogPostSeeder extends Seeder
     {
         $posts = [
             [
-                'title'        => 'Tips Memilih Jasa Transportasi Korporat yang Tepat',
-                'excerpt'      => 'Memilih jasa transportasi korporat yang tepat adalah kunci kelancaran operasional bisnis Anda. Berikut beberapa tips yang perlu diperhatikan.',
-                'content'      => '<p>Dalam dunia bisnis yang dinamis, transportasi korporat memegang peranan penting dalam menjaga kelancaran operasional perusahaan. Pemilihan mitra transportasi yang tepat bukan sekadar soal harga, tetapi juga menyangkut keandalan, kenyamanan, dan profesionalisme.</p>
+                'title'        => 'Tips Memilih Jasa Rental Kendaraan dan Alat Berat yang Tepat',
+                'excerpt'      => 'Memilih mitra rental kendaraan dan alat berat yang tepat adalah kunci kelancaran proyek dan operasional bisnis Anda. Berikut beberapa hal penting yang perlu diperhatikan.',
+                'content'      => 'Dalam industri konstruksi, pertambangan, dan operasional korporasi, ketersediaan kendaraan dan alat berat yang handal menjadi faktor penentu keberhasilan proyek. Memilih mitra rental yang tepat bukan sekadar soal harga, tetapi juga menyangkut keandalan unit, ketersediaan operator, dan kecepatan respons.
 
-<h2>1. Pastikan Legalitas dan Perizinan</h2>
-<p>Hal pertama yang perlu dicek adalah legalitas perusahaan transportasi tersebut. Pastikan mereka memiliki izin operasional yang lengkap dan armada yang terdaftar resmi. Ini menjamin keamanan dan perlindungan hukum bagi perusahaan Anda.</p>
+1. Pastikan Legalitas dan Perizinan
 
-<h2>2. Cek Kondisi dan Kelengkapan Armada</h2>
-<p>Armada yang prima mencerminkan komitmen perusahaan transportasi terhadap layanan. Tanyakan tentang jadwal perawatan berkala, usia kendaraan, dan fasilitas yang tersedia di setiap unit.</p>
+Hal pertama yang perlu dicek adalah legalitas perusahaan rental tersebut. Pastikan mereka memiliki izin usaha yang lengkap dan unit yang terdaftar resmi. Ini menjamin keamanan dan perlindungan hukum bagi perusahaan Anda.
 
-<h2>3. Evaluasi Rekam Jejak dan Reputasi</h2>
-<p>Cari tahu pengalaman klien sebelumnya. Ulasan dan testimoni dari perusahaan lain yang pernah menggunakan jasa mereka adalah indikator terpercaya atas kualitas layanan yang akan Anda terima.</p>
+2. Cek Kondisi dan Rekam Perawatan Unit
 
-<h2>4. Pertimbangkan Fleksibilitas Layanan</h2>
-<p>Kebutuhan transportasi korporat sering berubah. Pilih mitra yang mampu menyesuaikan layanan—baik dalam hal jumlah armada, rute, maupun jadwal—sesuai dinamika bisnis Anda.</p>
+Unit yang prima mencerminkan komitmen perusahaan rental. Tanyakan tentang jadwal perawatan berkala, usia kendaraan/alat berat, dan kelengkapan spare part. Unit yang terawat meminimalkan risiko downtime di lapangan.
 
-<h2>5. Transparansi Harga dan Kontrak</h2>
-<p>Hindari jasa transportasi yang tidak transparan dalam penentuan harga. Kontrak yang jelas melindungi kedua belah pihak dan menghindari potensi sengketa di kemudian hari.</p>
+3. Ketersediaan Operator/Driver Bersertifikat
 
-<p>Grand Satya hadir sebagai solusi transportasi korporat terpercaya dengan armada modern, pengemudi profesional, dan layanan yang dapat disesuaikan dengan kebutuhan bisnis Anda.</p>',
+Untuk alat berat, pastikan operator yang disediakan memiliki Surat Izin Operator (SIO) yang masih berlaku. Operator bersertifikat menjamin keselamatan kerja dan efisiensi penggunaan alat di lokasi proyek.
+
+4. Pertimbangkan Fleksibilitas Paket Sewa
+
+Kebutuhan proyek sering berubah. Pilih mitra yang menawarkan paket fleksibel—harian, mingguan, bulanan—dan mampu menyesuaikan jumlah unit sesuai kebutuhan proyek Anda.
+
+5. Transparansi Harga dan Kontrak
+
+Hindari mitra yang tidak transparan dalam penentuan harga. Kontrak yang jelas memuat spesifikasi unit, durasi sewa, biaya mobilisasi, dan klausul unit pengganti jika terjadi kerusakan.
+
+Grand Satya hadir sebagai solusi rental kendaraan dan alat berat terpercaya dengan unit terawat, operator bersertifikat, dan layanan yang dapat disesuaikan dengan kebutuhan proyek Anda.',
                 'photo'        => '/anyar/img/blog/blog-1.jpg',
                 'published_at' => now()->subDays(30),
             ],
             [
-                'title'        => 'Keunggulan Layanan Airport Transfer Profesional',
-                'excerpt'      => 'Airport transfer bukan sekadar antar jemput. Dengan layanan profesional, setiap perjalanan ke dan dari bandara menjadi pengalaman yang nyaman dan bebas stres.',
-                'content'      => '<p>Perjalanan bisnis sering kali dimulai dan diakhiri di bandara. Layanan airport transfer yang profesional tidak hanya memastikan Anda tiba tepat waktu, tetapi juga memberikan ketenangan pikiran sepanjang perjalanan.</p>
+                'title'        => 'Jenis-Jenis Alat Berat dan Fungsinya dalam Proyek Konstruksi',
+                'excerpt'      => 'Mengenal jenis alat berat dan fungsinya membantu Anda memilih unit yang tepat untuk setiap tahap proyek konstruksi, pertambangan, atau infrastruktur.',
+                'content'      => 'Proyek konstruksi dan pertambangan membutuhkan berbagai jenis alat berat yang berbeda sesuai kebutuhan pekerjaan di lapangan. Memahami fungsi masing-masing alat membantu perencanaan yang lebih efisien dan penggunaan anggaran yang optimal.
 
-<h2>Punctuality adalah Segalanya</h2>
-<p>Keterlambatan dalam menjemput tamu perusahaan di bandara dapat memberikan kesan buruk sejak awal. Driver kami selalu memantau jadwal penerbangan secara real-time dan menyesuaikan waktu penjemputan dengan kondisi aktual, termasuk keterlambatan penerbangan.</p>
+Excavator
+Excavator atau backhoe adalah alat berat paling serbaguna dalam dunia konstruksi. Digunakan untuk penggalian tanah, pengerukan, pemindahan material, pembongkaran, dan land clearing. Tersedia dalam berbagai ukuran dari mini excavator hingga excavator besar untuk pekerjaan tambang.
 
-<h2>Kenyamanan Selama Perjalanan</h2>
-<p>Setelah penerbangan panjang, kenyamanan adalah prioritas. Armada kami dilengkapi dengan air conditioning optimal, kursi yang nyaman, dan ruang bagasi yang memadai agar perjalanan dari bandara menuju destinasi terasa menyenangkan.</p>
+Bulldozer
+Bulldozer berfungsi untuk meratakan lahan, mendorong material, dan pembersihan area. Dilengkapi blade di bagian depan yang dapat disesuaikan ketinggiannya. Cocok untuk pekerjaan land clearing skala besar dan perataan tanah dasar sebelum konstruksi.
 
-<h2>Pengemudi Berpengetahuan Lokal</h2>
-<p>Driver kami bukan hanya mahir berkendara, tetapi juga memahami kondisi lalu lintas dan rute terbaik di kota. Ini memastikan Anda tiba di tujuan dengan waktu tempuh yang efisien.</p>
+Motor Grader
+Motor grader digunakan untuk membuat permukaan tanah yang rata dan presisi. Sangat penting dalam pengerjaan dan perawatan jalan proyek, pembentukan saluran drainase, serta perataan akhir sebelum pemadatan.
 
-<h2>Keamanan Terjamin</h2>
-<p>Setiap pengemudi kami telah melalui proses seleksi ketat dan pelatihan keselamatan berkendara. Data perjalanan juga tercatat untuk keamanan tambahan bagi klien kami.</p>
+Vibro Compactor
+Alat pemadatan tanah dan aspal yang menggunakan getaran untuk mencapai kepadatan optimal. Digunakan dalam pengerjaan jalan, landasan pacu bandara, area parkir, dan fondasi bangunan.
 
-<p>Percayakan kebutuhan airport transfer perusahaan Anda kepada Grand Satya. Hubungi kami untuk informasi lebih lanjut dan penawaran khusus kontrak korporat.</p>',
+Crane
+Mobile crane digunakan untuk pengangkatan dan pemindahan material berat. Tersedia dalam berbagai kapasitas, dari 10 ton hingga ratusan ton, sesuai kebutuhan pengangkatan di proyek gedung, jembatan, dan instalasi peralatan industri.
+
+Dump Truck
+Kendaraan pengangkut material galian, pasir, batu, dan material konstruksi lainnya. Kapasitas bervariasi dari 10 ton untuk proyek kecil hingga 100 ton untuk tambang skala besar.
+
+Grand Satya menyediakan berbagai jenis alat berat di atas dengan kondisi prima dan operator bersertifikat untuk mendukung proyek Anda.',
                 'photo'        => '/anyar/img/blog/blog-2.jpg',
                 'published_at' => now()->subDays(20),
             ],
             [
-                'title'        => 'Solusi Transportasi untuk Acara dan Event Perusahaan',
-                'excerpt'      => 'Sukseskan acara perusahaan Anda dengan dukungan transportasi yang terencana dan profesional. Kami siap mengelola mobilitas peserta dari awal hingga akhir acara.',
-                'content'      => '<p>Mengorganisir acara perusahaan berskala besar membutuhkan perencanaan logistik yang matang, termasuk aspek transportasi. Kemacetan, keterlambatan, atau ketidaknyamanan dalam mobilitas peserta dapat mengurangi kesan positif dari acara yang sudah dipersiapkan dengan susah payah.</p>
+                'title'        => 'Keuntungan Sewa Alat Berat vs Beli: Mana yang Lebih Menguntungkan?',
+                'excerpt'      => 'Pertimbangan antara menyewa atau membeli alat berat adalah keputusan bisnis penting. Simak analisis lengkapnya agar investasi perusahaan Anda lebih optimal.',
+                'content'      => 'Salah satu pertanyaan yang paling sering dihadapi oleh pengusaha konstruksi dan pertambangan adalah: lebih baik sewa atau beli alat berat? Jawabannya bergantung pada beberapa faktor krusial.
 
-<h2>Layanan Shuttle Terpadu</h2>
-<p>Kami menyediakan layanan shuttle terpadu untuk mengangkut peserta dari berbagai titik penjemputan menuju venue acara. Sistem ini mengurangi kepadatan parkir dan memastikan semua peserta tiba tepat waktu.</p>
+Keuntungan Sewa Alat Berat
 
-<h2>Koordinasi dengan Event Organizer</h2>
-<p>Tim kami berpengalaman berkoordinasi langsung dengan panitia acara atau event organizer untuk memahami kebutuhan transportasi secara detail, termasuk jadwal, jumlah peserta, dan titik-titik pickup.</p>
+Modal Awal Lebih Kecil
+Harga alat berat baru berkisar dari ratusan juta hingga miliaran rupiah. Dengan menyewa, Anda hanya membayar biaya pemakaian tanpa harus mengikat modal besar di aset tetap.
 
-<h2>Armada Sesuai Kebutuhan</h2>
-<p>Mulai dari sedan eksekutif untuk tamu VIP, MPV untuk kelompok kecil, hingga van kapasitas besar untuk rombongan—kami memiliki armada yang sesuai dengan setiap skala acara.</p>
+Tidak Ada Biaya Perawatan
+Biaya servis, spare part, dan perawatan alat berat ditanggung oleh perusahaan rental. Ini menghilangkan beban operasional yang tidak terduga bagi kontraktor.
 
-<h2>Standby 24 Jam</h2>
-<p>Untuk acara yang berlangsung hingga malam hari, armada dan pengemudi kami siap standby hingga seluruh peserta kembali dengan selamat ke hotel atau destinasi masing-masing.</p>
+Fleksibilitas Unit
+Setiap proyek memiliki kebutuhan alat yang berbeda. Dengan menyewa, Anda dapat memilih jenis dan kapasitas alat yang sesuai untuk setiap proyek tanpa terikat pada satu unit.
 
-<p>Percayakan logistik transportasi event perusahaan Anda kepada Grand Satya. Konsultasikan kebutuhan Anda dan dapatkan penawaran terbaik dari tim kami.</p>',
+Tidak Ada Risiko Depresiasi
+Nilai alat berat menyusut secara signifikan seiring waktu. Dengan menyewa, Anda tidak menanggung risiko kerugian akibat penurunan nilai aset.
+
+Kapan Lebih Baik Membeli?
+
+Membeli alat berat lebih masuk akal jika:
+- Alat tersebut akan digunakan secara intensif sepanjang tahun
+- Proyek berlangsung lebih dari 3-5 tahun berturut-turut
+- Perusahaan memiliki tim teknisi internal untuk perawatan
+- Jenis proyek yang dikerjakan sangat spesifik dan berulang
+
+Kesimpulan
+
+Untuk perusahaan dengan proyek yang bervariasi atau tidak terlalu intensif, sewa alat berat adalah pilihan yang jauh lebih efisien secara finansial. Grand Satya menyediakan paket sewa fleksibel dengan harga kompetitif untuk mendukung pertumbuhan bisnis Anda.',
                 'photo'        => '/anyar/img/blog/blog-3.jpg',
-                'published_at' => now()->subDays(10),
+                'published_at' => now()->subDays(12),
             ],
             [
-                'title'        => 'Pentingnya Keselamatan dalam Layanan Transportasi Korporat',
-                'excerpt'      => 'Keselamatan adalah nilai utama yang tidak bisa dikompromikan dalam setiap layanan transportasi. Pelajari bagaimana Grand Satya memastikan keamanan setiap perjalanan.',
-                'content'      => '<p>Ketika berbicara tentang transportasi korporat, keselamatan bukan hanya sebuah fitur—melainkan fondasi dari seluruh layanan. Di Grand Satya, kami membangun budaya keselamatan dalam setiap aspek operasional kami.</p>
+                'title'        => 'Pentingnya Keselamatan Kerja dalam Operasional Alat Berat',
+                'excerpt'      => 'Keselamatan adalah prioritas utama dalam setiap pekerjaan menggunakan alat berat. Pelajari standar keselamatan yang wajib diterapkan di lokasi proyek.',
+                'content'      => 'Pengoperasian alat berat membawa risiko kecelakaan yang serius jika tidak dikelola dengan standar keselamatan yang benar. Di Grand Satya, kami berkomitmen untuk memastikan setiap unit yang disewa dioperasikan dengan mengutamakan keselamatan.
 
-<h2>Seleksi dan Pelatihan Pengemudi</h2>
-<p>Setiap pengemudi kami menjalani proses rekrutmen yang ketat meliputi verifikasi latar belakang, tes kesehatan, dan evaluasi kemampuan berkendara. Pelatihan berkala juga dilakukan untuk memastikan standar keselamatan selalu terjaga.</p>
+Sertifikasi Operator (SIO)
+Setiap operator alat berat wajib memiliki Surat Izin Operator (SIO) yang diterbitkan oleh Kemnaker RI. SIO membuktikan bahwa operator telah memenuhi standar kompetensi dan keselamatan yang ditetapkan. Grand Satya hanya menyediakan operator bersertifikat aktif.
 
-<h2>Perawatan Armada Berkala</h2>
-<p>Kendaraan yang terawat adalah kendaraan yang aman. Seluruh armada Grand Satya menjalani servis rutin sesuai jadwal pabrikan dan pemeriksaan menyeluruh sebelum digunakan untuk setiap perjalanan.</p>
+Inspeksi Pra-Operasi
+Sebelum alat berat dioperasikan setiap hari, operator wajib melakukan pemeriksaan menyeluruh (daily checklist) meliputi sistem hidraulis, rem, lampu, klakson, dan kondisi umum alat. Ini adalah garis pertahanan pertama untuk mencegah kecelakaan akibat kerusakan mekanis.
 
-<h2>Asuransi Komprehensif</h2>
-<p>Seluruh armada dan penumpang dilindungi oleh asuransi komprehensif yang memberikan ketenangan pikiran bagi klien dan tamu perusahaan mereka.</p>
+APD yang Tepat
+Operator dan pekerja di sekitar alat berat wajib menggunakan Alat Pelindung Diri (APD) yang sesuai: helm proyek, rompi reflektif, sepatu safety, dan pelindung telinga. Kepatuhan APD harus ditegakkan tanpa pengecualian.
 
-<h2>Sistem Monitoring Perjalanan</h2>
-<p>Dengan teknologi GPS tracking, setiap perjalanan dapat dipantau secara real-time oleh tim operasional kami. Ini memungkinkan respons cepat jika terjadi situasi darurat di lapangan.</p>
+Zona Aman di Area Operasi
+Setiap alat berat membutuhkan radius aman yang harus bebas dari personel yang tidak berkepentingan. Penggunaan barrier, rambu peringatan, dan petugas safety sangat dianjurkan.
 
-<p>Bagi kami, membawa Anda ke tujuan dengan selamat adalah tanggung jawab yang kami emban dengan sepenuh hati di setiap perjalanan.</p>',
+Komunikasi Efektif
+Koordinasi yang jelas antara operator, rigger, dan pekerja lapangan sangat krusial terutama saat pengangkatan dengan crane atau pekerjaan di area sempit.
+
+Grand Satya memastikan setiap unit yang kami kirim telah melalui inspeksi menyeluruh dan operator kami memahami prosedur keselamatan kerja sesuai standar internasional.',
                 'photo'        => '/anyar/img/blog/blog-4.jpg',
                 'published_at' => now()->subDays(5),
             ],
             [
-                'title'        => 'Layanan Antar Jemput Karyawan: Efisiensi dan Produktivitas',
-                'excerpt'      => 'Program antar jemput karyawan yang terstruktur terbukti meningkatkan kehadiran, mengurangi stres perjalanan, dan mendongkrak produktivitas tim Anda.',
-                'content'      => '<p>Bagi banyak perusahaan, program transportasi karyawan adalah salah satu benefit yang paling diapresiasi. Selain meningkatkan kesejahteraan karyawan, program ini juga membawa manfaat nyata bagi produktivitas perusahaan secara keseluruhan.</p>
+                'title'        => 'Solusi Rental Kendaraan untuk Operasional Tambang dan Migas',
+                'excerpt'      => 'Operasional di sektor tambang dan migas membutuhkan kendaraan dan alat berat khusus yang andal. Simak bagaimana Grand Satya mendukung industri ini.',
+                'content'      => 'Sektor pertambangan dan minyak bumi & gas (migas) adalah dua industri yang sangat bergantung pada ketersediaan kendaraan dan alat berat yang handal. Downtime unit di lapangan bisa berarti kerugian besar bagi operasional proyek.
 
-<h2>Mengurangi Keterlambatan</h2>
-<p>Dengan jadwal yang teratur dan rute yang terencana, program antar jemput mengurangi risiko keterlambatan karyawan akibat kemacetan atau masalah transportasi pribadi. Hasilnya, operasional perusahaan berjalan lebih lancar.</p>
+Kebutuhan Kendaraan di Sektor Tambang
 
-<h2>Meningkatkan Keseimbangan Kerja dan Kehidupan</h2>
-<p>Karyawan yang tidak perlu memikirkan urusan transportasi setiap hari memiliki lebih banyak energi untuk difokuskan pada pekerjaan mereka. Ini berkontribusi langsung pada tingkat kepuasan dan retensi karyawan.</p>
+Operasional tambang membutuhkan beragam kendaraan: dari light vehicle seperti double cabin untuk inspeksi dan mobilitas personel, hingga heavy truck untuk pengangkutan material galian. Alat berat seperti excavator, bulldozer, dan dump truck adalah tulang punggung produktivitas tambang.
 
-<h2>Hemat Biaya Operasional</h2>
-<p>Dibandingkan memberikan tunjangan transportasi individual, program antar jemput korporat yang dikelola secara profesional seringkali lebih efisien secara biaya, terutama untuk perusahaan dengan karyawan dalam jumlah besar.</p>
+Tantangan Khusus Medan Tambang
 
-<h2>Ramah Lingkungan</h2>
-<p>Mengkonsolidasikan perjalanan karyawan dalam satu armada berarti mengurangi jumlah kendaraan pribadi di jalan. Ini adalah kontribusi nyata perusahaan Anda terhadap pengurangan emisi karbon.</p>
+Medan di area tambang seringkali ekstrem: jalan berdebu, tanjakan curam, dan beban kerja tinggi sepanjang waktu. Unit yang disewa harus memiliki spesifikasi yang sesuai dan telah terbukti handal di kondisi serupa.
 
-<p>Grand Satya menawarkan program antar jemput karyawan yang fleksibel dan dapat disesuaikan dengan lokasi kantor, jumlah karyawan, dan jadwal operasional perusahaan Anda.</p>',
+Solusi Grand Satya untuk Tambang & Migas
+
+Grand Satya menyediakan:
+- Double cabin 4WD untuk mobilitas personel dan inspeksi lapangan
+- Dump truck berbagai kapasitas untuk pengangkutan material
+- Excavator dan bulldozer untuk pekerjaan galian dan perataan
+- Bus karyawan untuk transportasi shift tambang
+- Kontrak jangka panjang dengan harga kompetitif
+
+Dukungan 24 Jam
+
+Kami memahami bahwa operasional tambang dan migas berlangsung 24 jam. Tim support Grand Satya siap dihubungi kapan pun untuk memastikan tidak ada downtime yang menghambat produktivitas proyek Anda.
+
+Hubungi Grand Satya untuk mendapatkan paket rental kendaraan dan alat berat yang disesuaikan dengan kebutuhan spesifik proyek tambang dan migas Anda.',
                 'photo'        => '/anyar/img/blog/blog-5.jpg',
                 'published_at' => now()->subDay(),
             ],

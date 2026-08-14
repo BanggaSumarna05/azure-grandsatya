@@ -22,7 +22,7 @@ class QuotationMail extends Mailable
         $senderName = $this->detail['name'] ?? 'Unknown';
 
         return $this
-            ->subject("Request Quotation dari {$senderName} — Grand Satya")
+            ->subject("Request Quotation Rental dari {$senderName} — Grand Satya")
             ->view('formatMail');
     }
 }

@@ -1,9 +1,9 @@
 @extends('layouts.front')
 
 @section('title', 'Blog — Grand Satya')
-@section('meta_description', 'Baca artikel, tips, dan informasi terbaru seputar transportasi dari Grand Satya.')
-@section('og_title',       'Blog Grand Satya — Artikel & Tips Corporate Transportation')
-@section('og_description', 'Temukan artikel terbaru seputar corporate transportation, tips perjalanan bisnis, dan informasi armada dari Grand Satya.')
+@section('meta_description', 'Baca artikel, tips, dan informasi terbaru seputar rental kendaraan dan alat berat dari Grand Satya.')
+@section('og_title',       'Blog Grand Satya — Artikel & Tips Rental Kendaraan & Alat Berat')
+@section('og_description', 'Temukan artikel terbaru seputar rental kendaraan, tips sewa alat berat, dan informasi industri dari Grand Satya.')
 @section('og_image',        asset('images/hero/hero-blog.jpg'))
 
 @php use Illuminate\Support\Facades\Storage; @endphp

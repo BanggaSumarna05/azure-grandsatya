@@ -17,11 +17,11 @@ class FleetResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-truck';
 
-    protected static ?string $navigationLabel = 'Armada';
+    protected static ?string $navigationLabel = 'Kendaraan & Alat Berat';
 
-    protected static ?string $modelLabel = 'Armada';
+    protected static ?string $modelLabel = 'Unit';
 
-    protected static ?string $pluralModelLabel = 'Armada';
+    protected static ?string $pluralModelLabel = 'Kendaraan & Alat Berat';
 
     protected static ?int $navigationSort = 1;
 
@@ -29,23 +29,23 @@ class FleetResource extends Resource
     {
         return $form->schema([
             Forms\Components\TextInput::make('name')
-                ->label('Nama Armada')
+                ->label('Nama Unit')
                 ->required()
                 ->maxLength(255),
 
             Forms\Components\TextInput::make('class')
-                ->label('Kelas')
+                ->label('Kategori (Misal: Excavator, Mobil Operasional, Dump Truck)')
                 ->required()
                 ->maxLength(255),
 
             Forms\Components\TextInput::make('capacity')
-                ->label('Kapasitas (penumpang)')
+                ->label('Kapasitas (penumpang/ton/m³)')
                 ->numeric()
                 ->required()
                 ->minValue(1),
 
             Forms\Components\FileUpload::make('photo')
-                ->label('Foto')
+                ->label('Foto Unit')
                 ->image()
                 ->disk('public')
                 ->directory('fleets')
@@ -54,7 +54,7 @@ class FleetResource extends Resource
                 ->required(fn ($livewire) => $livewire instanceof Pages\CreateFleet),
 
             Forms\Components\Textarea::make('description')
-                ->label('Deskripsi')
+                ->label('Deskripsi / Spesifikasi')
                 ->nullable()
                 ->rows(4)
                 ->columnSpanFull(),
@@ -72,12 +72,12 @@ class FleetResource extends Resource
                     ->width(90),
 
                 Tables\Columns\TextColumn::make('name')
-                    ->label('Nama')
+                    ->label('Nama Unit')
                     ->searchable()
                     ->sortable(),
 
                 Tables\Columns\TextColumn::make('class')
-                    ->label('Kelas')
+                    ->label('Kategori')
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('capacity')

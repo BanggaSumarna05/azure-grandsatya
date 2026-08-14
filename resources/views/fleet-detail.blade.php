@@ -1,9 +1,9 @@
 @extends('layouts.front')
 
-@section('title', $fleet->name . ' — Grand Satya Fleet')
-@section('meta_description', 'Detail armada ' . $fleet->name . ' — ' . ($fleet->description ?? 'Kendaraan profesional dari Grand Satya Transportation.'))
-@section('og_title',       $fleet->name . ' — Armada Grand Satya')
-@section('og_description', $fleet->description ?? 'Kendaraan profesional, terawat, dan berasuransi dari Grand Satya Corporate Transportation.')
+@section('title', $fleet->name . ' — Grand Satya Rental')
+@section('meta_description', 'Detail unit ' . $fleet->name . ' — ' . ($fleet->description ?? 'Kendaraan/alat berat siap pakai dari Grand Satya Rental.'))
+@section('og_title',       $fleet->name . ' — Armada Grand Satya Rental')
+@section('og_description', $fleet->description ?? 'Unit terawat, berasuransi, dan siap disewa dari Grand Satya Rental Kendaraan & Alat Berat.')
 @section('og_image',        $fleet->photo ? Storage::url($fleet->photo) : asset('images/hero/hero-fleet.jpg'))
 
 @push('scripts')
@@ -12,7 +12,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": {{ Js::from($fleet->name) }},
-  "description": {{ Js::from($fleet->description ?? 'Kendaraan profesional dari Grand Satya.') }},
+  "description": {{ Js::from($fleet->description ?? 'Kendaraan/alat berat siap pakai dari Grand Satya Rental.') }},
   "image": "{{ $fleet->photo ? Storage::url($fleet->photo) : asset('images/hero/hero-fleet.jpg') }}",
   "brand": { "@type": "Brand", "name": "Grand Satya" },
   "offers": {
@@ -116,7 +116,7 @@
             <div data-aos="fade-left">
                 <h2 style="font-size:1.875rem;margin-bottom:.75rem">{{ $fleet->name }}</h2>
                 <p style="color:var(--text-muted);font-size:.9375rem;line-height:1.75;margin-bottom:2rem">
-                    {{ $fleet->description ?? 'Kendaraan profesional siap pakai dengan kondisi prima, dirawat secara berkala oleh tim teknisi berpengalaman Grand Satya.' }}
+                    {{ $fleet->description ?? 'Unit siap pakai dalam kondisi prima, dirawat secara berkala oleh tim teknisi berpengalaman Grand Satya.' }}
                 </p>
 
                 {{-- Specs --}}
@@ -124,11 +124,11 @@
                     <p style="font-size:.7rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.15em;margin:0 0 1rem">Spesifikasi</p>
                     <table class="gs-spec-table">
                         @foreach([
-                            ['bi-people-fill','Kapasitas',$fleet->capacity.' Penumpang'],
-                            ['bi-tag-fill','Kelas',$fleet->class],
-                            ['bi-fuel-pump-fill','Bahan Bakar','Bensin / Diesel'],
-                            ['bi-shield-check','Asuransi','Tercakup penuh'],
-                            ['bi-person-badge-fill','Driver','Profesional & Berlisensi'],
+                            ['bi-people-fill',      'Kapasitas',    $fleet->capacity . (strtolower($fleet->class) === 'alat berat' ? ' Ton / Unit' : ' Penumpang')],
+                            ['bi-tag-fill',         'Kategori',     $fleet->class],
+                            ['bi-fuel-pump-fill',   'Bahan Bakar',  'Bensin / Diesel / Solar'],
+                            ['bi-shield-check',     'Asuransi',     'Tercakup penuh'],
+                            ['bi-person-badge-fill','Operator/Driver','Profesional & Bersertifikat'],
                         ] as [$icon,$label,$val])
                         <tr>
                             <td><i class="bi {{ $icon }}"></i>{{ $label }}</td>
@@ -140,9 +140,9 @@
 
                 {{-- Features --}}
                 <div style="background:white;border-radius:1.25rem;padding:1.5rem;border:1.5px solid var(--border);margin-bottom:2rem">
-                    <p style="font-size:.7rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.15em;margin:0 0 1rem">Fasilitas</p>
+                    <p style="font-size:.7rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.15em;margin:0 0 1rem">Fasilitas & Kelengkapan</p>
                     <div class="gs-fleet-features-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:.625rem">
-                        @foreach(['AC Double Blower','Musik / Hiburan','Kamera Mundur','GPS Tracker','WIFI (tersedia)','Bangku Nyaman','Bagasi Luas','24/7 Support'] as $feat)
+                        @foreach(['Kondisi Prima','Terawat Berkala','Asuransi Lengkap','GPS Tracker','Unit Pengganti Siap','Operator/Driver Tersedia','Inspeksi Pra-Kirim','Support 24/7'] as $feat)
                         <div style="display:flex;align-items:center;gap:.5rem;font-size:.8125rem;color:var(--text-dark)">
                             <i class="bi bi-check-circle-fill" style="color:var(--orange);flex-shrink:0"></i>
                             {{ $feat }}
@@ -153,14 +153,14 @@
 
                 {{-- CTA --}}
                 <div class="gs-fleet-detail-cta" style="display:flex;flex-wrap:wrap;gap:.75rem">
-                    <a href="https://api.whatsapp.com/send?phone=6289636463189&text=Hallo%21+Saya+tertarik+memesan+{{ urlencode($fleet->name) }}.+Boleh+info+lebih+lanjut%3F"
+                    <a href="https://api.whatsapp.com/send?phone=6289636463189&text=Hallo%21+Saya+tertarik+menyewa+{{ urlencode($fleet->name) }}.+Boleh+info+harga+dan+ketersediaan%3F"
                        target="_blank" rel="noopener"
                        class="gs-btn"
                        style="background:#25d366;color:white;border-color:#25d366;box-shadow:0 4px 15px rgba(37,211,102,.3)">
-                        <i class="bi bi-whatsapp"></i> Pesan via WhatsApp
+                        <i class="bi bi-whatsapp"></i> Tanya via WhatsApp
                     </a>
                     <a href="{{ route('front.contact') }}" class="gs-btn gs-btn-primary">
-                        <i class="bi bi-calendar-check-fill"></i> Book Now
+                        <i class="bi bi-clipboard-check"></i> Request Quotation
                     </a>
                 </div>
             </div>

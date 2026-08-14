@@ -1,9 +1,9 @@
 @extends('layouts.front')
 
-@section('title', 'About Us — Grand Satya | Corporate Transportation & Travel Management')
-@section('meta_description', 'Grand Satya didirikan tahun 2021 sebagai perusahaan Corporate Transportation, Executive Car Rental, dan Business Travel Management terpercaya di Indonesia. Mitra strategis mobilitas korporasi Anda.')
-@section('og_title',       'About Grand Satya — Corporate Transportation & Travel Management')
-@section('og_description', 'Didirikan tahun 2021, Grand Satya hadir sebagai mitra strategis mobilitas korporasi di Indonesia. Melayani Corporate Car Rental, Executive Transportation, dan Business Travel Management.')
+@section('title', 'About Us — Grand Satya | Rental Kendaraan Mobil & Alat Berat')
+@section('meta_description', 'Grand Satya didirikan tahun 2021 sebagai perusahaan rental kendaraan mobil dan alat berat terpercaya di Indonesia. Mitra strategis untuk kebutuhan sewa kendaraan operasional, eksekutif, proyek, dan heavy equipment.')
+@section('og_title',       'About Grand Satya — Rental Kendaraan Mobil & Alat Berat')
+@section('og_description', 'Didirikan tahun 2021, Grand Satya hadir sebagai mitra terpercaya untuk kebutuhan rental kendaraan mobil dan alat berat di Indonesia. Melayani sewa mobil, kendaraan proyek, dan heavy equipment.')
 @section('og_image',        asset('images/hero/hero2.png'))
 
 @php use Illuminate\Support\Facades\Storage; @endphp
@@ -296,29 +296,30 @@
             <div data-aos="fade-left">
                 <span class="gs-eyebrow-orange">&#9733; Tentang Grand Satya</span>
                 <h2 style="font-size:clamp(1.625rem,3.5vw,2.75rem);margin-bottom:1.25rem;line-height:1.15">
-                    Mitra Strategis Mobilitas<br>Korporasi Anda
+                    Mitra Terpercaya Rental<br>Kendaraan &amp; Alat Berat
                 </h2>
                 <p style="color:var(--text-muted);font-size:.9375rem;line-height:1.75;margin-bottom:1rem">
                     Grand Satya adalah perusahaan yang bergerak di bidang
-                    <strong>Corporate Transportation, Executive Car Rental,</strong> dan
-                    <strong>Business Travel Management</strong> yang berfokus pada penyediaan
-                    solusi mobilitas bagi perusahaan, institusi, dan sektor industri.
+                    <strong>Rental Kendaraan Mobil</strong> dan
+                    <strong>Rental Alat Berat</strong> — menyediakan solusi sewa lengkap
+                    untuk kebutuhan operasional perusahaan, kendaraan proyek, hingga
+                    heavy equipment industri di seluruh Indonesia.
                 </p>
                 <p style="color:var(--text-muted);font-size:.9375rem;line-height:1.75;margin-bottom:2rem">
-                    Didirikan pada tahun 2021, Grand Satya hadir sebagai mitra strategis bagi
-                    perusahaan yang membutuhkan layanan transportasi profesional dengan standar
-                    keamanan, kenyamanan, dan ketepatan waktu yang tinggi.
+                    Didirikan pada tahun 2021, Grand Satya hadir sebagai mitra terpercaya bagi
+                    perusahaan yang membutuhkan kendaraan dan alat berat handal dengan standar
+                    keamanan, ketersediaan unit, dan ketepatan jadwal yang tinggi.
                 </p>
 
                 {{-- Feature rows --}}
                 <div style="display:flex;flex-direction:column;gap:0">
                     @foreach([
-                        ['bi-patch-check',  'Professional Corporate Partner',
-                         'Kami memahami standar operasional perusahaan. Setiap layanan dirancang memenuhi kebutuhan bisnis secara profesional dan efisien.'],
-                        ['bi-car-front-fill','Premium Fleet, Selalu Prima',
-                         'Armada selalu dalam kondisi prima dengan perawatan berkala untuk memastikan keamanan dan kenyamanan perjalanan.'],
+                        ['bi-patch-check',  'Armada Lengkap & Terawat',
+                         'Kendaraan mobil dan alat berat selalu dalam kondisi prima dengan perawatan berkala oleh teknisi berpengalaman. Inspeksi rutin dilakukan sebelum setiap penyerahan unit.'],
+                        ['bi-tools',        'Heavy Equipment Bersertifikat',
+                         'Alat berat kami memenuhi standar operasional industri. Operator tersertifikat dan berpengalaman tersedia untuk mendukung proyek konstruksi, tambang, dan migas.'],
                         ['bi-shield-check', 'Safety First & Fully Insured',
-                         'Seluruh armada dilengkapi perlindungan asuransi serta prosedur keselamatan ketat. Unit pengganti tersedia jika terjadi kendala.'],
+                         'Seluruh unit dilengkapi perlindungan asuransi serta prosedur keselamatan ketat. Unit pengganti tersedia jika terjadi kendala di lapangan.'],
                     ] as [$icon, $title, $desc])
                     <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.125rem 0;border-bottom:1px solid var(--border)">
                         <div style="width:2.75rem;height:2.75rem;min-width:2.75rem;border-radius:50%;background:var(--orange-light);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--orange);flex-shrink:0">
@@ -351,7 +352,7 @@
         <div style="text-align:center;margin-bottom:2.5rem" data-aos="fade-up">
             <span class="gs-eyebrow-orange">&#9733; Visi &amp; Misi</span>
             <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:1rem">
-                Mendorong keunggulan dan inovasi<br class="d-none d-md-block">dalam layanan transportasi korporat
+                Mendorong keunggulan dan inovasi<br class="d-none d-md-block">dalam layanan rental kendaraan &amp; alat berat
             </h2>
 
             {{-- Tab Switcher --}}
@@ -375,10 +376,10 @@
                 <div class="gs-vm-text">
                     <span class="gs-eyebrow-orange" style="margin-bottom:.875rem;display:block">&#9733; Visi Kami</span>
                     <h3 style="font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.2;margin-bottom:1.25rem">
-                        Menjadi mitra transportasi korporat terpercaya di Indonesia
+                        Menjadi mitra rental kendaraan &amp; alat berat terpercaya di Indonesia
                     </h3>
                     <p style="color:var(--text-muted);font-size:.9375rem;line-height:1.8;margin-bottom:1.75rem">
-                        Menjadi perusahaan penyedia solusi transportasi dan perjalanan korporat terpercaya di Indonesia yang memberikan pelayanan terbaik, inovatif, aman, dan berkelanjutan.
+                        Menjadi perusahaan penyedia solusi rental kendaraan mobil dan alat berat terpercaya di Indonesia yang memberikan pelayanan terbaik, inovatif, aman, dan berkelanjutan untuk mendukung operasional bisnis dan proyek industri.
                     </p>
                     <div style="display:flex;flex-direction:column;gap:.875rem">
                         @foreach([
@@ -421,23 +422,23 @@
                 <div class="gs-vm-text">
                     <span class="gs-eyebrow-orange" style="margin-bottom:.875rem;display:block">&#9733; Misi Kami</span>
                     <h3 style="font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.2;margin-bottom:1.25rem">
-                        Berkomitmen memberikan layanan transportasi profesional standar tinggi
+                        Berkomitmen menyediakan kendaraan dan alat berat berkualitas tinggi
                     </h3>
                     <p style="color:var(--text-muted);font-size:.9375rem;line-height:1.8;margin-bottom:1.75rem">
-                        Setiap misi kami dirancang untuk memastikan kepuasan klien dan keandalan operasional dalam setiap aspek layanan transportasi korporat.
+                        Setiap misi kami dirancang untuk memastikan kepuasan klien dan keandalan unit dalam setiap aspek layanan rental kendaraan dan alat berat.
                     </p>
                     <div style="display:flex;flex-direction:column;gap:.875rem">
                         @foreach([
-                            ['bi-patch-check-fill', 'Layanan Profesional Berkualitas Tinggi',
-                             'Memberikan layanan transportasi profesional dengan standar kualitas tinggi di setiap perjalanan.'],
-                            ['bi-car-front-fill',   'Armada Prima & Terjamin',
-                             'Menyediakan armada yang aman, nyaman, dan selalu dalam kondisi prima melalui perawatan berkala.'],
-                            ['bi-person-badge-fill','Pengemudi Berpengalaman & Berintegritas',
-                             'Menyediakan pengemudi profesional yang berpengalaman, tersertifikasi, dan menjunjung tinggi integritas.'],
-                            ['bi-clock-fill',       'Responsif & Berorientasi Kepuasan',
-                             'Memberikan pelayanan yang cepat, responsif, dan selalu berorientasi pada kepuasan pelanggan.'],
-                            ['bi-buildings-fill',   'Mitra Strategis Korporasi',
-                             'Menjadi mitra strategis perusahaan dalam mendukung mobilitas bisnis dan perjalanan dinas.'],
+                            ['bi-patch-check-fill', 'Unit Berkualitas Tinggi',
+                             'Menyediakan kendaraan dan alat berat dengan kualitas prima melalui perawatan dan inspeksi berkala.'],
+                            ['bi-tools',            'Armada Lengkap & Siap Pakai',
+                             'Menyediakan berbagai jenis kendaraan dan heavy equipment yang aman, terawat, dan siap beroperasi kapan pun dibutuhkan.'],
+                            ['bi-person-badge-fill','Operator & Driver Profesional',
+                             'Menyediakan operator alat berat bersertifikat dan driver profesional yang berpengalaman di proyek industri.'],
+                            ['bi-clock-fill',       'Responsif & Tepat Jadwal',
+                             'Pengiriman unit tepat waktu ke lokasi proyek. Tim kami responsif dalam menangani setiap permintaan.'],
+                            ['bi-buildings-fill',   'Mitra Industri & Korporasi',
+                             'Menjadi mitra terpercaya untuk perusahaan konstruksi, pertambangan, migas, manufaktur, dan korporasi.'],
                         ] as [$icon, $title, $desc])
                         <div style="display:flex;align-items:flex-start;gap:.875rem">
                             <div style="width:2.25rem;height:2.25rem;min-width:2.25rem;border-radius:50%;background:var(--orange-light);display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:.9rem;flex-shrink:0">
@@ -514,7 +515,7 @@
         <div class="gs-grid-stats" data-aos="fade-up" data-aos-delay="80">
             @foreach([
                 ['2021', 'Tahun Berdiri'],
-                ['100+', 'Armada Siap'],
+                ['200+', 'Unit Tersedia'],
                 ['7',    'Kota Coverage'],
                 ['24/7', 'Customer Support'],
             ] as [$num, $label])
@@ -532,18 +533,18 @@
     <div class="gs-container">
         <div style="text-align:center;margin-bottom:2.5rem" data-aos="fade-up">
             <span class="gs-eyebrow-orange">&#9733; Why Choose Grand Satya</span>
-            <h2 style="font-size:clamp(1.75rem,4vw,2.5rem)">Keunggulan yang Membuat<br class="d-none d-md-block">Perusahaan Mempercayai Kami</h2>
+            <h2 style="font-size:clamp(1.75rem,4vw,2.5rem)">Keunggulan yang Membuat<br class="d-none d-md-block">Perusahaan Mempercayai Grand Satya</h2>
         </div>
         <div class="gs-grid-features">
             @foreach([
-                ['bi-patch-check',  'Professional Corporate Partner',
-                 'Kami memahami standar operasional perusahaan sehingga setiap layanan dirancang untuk memenuhi kebutuhan bisnis secara profesional.'],
+                ['bi-patch-check',  'Armada Lengkap & Terawat',
+                 'Kendaraan dan alat berat selalu dalam kondisi prima dengan perawatan berkala dan inspeksi rutin sebelum setiap penggunaan.'],
                 ['bi-shield-check', 'Safety First & Insured',
-                 'Seluruh armada dilengkapi perlindungan asuransi dan dirawat oleh tim maintenance. Unit pengganti siap jika terjadi kendala operasional.'],
-                ['bi-clock-fill',   'Fast Response',
-                 'Permintaan quotation, reservasi kendaraan, maupun perjalanan dinas diproses secara cepat dan efisien oleh tim Grand Satya.'],
+                 'Seluruh unit diasuransikan dan dirawat oleh tim maintenance. Unit pengganti siap jika terjadi kendala operasional di lapangan.'],
+                ['bi-clock-fill',   'Pengiriman Tepat Waktu',
+                 'Unit tiba di lokasi sesuai jadwal yang disepakati. Tim kami responsif dalam memproses permintaan sewa secara cepat dan efisien.'],
                 ['bi-geo-alt-fill', 'Coverage Seluruh Indonesia',
-                 'Melayani Jakarta, Cilegon, Gresik, Medan, Pekanbaru, Balikpapan, Sumba, dan kota-kota industri strategis lainnya.'],
+                 'Melayani Jakarta, Cilegon, Gresik, Medan, Pekanbaru, Balikpapan, Sumba, dan wilayah industri strategis lainnya di seluruh Indonesia.'],
             ] as $i => [$icon, $title, $desc])
             <div class="gs-about-wcu-item"
                  style="text-align:center;padding:1.75rem 1.25rem;background:white;border-radius:1.25rem;border:1.5px solid var(--border)"
@@ -629,9 +630,9 @@
         <div class="gs-grid-services gs-testi-grid-about" style="gap:1.5rem">
             @foreach([
                 ['Budi Santoso',  'Corporate Manager',
-                 'Grand Satya selalu memberikan pelayanan yang cepat dan profesional untuk kebutuhan transportasi perusahaan kami. Driver tepat waktu, armada terawat, dan tim yang sangat responsif.', 5, 1],
+                 'Grand Satya selalu memberikan pelayanan yang cepat dan profesional untuk kebutuhan sewa kendaraan dan alat berat proyek kami. Unit terawat, tepat jadwal, dan tim yang sangat responsif.', 5, 1],
                 ['Hendra Wijaya', 'Project Manager',
-                 'Site visit ke lokasi proyek jadi jauh lebih terorganisir dengan Grand Satya. Mereka benar-benar memahami kebutuhan operasional di lapangan.', 5, 2],
+                 'Mobilisasi excavator dan dump truck ke lokasi proyek jadi jauh lebih mudah dengan Grand Satya. Mereka benar-benar memahami kebutuhan operasional di lapangan.', 5, 2],
                 ['Rina Kusuma',   'HR Director',
                  'Grand Satya menjadi mitra transportasi utama kami untuk seluruh kebutuhan mobilitas karyawan. Pelayanan konsisten, profesional, dan harga sangat kompetitif.', 5, 3],
             ] as [$name, $role, $text, $stars, $driverIdx])
